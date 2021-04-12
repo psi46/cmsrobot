@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="clkCleanupChuck1">
+    <Locals>
+      <Local name="nAirexIdx" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  switchMagnet=false  
+  statusCleanupChuck1 = colorRunning
+
+  call selectedCheck()
+ 
+  // -- pick vacuum chuck1's and put them back to their original place
+  for nAirexIdx=0 to 5
+    if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
+      // -- move over final airex position (where the chuck is from gluing) and down
+      call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trUpTwo)
+      //movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mNomSpeed)
+      //movel(airexFinal[nAirexIdx], tTool, mVerySlow)
+      //waitEndMove()
+   
+      // -- lift chuck1
+      switchMagnet=true
+      delay(waitShort)
+      movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mVerySlow)
+
+      // -- move over/to initial chuck position
+      call moveDown(chuck1[nAirexIdx], mVerySlow, trZero)
+      //movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mNomSpeed)
+      //waitEndMove()
+      //movel(chuck1[nAirexIdx], tTool, mVerySlow)
+      //waitEndMove()
+
+      // -- release it
+      switchMagnet=false
+
+      // -- move up 
+      movel(appro(chuck1[nAirexIdx], trZsafe) ,tTool, mSlow)
+    endIf
+  endFor
+ 
+  // -- move back somewhere
+  waitEndMove()
+  movej(jInitialPosition, tTool, mNomSpeed)
+  waitEndMove()
+  statusCleanupChuck1 = colorOn
+  statusDoAirex = colorGray
+  call print("cleanup (airex) done")
+  call selectedClear()
+    
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="doModules">
+    <Locals>
+      <Local name="nIdx" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  while true
+
+    if bDoModules==true
+      call selectedCheck()
+      call print("starting doModules")
+      statusDoModules = colorRunning
+       
+      statusCleanupChuck1 = colorGray
+
+      // -- check that relevant vacuum is active
+      if !bSelectItem
+        // -- check all
+        call print("check vacuum on all")
+        for nIdx = 0 to 5
+          if statusValves[sensorValve[nIdx]]==0
+            bDoModules = false
+            statusDoModules = colorError
+            call print("Error: no vacuum at position" + toString("1.0", nIdx))
+          endIf
+        endFor
+      else 
+        // -- check only those that are selected
+        call print("check vacuum on selection")
+        for nIdx = 0 to 5
+          if statusValves[sensorValve[nIdx]]==0 and bSelectedItems[nIdx]==true
+            bDoModules = false
+            statusDoModules = colorError
+            call print("Error: no vacuum at position" + toString("1.0", nIdx))
+          endIf
+        endFor
+      endIf
+      
+      if bDoModules == false
+        call print("Fix missing vacuum and try again")
+      endIf
+    endIf
+    
+    if bDoModules==true
+      statusDoModules = colorRunning
+      
+      if !bSkipGlue[0]
+        call print("picking glue stamp")
+        // -- pick glue stamp
+        call moveDown(moduleGlueStampHome, mVerySlow, trZero)
+        waitEndMove()
+        switchMagnet = true
+        movel(appro(moduleGlueStampHome, trZsafe), tTool, mVerySlow)
+
+        // -- dip stamp into glue before starting the normal procedure
+        call moveDown(glueFirstPoint[1], mVerySlow, trZero)
+        
+        waitEndMove()
+        delay(waitGlue)
+        movej(appro(glueFirstPoint[1], trZclose), tTool, mVerySlow)
+        movej(appro(glueFirstPoint[1], trZsafe), tTool, mSlow)
+
+        // -- apply glue stamp to all positions  
+        if bDoModules==true
+          for nIdx=0 to 5
+            if !bSelectItem or (bSelectedItems[nIdx]==true)
+              call moveDown(gluePickPoint2[nIdx], mVerySlow, trZero)
+              waitEndMove()
+              call print("applying glue to position " + toString("1.0", nIdx))
+              delay(waitGlue)
+              movej(appro(gluePickPoint2[nIdx], trZclose), tTool, mVerySlow)
+              movej(appro(gluePickPoint2[nIdx], trZsafe), tTool, mSlow)
+
+              call moveDown(hdiFinal[nIdx], mExtremelySlow, trStamp)
+              call print("movinbg up again at " + toString("1.0", nIdx))
+              call moveStampUp(hdiFinal[nIdx])
+            endIf
+          endFor
+        endIf
+        
+        // -- Drop glue stamp
+        if bDoModules==true
+          call print("put away glue stamp")
+          call moveDown(moduleGlueStampEnd, mVerySlow, trZero)
+          switchMagnet = false
+          movel(appro(moduleGlueStampEnd, trZsafe), tTool, mVerySlow)
+          waitEndMove()
+        endIf
+      endIf
+      
+      if !bSelectItem
+        call print("handling all modules")
+      else 
+        call print("handling selected modules")
+      endIf
+      
+      // -- pick weighted vacuum chucks and lift airex frames to HDIs
+      for nIdx=0 to 5
+        if !bSelectItem or (bSelectedItems[nIdx]==true)
+          if bDoModules==true
+            // -- move over/to chuck
+            call moveDown(chuck2[nIdx], mVerySlow, trZero)
+            waitEndMove()
+
+            // -- pick it
+            switchMagnet = true
+            call print("picking module " + toString("1.0", nIdx))
+            movel(appro(chuck2[nIdx], trZsafe), tTool, mVerySlow)
+
+            // -- move to hdi initial location (where the airex frame had been glued) and lower
+            call moveDown(airexFinal[nIdx], mVerySlow, trZero)
+        
+            // -- release hdi vacuum to allow picking up
+            call toggleValve(hdiValve[nIdx])
+            switchVac0=true
+            switchVac1=true
+            delay(waitShort)
+
+            // -- move up
+            movel(appro(airexFinal[nIdx], trZsafe), tTool, mVerySlow)
+            waitEndMove()
+        
+            // -- move to final location
+            call moveDown(hdiFinal[nIdx], mExtremelySlow, trZero)
+            switchVac0=false
+            switchVac1=false
+            switchMagnet=false
+
+            delay(waitShort)
+
+            movel(appro(hdiFinal[nIdx], trZsafe), tTool, mVerySlow)
+            waitEndMove()
+          endIf
+
+        endIf
+      endFor
+
+      // -- move back somewhere
+      call print("parking robot")
+      waitEndMove()
+      movej(jInitialPosition, tTool, mNomSpeed)
+      waitEndMove()
+      statusDoModules = colorOn
+      
+      call selectedClear()
+      bDoModules = false
+      call print("glue modules done")
+    endIf
+
+    delay(waitShort)
+  endWhile
+
+end]]></Code>
+  </Program>
+</Programs>
