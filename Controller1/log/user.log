@@ -4,3 +4,6 @@
 {"entry":{"date":"2021-04-12T17:50:49","ts":"189.969939042","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"33e0fc0c6e196c33ba"}
 {"entry":{"date":"2021-04-12T17:52:07","ts":"268.455363539","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"3b977dc215d7a1885c"}
 {"entry":{"date":"2021-04-12T17:52:07","ts":"268.464648096","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"b972360ee137d1706f"}
+{"entry":{"date":"2021-04-13T08:48:09","type":"run","version":"3.0.0"}}
+{"entry":{"date":"2021-04-13T08:56:35","type":"run","version":"3.0.0"}}
+{"entry":{"date":"2021-04-13T08:57:59","ts":"86.012083912","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"77aca16b28e8d5f68f"}

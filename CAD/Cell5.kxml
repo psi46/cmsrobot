@@ -259,7 +259,6 @@
 					0 0 1 0 
 					0 0 0 1 
 				</RELATIVE_POSITION>
-				<ABSOLUTE_FILENAME>C:/Users/gac-cmsroboter/source/SixModules/CAD/cmsroboter_1.wrl</ABSOLUTE_FILENAME>
 				<RELATIVE_FILENAME>cmsroboter_1.wrl</RELATIVE_FILENAME>
 				<ADDRESS>;0</ADDRESS>
 				<LOADING_OPTIONS/>
@@ -298,7 +297,6 @@
 					0 0 1 0 
 					0 0 0 1 
 				</RELATIVE_POSITION>
-				<ABSOLUTE_FILENAME>C:/Users/gac-cmsroboter/source/SixModules/CAD/cmsroboter_1.wrl</ABSOLUTE_FILENAME>
 				<RELATIVE_FILENAME>cmsroboter_1.wrl</RELATIVE_FILENAME>
 				<ADDRESS>;1</ADDRESS>
 				<LOADING_OPTIONS/>
@@ -336,7 +334,6 @@
 					0 0 1 0 
 					0 0 0 1 
 				</RELATIVE_POSITION>
-				<ABSOLUTE_FILENAME>C:/Users/gac-cmsroboter/source/SixModules/CAD/cmsroboter_1.wrl</ABSOLUTE_FILENAME>
 				<RELATIVE_FILENAME>cmsroboter_1.wrl</RELATIVE_FILENAME>
 				<ADDRESS>;3</ADDRESS>
 				<LOADING_OPTIONS/>
@@ -388,7 +385,6 @@
 				3.8556167807068942e-012 -2.9174384262586894e-013 1 -27.276241302490234 
 				0 0 0 1 
 			</RELATIVE_POSITION>
-			<ABSOLUTE_FILENAME>C:/Users/gac-cmsroboter/source/SixModules/CAD/cmsroboter_1.wrl</ABSOLUTE_FILENAME>
 			<RELATIVE_FILENAME>cmsroboter_1.wrl</RELATIVE_FILENAME>
 			<ADDRESS>;2</ADDRESS>
 			<LOADING_OPTIONS/>

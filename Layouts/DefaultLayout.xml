@@ -6,7 +6,7 @@
 				<UIElement xsi:type="SplitContainer" Orientation="Vertical" DockedSize="995,876">
 					<UIElement xsi:type="Workspace">
 						<Content xsi:type="TabbedMdiHost">
-							<Content xsi:type="TabbedMdiContainer" DockedSize="995,720" SelectedWindowUniqueId="dfa83aeb-ded0-4f39-a707-a760e187ac5f" />
+							<Content xsi:type="TabbedMdiContainer" SelectedWindowUniqueId="e8c2e767-6b59-4502-b863-0da42ca665e9" />
 						</Content>
 					</UIElement>
 					<UIElement xsi:type="ToolWindowContainer" DockedSize="0,0">
@@ -88,11 +88,11 @@
 		<ToolWindow UniqueId="f6ad8484-8169-4b52-8a45-c0c34b8ad876" Name="Jog" IsOpen="false" State="Docked" />
 		<ToolWindow UniqueId="b268cb4b-9336-4c0d-b985-0286359405c2" Name="RecordPlayer" ContainerDockedSize="1249,193" IsOpen="false" LastActiveDateTime="2018-02-28T09:46:07.8883588+01:00" StandardMdiBounds="0,0,300,200" State="Docked" />
 		<ToolWindow UniqueId="a71b607d-11de-4941-a977-2d1d4d2a8f7b" Name="DocumentOutline" IsOpen="false" StandardMdiBounds="0,0,300,200" State="Docked" />
-		<ToolWindow UniqueId="c9c15219-ad0f-4a61-aaef-c6ec15b2f8ae" IsOpen="false" State="Docked" />
+		<ToolWindow UniqueId="a639fe7c-f7b6-4fed-aa67-2e07f20fb594" IsOpen="false" State="Docked" />
 		<ToolWindow UniqueId="9cdb7a09-d8f8-46d1-afd7-6f1dece1fbc8" Name="AioControlPanel" IsOpen="false" StandardMdiBounds="0,0,300,200" State="Docked" />
 		<ToolWindow UniqueId="4f5d8d9a-ddec-400a-bbb7-ad867f6fb6e0" Name="DioControlPanel" IsOpen="false" StandardMdiBounds="0,0,300,200" State="Docked" />
 		<ToolWindow UniqueId="c9274c85-4013-492f-90d0-c1edab5a8f97" Name="EmulatorVersions" ContainerDockedSize="1538,1200" IsOpen="false" StandardMdiBounds="0,0,300,200" State="Document" />
-		<ToolWindow UniqueId="4734bbb8-e6cf-4a0c-baf5-8c4f6d36e454" Name="_DN_8dfc529521fb53d8ddf31af6d601f860" ContainerDockedSize="380,200" IsOpen="true" LastActiveDateTime="2021-04-12T17:51:18.3853937+02:00" State="Docked">
+		<ToolWindow UniqueId="4734bbb8-e6cf-4a0c-baf5-8c4f6d36e454" Name="_DN_8dfc529521fb53d8ddf31af6d601f860" ContainerDockedSize="380,200" IsOpen="true" LastActiveDateTime="2021-04-13T08:57:47.9845306+02:00" State="Docked">
 			<Tag xsi:type="xsd:string">SRS.Emulator.Views.EmulatorCs9View?Controller=Controller1</Tag>
 		</ToolWindow>
 	</ToolWindows>
