@@ -6,7 +6,7 @@
     </Locals>
     <Code><![CDATA[begin
 
-  call print("Welcome to the CMS module production")
+  call print("Welcome to the TEPX module production")
 
   // -- required for local automatic?
   if esStatus() == 1
@@ -78,6 +78,7 @@
   statusCleanupChuck2 = colorGray
   
   speedFactor = 1
+  call setSpeed()
   
   // -- display user page
   userPage("firstpage")
