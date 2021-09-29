@@ -43,12 +43,14 @@
     if bDoAirex==true
       
       statusDoAirex = colorRunning
+      call setSpeed()
       
       if bSkipGlue[0]==false
         call print("picking glue stamp")
         // -- pick glue stamp
         call moveDown(airexGlueStampHome, mVerySlow, trZero)
         switchMagnet=true
+        // FIXME add intermediate step to trZclose?
         movel(appro(airexGlueStampHome, trZsafe), tTool, mVerySlow)
 
         // -- dip stamp into glue before starting the normal procedure
