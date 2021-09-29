@@ -77,6 +77,8 @@
   statusDoModules     = colorGray
   statusCleanupChuck2 = colorGray
   
+  speedFactor = 1
+  
   // -- display user page
   userPage("firstpage")
 

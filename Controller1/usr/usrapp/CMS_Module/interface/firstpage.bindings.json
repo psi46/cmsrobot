@@ -112,6 +112,22 @@
       "size": 1,
       "direction": "r",
       "refresh": 1
+    },
+    {
+      "id": "nmb1",
+      "attribute": "value",
+      "data": "speedFactor[0]",
+      "size": 1,
+      "direction": "r",
+      "refresh": 1
+    },
+    {
+      "id": "rng1",
+      "attribute": "value",
+      "data": "speedFactor[0]",
+      "size": 1,
+      "direction": "rw",
+      "refresh": 1
     }
   ],
   "callbacks": [
