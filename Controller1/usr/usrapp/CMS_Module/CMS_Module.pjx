@@ -43,6 +43,7 @@
     <Program file="print.pgx" />
     <Program file="selectedCheck.pgx" />
     <Program file="selectedClear.pgx" />
+    <Program file="setSpeed.pgx" />
     <Program file="start.pgx" />
     <Program file="stop.pgx" />
     <Program file="toggleValve.pgx" />
