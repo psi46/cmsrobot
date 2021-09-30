@@ -6,7 +6,7 @@
     </Locals>
     <Code><![CDATA[begin
   while true
-
+    delay(1)
     if bDoAirex==true
       call selectedCheck()
       call print("starting doAirex")
@@ -15,6 +15,7 @@
       if !bSelectItem
         // -- check all
         call print("check vacuum on all")
+        delay(waitGlue)
         for nAirexIdx = 0 to 5
           if statusValves[sensorValve[nAirexIdx]] == 0
             bDoAirex = false
@@ -25,6 +26,7 @@
       else 
         // -- check only those that are selected
         call print("check vacuum on selection")
+        delay(waitGlue)
         for nAirexIdx = 0 to 5
           if statusValves[sensorValve[nAirexIdx]] == 0 and (bSelectedItems[nAirexIdx]==true)
             bDoAirex = false
@@ -56,8 +58,6 @@
         call moveDown(glueFirstPoint[0], mSlow, trZero)
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mSlow)
-        // movej(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
-        // movej(appro(glueFirstPoint[0], trZsafe), tTool, mSlow)
       
         // -- apply glue stamp to all positions:
         //    divide approach onto /from glue position into two steps
@@ -70,16 +70,13 @@
               delay(waitGlue)
               
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
-              //   movej(appro(gluePickPoint[nAirexIdx], trZclose), tTool, mVerySlow)
-              //   movej(appro(gluePickPoint[nAirexIdx], trZsafe), tTool, mSlow)
-        
+            
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
               call moveDown(airexFinal[nAirexIdx], mSlow, trStamp)
               delay(waitGlue)
               call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
-              //  movej(appro(airexFinal[nAirexIdx], trZclose), tTool, mExtremelySlow)
-              //  movej(appro(airexFinal[nAirexIdx], trZsafe), tTool, mSlow)
+              
             endIf
           endIf
         endFor
@@ -100,6 +97,9 @@
         call print("handling selected airex frames")
       endIf
       
+      // -- move over airex chuck position
+      movel(appro(chuck1[0], trZsafe), tTool, mNomSpeed)
+      
       // -- pick weighted vacuum chucks and lift airex frames to HDIs
       for nAirexIdx=0 to 5
         if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
@@ -107,7 +107,7 @@
             // -- move over/to chuck
             call moveDown(chuck1[nAirexIdx], mVerySlow, trZero)
             // -- the following cures the click when the chuck 'jumps' up a bit
-            movel(appro(chuck1[nAirexIdx], trDownTwo), tTool, mVerySlow)
+            movel(appro(chuck1[nAirexIdx], trPressTwo), tTool, mVerySlow)
             waitEndMove()
          
             // -- pick chuck and move up
@@ -128,13 +128,14 @@
             delay(waitShort)
 
             // -- move up with airex frame
+            call print("placing airex frame " + toString("1.0", nAirexIdx))
             movel(appro(airexInitial[nAirexIdx], trZclose), tTool, mVerySlow)
             // waitEndMove()
             movel(appro(airexInitial[nAirexIdx], trZsafe), tTool, mSlow)
             // likely not required waitEndMove()
           
             // -- move to final airex position and put down 
-            call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trZero)
+            call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trUpTwo)
          
             switchVac0   = false
             switchVac1   = false
