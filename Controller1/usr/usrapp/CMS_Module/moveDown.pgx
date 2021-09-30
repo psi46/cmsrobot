@@ -19,12 +19,13 @@
     speed[1] = mSlow
     speed[2] = mVerySlow
   else 
-    speed[0] = mNomSpeed
-    speed[1] = mSlow
+    speed[0] = mFast
+    speed[1] = mNomSpeed
     speed[2] = mSlow
   endIf
   
   // -- move safely over location where and make sure you reach it. Do not blend!
+  //    (the movej ensures that things do not hit Carteian position out of joint limits)
   movej(appro(where, trZsafe), tTool, speed[0])
   waitEndMove()
   // -- move down with decreasing speeds. Not sure whether this gets "blended" away

@@ -41,22 +41,21 @@
     
     // -- return above does not work. It terminates the task!
     if bDoAirex==true
-      
       statusDoAirex = colorRunning
       call setSpeed()
       
       if bSkipGlue[0]==false
         call print("picking glue stamp")
         // -- pick glue stamp
-        call moveDown(airexGlueStampHome, mVerySlow, trZero)
+        call moveDown(airexGlueStampHome, mSlow, trZero)
         switchMagnet=true
         // FIXME add intermediate step to trZclose?
         movel(appro(airexGlueStampHome, trZsafe), tTool, mVerySlow)
 
         // -- dip stamp into glue before starting the normal procedure
-        call moveDown(glueFirstPoint[0], mVerySlow, trZero)
+        call moveDown(glueFirstPoint[0], mSlow, trZero)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mVerySlow)
+        call moveStampUp(glueFirstPoint[0], mSlow)
         // movej(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
         // movej(appro(glueFirstPoint[0], trZsafe), tTool, mSlow)
       
@@ -67,17 +66,16 @@
         for nAirexIdx=0 to 5
           if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
             if bDoAirex==true
-              call moveDown(gluePickPoint[nAirexIdx], mVerySlow, trZero)
-            
-           
+              call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero)         
               delay(waitGlue)
+              
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
               //   movej(appro(gluePickPoint[nAirexIdx], trZclose), tTool, mVerySlow)
               //   movej(appro(gluePickPoint[nAirexIdx], trZsafe), tTool, mSlow)
         
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
-              call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trStamp)
+              call moveDown(airexFinal[nAirexIdx], mSlow, trStamp)
               delay(waitGlue)
               call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
               //  movej(appro(airexFinal[nAirexIdx], trZclose), tTool, mExtremelySlow)
@@ -88,10 +86,11 @@
 
         // -- Drop glue stamp
         call print("put away glue stamp")
-        call moveDown(airexGlueStampEnd, mExtremelySlow, trZero)
+        movel(appro(airexGlueStampEnd, trZsafe), tTool, mNomSpeed)
+        call moveDown(airexGlueStampEnd, mVerySlow, trZero)
        
         switchMagnet = false
-        movel(appro(airexGlueStampEnd, trZsafe), tTool, mVerySlow)
+        movel(appro(airexGlueStampEnd, trZsafe), tTool, mSlow)
 
       endIf
       
@@ -108,7 +107,7 @@
             // -- move over/to chuck
             call moveDown(chuck1[nAirexIdx], mVerySlow, trZero)
             // -- the following cures the click when the chuck 'jumps' up a bit
-            movel(appro(chuck1[nAirexIdx], trDownTwo), tTool, mExtremelySlow)
+            movel(appro(chuck1[nAirexIdx], trDownTwo), tTool, mVerySlow)
             waitEndMove()
          
             // -- pick chuck and move up
