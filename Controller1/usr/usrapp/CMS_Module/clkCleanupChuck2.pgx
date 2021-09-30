@@ -9,7 +9,7 @@
   statusCleanupChuck2 = colorRunning
 
   call selectedCheck()
-  
+  call print("cleanup (modules) start")
   // -- pick vacuum chuck2's and put them back to their original place
   for nIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nIdx]==true)
