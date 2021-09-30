@@ -27,7 +27,7 @@
     mNomSpeed      = mSpeedArray[7]
     mFast          = mSpeedArray[9]
   elseIf speedFactor >= 5
-    mExtremelySlow = mSpeedArray[5]
+    mExtremelySlow = mSpeedArray[4]
     mVerySlow      = mSpeedArray[6]
     mSlow          = mSpeedArray[7]
     mNomSpeed      = mSpeedArray[8]
