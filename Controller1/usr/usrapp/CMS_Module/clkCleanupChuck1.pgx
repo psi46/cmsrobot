@@ -9,15 +9,16 @@
   statusCleanupChuck1 = colorRunning
 
   call selectedCheck()
+  
+  call print("cleanup (airex) start")
+  // -- move over airex chuck position
+  movel(appro(airexFinal[0], trZsafe), tTool, mNomSpeed)
  
   // -- pick vacuum chuck1's and put them back to their original place
   for nAirexIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
       // -- move over final airex position (where the chuck is from gluing) and down
       call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trUpTwo)
-      //movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mNomSpeed)
-      //movel(airexFinal[nAirexIdx], tTool, mVerySlow)
-      //waitEndMove()
    
       // -- lift chuck1
       switchMagnet=true
@@ -26,16 +27,12 @@
 
       // -- move over/to initial chuck position
       call moveDown(chuck1[nAirexIdx], mVerySlow, trZero)
-      //movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mNomSpeed)
-      //waitEndMove()
-      //movel(chuck1[nAirexIdx], tTool, mVerySlow)
-      //waitEndMove()
 
       // -- release it
       switchMagnet=false
 
       // -- move up 
-      movel(appro(chuck1[nAirexIdx], trZsafe) ,tTool, mSlow)
+      movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mSlow)
     endIf
   endFor
  
