@@ -365,5 +365,17 @@
     <Data name="jPosition" access="private" xsi:type="array" type="jointRs" size="1" />
     <Data name="sPosition" access="private" xsi:type="array" type="string" size="1" />
     <Data name="bCleanup" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="speedFactor" access="private" xsi:type="array" type="num" size="1" />
+    <Data name="mSpeedArray" access="private" xsi:type="array" type="mdesc" size="10">
+      <Value key="0" accel="0.05" vel="0.05" decel="0.05" tmax="0.05" rmax="0.05" leave="1" reach="1" />
+      <Value key="1" accel="1" vel="1" decel="1" tmax="1" rmax="1" leave="2" reach="2" />
+      <Value key="2" accel="2" vel="2" decel="2" tmax="2" rmax="2" leave="2" reach="2" />
+      <Value key="3" accel="5" vel="5" decel="5" tmax="5" rmax="5" leave="5" reach="5" />
+      <Value key="4" accel="10" vel="10" decel="10" tmax="10" rmax="10" leave="10" reach="10" />
+      <Value key="5" accel="15" vel="15" decel="15" tmax="15" rmax="15" leave="10" reach="10" />
+      <Value key="6" accel="20" vel="20" decel="20" tmax="20" rmax="20" leave="10" reach="10" />
+      <Value key="7" accel="50" vel="50" decel="50" tmax="50" rmax="50" leave="20" reach="20" />
+      <Value key="8" accel="80" vel="80" decel="80" tmax="80" rmax="80" leave="20" reach="20" />
+    </Data>
   </Datas>
 </Database>
