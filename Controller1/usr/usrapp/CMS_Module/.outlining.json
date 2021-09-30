@@ -464,43 +464,6 @@
     },
     {
       "mode": 3,
-      "name": "moveDown",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 306,
-          "isCollapsed": false
-        },
-        {
-          "start": 122,
-          "end": 223,
-          "isCollapsed": false
-        },
-        {
-          "start": 226,
-          "end": 298,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck2",
-      "nodes": [
-        {
-          "start": 166,
-          "end": 975,
-          "isCollapsed": false
-        },
-        {
-          "start": 186,
-          "end": 966,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "stop",
       "nodes": [
         {
@@ -512,76 +475,8 @@
     },
     {
       "mode": 3,
-      "name": "selectedCheck",
-      "nodes": [
-        {
-          "start": 9,
-          "end": 237,
-          "isCollapsed": false
-        },
-        {
-          "start": 202,
-          "end": 229,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck1",
-      "nodes": [
-        {
-          "start": 165,
-          "end": 1107,
-          "isCollapsed": false
-        },
-        {
-          "start": 190,
-          "end": 1098,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "clkStop",
       "nodes": []
-    },
-    {
-      "mode": 3,
-      "name": "start",
-      "nodes": [
-        {
-          "start": 102,
-          "end": 151,
-          "isCollapsed": false
-        },
-        {
-          "start": 154,
-          "end": 239,
-          "isCollapsed": false
-        },
-        {
-          "start": 178,
-          "end": 231,
-          "isCollapsed": false
-        },
-        {
-          "start": 458,
-          "end": 550,
-          "isCollapsed": false
-        },
-        {
-          "start": 622,
-          "end": 684,
-          "isCollapsed": false
-        },
-        {
-          "start": 1882,
-          "end": 1973,
-          "isCollapsed": false
-        }
-      ]
     },
     {
       "mode": 3,
@@ -597,37 +492,6 @@
       "mode": 3,
       "name": "moveStampUp",
       "nodes": []
-    },
-    {
-      "mode": 3,
-      "name": "setSpeed",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 1038,
-          "isCollapsed": false
-        },
-        {
-          "start": 210,
-          "end": 413,
-          "isCollapsed": false
-        },
-        {
-          "start": 417,
-          "end": 620,
-          "isCollapsed": false
-        },
-        {
-          "start": 623,
-          "end": 826,
-          "isCollapsed": false
-        },
-        {
-          "start": 829,
-          "end": 1032,
-          "isCollapsed": false
-        }
-      ]
     },
     {
       "mode": 3,
@@ -737,101 +601,237 @@
     },
     {
       "mode": 3,
+      "name": "start",
+      "nodes": [
+        {
+          "start": 102,
+          "end": 151,
+          "isCollapsed": false
+        },
+        {
+          "start": 154,
+          "end": 239,
+          "isCollapsed": false
+        },
+        {
+          "start": 178,
+          "end": 231,
+          "isCollapsed": false
+        },
+        {
+          "start": 458,
+          "end": 550,
+          "isCollapsed": false
+        },
+        {
+          "start": 622,
+          "end": 684,
+          "isCollapsed": false
+        },
+        {
+          "start": 1882,
+          "end": 1973,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveDown",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 306,
+          "isCollapsed": false
+        },
+        {
+          "start": 122,
+          "end": 223,
+          "isCollapsed": false
+        },
+        {
+          "start": 226,
+          "end": 298,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck1",
+      "nodes": [
+        {
+          "start": 302,
+          "end": 934,
+          "isCollapsed": false
+        },
+        {
+          "start": 327,
+          "end": 925,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck2",
+      "nodes": [
+        {
+          "start": 203,
+          "end": 1012,
+          "isCollapsed": false
+        },
+        {
+          "start": 223,
+          "end": 1003,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "setSpeed",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 1038,
+          "isCollapsed": false
+        },
+        {
+          "start": 210,
+          "end": 413,
+          "isCollapsed": false
+        },
+        {
+          "start": 417,
+          "end": 620,
+          "isCollapsed": false
+        },
+        {
+          "start": 623,
+          "end": 826,
+          "isCollapsed": false
+        },
+        {
+          "start": 829,
+          "end": 1032,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "selectedCheck",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 236,
+          "isCollapsed": false
+        },
+        {
+          "start": 201,
+          "end": 228,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "doAirex",
       "nodes": [
         {
           "start": 8,
-          "end": 5742,
+          "end": 5558,
           "isCollapsed": false
         },
         {
-          "start": 24,
-          "end": 1059,
+          "start": 36,
+          "end": 1119,
           "isCollapsed": false
         },
         {
-          "start": 168,
-          "end": 948,
+          "start": 180,
+          "end": 1008,
           "isCollapsed": false
         },
         {
-          "start": 258,
-          "end": 519,
+          "start": 294,
+          "end": 555,
           "isCollapsed": false
         },
         {
-          "start": 291,
-          "end": 504,
+          "start": 327,
+          "end": 540,
           "isCollapsed": false
         },
         {
-          "start": 526,
-          "end": 936,
+          "start": 562,
+          "end": 996,
           "isCollapsed": false
         },
         {
-          "start": 637,
-          "end": 936,
+          "start": 697,
+          "end": 996,
           "isCollapsed": false
         },
         {
-          "start": 670,
-          "end": 921,
+          "start": 730,
+          "end": 981,
           "isCollapsed": false
         },
         {
-          "start": 955,
-          "end": 1042,
+          "start": 1015,
+          "end": 1102,
           "isCollapsed": false
         },
         {
-          "start": 1131,
-          "end": 5731,
+          "start": 1191,
+          "end": 5547,
           "isCollapsed": false
         },
         {
-          "start": 1226,
-          "end": 3429,
+          "start": 1279,
+          "end": 3065,
+          "isCollapsed": false
+        },
+        {
+          "start": 2032,
+          "end": 2752,
+          "isCollapsed": false
+        },
+        {
+          "start": 2063,
+          "end": 2737,
           "isCollapsed": false
         },
         {
           "start": 2128,
-          "end": 3174,
+          "end": 2721,
           "isCollapsed": false
         },
         {
-          "start": 2159,
-          "end": 3159,
+          "start": 3079,
+          "end": 3219,
           "isCollapsed": false
         },
         {
-          "start": 2224,
-          "end": 3143,
+          "start": 3149,
+          "end": 3207,
           "isCollapsed": false
         },
         {
-          "start": 3443,
-          "end": 3583,
+          "start": 3410,
+          "end": 5261,
           "isCollapsed": false
         },
         {
-          "start": 3513,
-          "end": 3571,
+          "start": 3439,
+          "end": 5248,
           "isCollapsed": false
         },
         {
-          "start": 3667,
-          "end": 5445,
-          "isCollapsed": false
-        },
-        {
-          "start": 3696,
-          "end": 5432,
-          "isCollapsed": false
-        },
-        {
-          "start": 3759,
-          "end": 5418,
+          "start": 3502,
+          "end": 5234,
           "isCollapsed": false
         }
       ]
