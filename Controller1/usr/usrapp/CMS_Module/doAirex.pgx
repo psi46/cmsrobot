@@ -5,6 +5,9 @@
       <Local name="nAirexIdx" type="num" xsi:type="array" size="1" />
     </Locals>
     <Code><![CDATA[begin
+  // FIXME: I need a local variable to ensure that the vacuum check is run before the real work!
+  // Else a race condition exists that the 'real work' could be activated before the check is done. 
+  // the delay(1) below is bogus!
   while true
     delay(1)
     if bDoAirex==true
