@@ -56,8 +56,9 @@
         // -- dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[0], mVerySlow, trZero)
         delay(waitGlue)
-        movej(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
-        movej(appro(glueFirstPoint[0], trZsafe), tTool, mSlow)
+        call moveStampUp(glueFirstPoint[0], mVerySlow)
+        // movej(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
+        // movej(appro(glueFirstPoint[0], trZsafe), tTool, mSlow)
       
         // -- apply glue stamp to all positions:
         //    divide approach onto /from glue position into two steps
@@ -65,18 +66,23 @@
         //    (2) extremely slowly down to/up from glue to trApproach 
         for nAirexIdx=0 to 5
           if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
-            call moveDown(gluePickPoint[nAirexIdx], mVerySlow, trZero)
+            if bDoAirex==true
+              call moveDown(gluePickPoint[nAirexIdx], mVerySlow, trZero)
             
-            call print("applying glue to position " + toString("1.0", nAirexIdx))
-            delay(waitGlue)
-            movej(appro(gluePickPoint[nAirexIdx], trZclose), tTool, mVerySlow)
-            movej(appro(gluePickPoint[nAirexIdx], trZsafe), tTool, mSlow)
+           
+              delay(waitGlue)
+              call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
+              //   movej(appro(gluePickPoint[nAirexIdx], trZclose), tTool, mVerySlow)
+              //   movej(appro(gluePickPoint[nAirexIdx], trZsafe), tTool, mSlow)
         
-            // -- move to where the glue should be applied (the final airex position)
-            call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trStamp)
-            delay(waitGlue)
-            movej(appro(airexFinal[nAirexIdx], trZclose), tTool, mExtremelySlow)
-            movej(appro(airexFinal[nAirexIdx], trZsafe), tTool, mSlow)
+              // -- move to where the glue should be applied (the final airex position)
+              call print("applying glue to position " + toString("1.0", nAirexIdx))
+              call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trStamp)
+              delay(waitGlue)
+              call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
+              //  movej(appro(airexFinal[nAirexIdx], trZclose), tTool, mExtremelySlow)
+              //  movej(appro(airexFinal[nAirexIdx], trZsafe), tTool, mSlow)
+            endIf
           endIf
         endFor
 
@@ -98,47 +104,49 @@
       // -- pick weighted vacuum chucks and lift airex frames to HDIs
       for nAirexIdx=0 to 5
         if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
-          // -- move over/to chuck
-          call moveDown(chuck1[nAirexIdx], mVerySlow, trZero)
-          // -- the following cures the click when the chuck 'jumps' up a bit
-          movel(appro(chuck1[nAirexIdx], trDownTwo), tTool, mExtremelySlow)
-          waitEndMove()
+          if bDoAirex==true
+            // -- move over/to chuck
+            call moveDown(chuck1[nAirexIdx], mVerySlow, trZero)
+            // -- the following cures the click when the chuck 'jumps' up a bit
+            movel(appro(chuck1[nAirexIdx], trDownTwo), tTool, mExtremelySlow)
+            waitEndMove()
          
-          // -- pick chuck and move up
-          switchMagnet=true
-          delay(waitShort)
-          call print("picking airex frame " + toString("1.0", nAirexIdx))
-          movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mVerySlow)
-          waitEndMove()
+            // -- pick chuck and move up
+            switchMagnet=true
+            delay(waitShort)
+            call print("picking airex frame " + toString("1.0", nAirexIdx))
+            movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mVerySlow)
+            waitEndMove()
           
-          // -- move with chuck to airex position
-          call moveDown(airexInitial[nAirexIdx], mVerySlow, trZero)
+            // -- move with chuck to airex position
+            call moveDown(airexInitial[nAirexIdx], mVerySlow, trZero)
         
-          // -- release airex vacuum to allow picking up
-          call toggleValve(airexValve[nAirexIdx])
-          delay(waitShort)
-          switchVac0=true
-          switchVac1=true
-          delay(waitShort)
+            // -- release airex vacuum to allow picking up
+            call toggleValve(airexValve[nAirexIdx])
+            delay(waitShort)
+            switchVac0=true
+            switchVac1=true
+            delay(waitShort)
 
-          // -- move up with airex frame
-          movel(appro(airexInitial[nAirexIdx], trZclose), tTool, mVerySlow)
-          // waitEndMove()
-          movel(appro(airexInitial[nAirexIdx], trZsafe), tTool, mSlow)
-          // likely not required waitEndMove()
+            // -- move up with airex frame
+            movel(appro(airexInitial[nAirexIdx], trZclose), tTool, mVerySlow)
+            // waitEndMove()
+            movel(appro(airexInitial[nAirexIdx], trZsafe), tTool, mSlow)
+            // likely not required waitEndMove()
           
-          // -- move to final airex position and put down 
-          call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trZero)
+            // -- move to final airex position and put down 
+            call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trZero)
          
-          switchVac0   = false
-          switchVac1   = false
-          switchMagnet = false
+            switchVac0   = false
+            switchVac1   = false
+            switchMagnet = false
 
-          delay(waitShort)
+            delay(waitShort)
 
-          // -- move up again
-          movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mVerySlow)
-          waitEndMove()
+            // -- move up again
+            movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mVerySlow)
+            waitEndMove()
+          endIf
         endIf
       endFor
 

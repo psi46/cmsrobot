@@ -3,13 +3,14 @@
   <Program name="moveStampUp">
     <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
       <Parameter name="where" type="pointRs" xsi:type="element" />
+      <Parameter name="iniSpeed" type="mdesc" xsi:type="element" />
     </Parameters>
     <Code><![CDATA[begin
-  movej(appro(where, trUpTwo), tTool, mExtremelySlow)
+  movej(appro(where, trUpTwo), tTool, iniSpeed)
   waitEndMove()
-  movej(appro(where, trZclose), tTool, mVerySlow)
+  movej(appro(where, trZclose), tTool, mSlow)
   waitEndMove()
-  movej(appro(where, trZsafe), tTool, mSlow)
+  movej(appro(where, trZsafe), tTool, mNomSpeed)
   waitEndMove()
 end]]></Code>
   </Program>
