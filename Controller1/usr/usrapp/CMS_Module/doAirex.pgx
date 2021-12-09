@@ -117,7 +117,7 @@
             switchMagnet=true
             delay(waitShort)
             call print("picking airex frame " + toString("1.0", nAirexIdx))
-            movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mVerySlow)
+            movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mSlow)
             waitEndMove()
           
             // -- move with chuck to airex position
@@ -138,7 +138,7 @@
             // likely not required waitEndMove()
           
             // -- move to final airex position and put down 
-            call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trUpTwo)
+            call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero)
          
             switchVac0   = false
             switchVac1   = false
@@ -147,7 +147,8 @@
             delay(waitShort)
 
             // -- move up again
-            movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mVerySlow)
+            movel(appro(airexFinal[nAirexIdx], trZclose), tTool, mVerySlow)
+            movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mSlow)
             waitEndMove()
           endIf
         endIf
