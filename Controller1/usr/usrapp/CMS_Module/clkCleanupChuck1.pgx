@@ -13,12 +13,13 @@
   call print("cleanup (airex) start")
   // -- move over airex chuck position
   movel(appro(airexFinal[0], trZsafe), tTool, mNomSpeed)
+  waitEndMove()  
  
   // -- pick vacuum chuck1's and put them back to their original place
   for nAirexIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
       // -- move over final airex position (where the chuck is from gluing) and down
-      call moveDown(airexFinal[nAirexIdx], mExtremelySlow, trUpTwo)
+      call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero)
    
       // -- lift chuck1
       switchMagnet=true
