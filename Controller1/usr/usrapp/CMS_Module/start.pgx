@@ -6,7 +6,7 @@
     </Locals>
     <Code><![CDATA[begin
 
-  call print("Welcome to TEPX module production 2021/12/09-01")
+  call print("Welcome to TEPX module production 2021/12/09-03")
 
   // -- required for local automatic?
   if esStatus() == 1
@@ -27,9 +27,13 @@
   colorError   = "red"
   
   // -- initialize valve buttons and status
-  for nIndex=0 to 31
-    statusValves[nIndex]=0
-    colorValveButton[nIndex]=colorOff
+  call setValveStatus()
+  for nIndex = 0 to 31
+    if statusValves[nIndex] == 0
+      colorValveButton[nIndex] = colorOff
+    else
+      colorValveButton[nIndex] = colorOn
+    endIf
   endFor
 
   // -- initialize selection to be all on and bSelectItem to be off
@@ -43,7 +47,8 @@
   switchVac0   = false
   switchVac1   = false
   bDoAirex     = false
-
+  bGlueGlass   = false
+  
   // -- airex valve indices
   airexValve[0]=12
   airexValve[1]=6
@@ -91,6 +96,7 @@
 
   taskCreate "doAirexTask", 10, doAirex()
   taskCreate "doModulesTask", 10, doModules()
+  taskCreate "doGlueGlass", 10, glueGlass()
   
   while true
     jPosition = herej()
