@@ -1,34 +1,171 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
   <Program name="glueGlass">
+    <Locals>
+      <Local name="nIdx" type="num" xsi:type="array" size="1" />
+    </Locals>
     <Code><![CDATA[begin
-  call park1()
-
   while true
-
-    if bDoTest==true
-      if statusValves[hdiValve[0]]==0 or statusValves[sensorValve[0]]==0
-        userPageAlert("No vaccum applied to airex #0. Fix this first!")
-        return
-      elseIf statusValves[hdiValve[1]]==0
-        userPageAlert("No vaccum applied to airex #1. Fix this first!")
-        return
-      elseIf statusValves[hdiValve[2]]==0
-        userPageAlert("No vaccum applied to airex #2. Fix this first!")
-        return
-      elseIf statusValves[hdiValve[3]]==0
-        userPageAlert("No vaccum applied to airex #3. Fix this first!")
-        return
-      elseIf statusValves[hdiValve[4]]==0
-        userPageAlert("No vaccum applied to airex #4. Fix this first!")
-        return
-      elseIf statusValves[hdiValve[5]]==0
-        userPageAlert("No vaccum applied to airex #5. Fix this first!")
-        return
+    delay(1)
+    if bGlueGlass==true
+      call selectedCheck()
+      call print("starting glueGlass test")
+      
+      // -- check that relevant vacuum is active
+      if !bSelectItem
+        // -- check all
+        call print("check vacuum on all")
+        delay(waitGlue)
+        for nIdx = 0 to 5
+          if statusValves[sensorValve[nIdx]] == 0
+            bGlueGlass = false
+            statusDoAirex = colorError
+            call print("Error: no vacuum at position " + toString("1.0", nIdx))
+          endIf
+        endFor
+      else 
+        // -- check only those that are selected
+        call print("check vacuum on selection")
+        delay(waitGlue)
+        for nIdx = 0 to 5
+          if statusValves[sensorValve[nIdx]] == 0 and (bSelectedItems[nIdx]==true)
+            bGlueGlass = false
+            statusDoAirex = colorError
+            call print("Error: no vacuum at position " + toString("1.0", nIdx))
+          endIf
+        endFor
       endIf
+      if bGlueGlass == false
+        call print("Fix missing vacuum and try again")
+      endIf
+      
     endIf
+    
+    // -- return above does not work. It terminates the task!
+    if bGlueGlass==true
+      call setSpeed()
+      
+      if bSkipGlue[0]==false
+        call print("picking module glue stamp")
+        // -- pick glue stamp
+        call moveDown(moduleGlueStampHome, mSlow, trZero)
+        switchMagnet=true
+        // FIXME add intermediate step to trZclose?
+        movel(appro(moduleGlueStampHome, trZsafe), tTool, mSlow)
 
+        // -- dip stamp into glue before starting the normal procedure
+        call moveDown(glueFirstPoint[0], mSlow, trZero)
+        delay(waitGlue)
+        call moveStampUp(glueFirstPoint[0], mSlow)
+      
+        // -- apply glue stamp to all positions:
+        //    divide approach onto /from glue position into two steps
+        //    (1) slowly to trApproach above it
+        //    (2) extremely slowly down to/up from glue to trApproach 
+        for nIdx=0 to 5
+          if !bSelectItem or (bSelectedItems[nIdx]==true)
+            call setSpeed()
+            if bGlueGlass==true
+              call moveDown(gluePickPoint2[nIdx], mSlow, trZero)         
+              delay(waitGlue)
+              
+              call moveStampUp(gluePickPoint2[nIdx], mVerySlow)
+            
+              // -- move to where the glue should be applied (the final airex position)
+              call print("applying glue to position " + toString("1.0", nIdx))
+              call moveDown(hdiFinal[nIdx], mSlow, trStamp)
+              delay(waitGlue)
+              call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
+              
+            endIf
+          endIf
+        endFor
+
+        // -- Drop glue stamp
+        call setSpeed()
+        call print("put away glue stamp")
+        movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
+        call moveDown(moduleGlueStampEnd, mVerySlow, trZero)
+       
+        switchMagnet = false
+        movel(appro(moduleGlueStampEnd, trZsafe), tTool, mSlow)
+
+      endIf
+      
+      if !bSelectItem
+        call print("handling all glasses")
+      else 
+        call print("handling selected glasses")
+      endIf
+      
+      // -- move over chuck2 position
+      movel(appro(chuck2[0], trZsafe), tTool, mNomSpeed)
+      
+      // -- pick weighted vacuum chucks and lift airex frames to HDIs
+      for nIdx=0 to 5
+        if !bSelectItem or (bSelectedItems[nIdx]==true)
+          call setSpeed()
+          if bGlueGlass==true
+            // -- move over/to chuck
+            call moveDown(chuck2[nIdx], mVerySlow, trZero)
+            // -- the following cures the click when the chuck 'jumps' up a bit
+            movel(appro(chuck2[nIdx], trPressTwo), tTool, mVerySlow)
+            waitEndMove()
+         
+            // -- pick chuck and move up
+            switchMagnet=true
+            delay(waitShort)
+            call print("picking module frame " + toString("1.0", nIdx))
+            movel(appro(chuck2[nIdx], trZsafe), tTool, mSlow)
+            waitEndMove()
+          
+            // -- move with chuck to hdi glass position
+            call moveDown(airexFinal[nIdx], mVerySlow, trZero)
+        
+            // -- release hdi vacuum to allow picking up hdi glass
+            call toggleValve(hdiValve[nIdx])
+            delay(waitShort)
+            switchVac0=true
+            switchVac1=true
+            delay(waitShort)
+
+            // -- move up with hdi glass
+            call print("placing hdi glass " + toString("1.0", nIdx))
+            movel(appro(airexFinal[nIdx], trZclose), tTool, mVerySlow)
+            // waitEndMove()
+            movel(appro(airexFinal[nIdx], trZsafe), tTool, mSlow)
+            // likely not required waitEndMove()
+          
+            // -- move to final airex position and put down 
+            call moveDown(hdiFinal[nIdx], mVerySlow, trZero)
+         
+            switchVac0   = false
+            switchVac1   = false
+            switchMagnet = false
+
+            delay(waitShort)
+
+            // -- move up again
+            movel(appro(hdiFinal[nIdx], trZclose), tTool, mVerySlow)
+            movel(appro(hdiFinal[nIdx], trZsafe), tTool, mSlow)
+            waitEndMove()
+          endIf
+        endIf
+      endFor
+
+      // -- move back somewhere
+      call print("parking robot")
+      waitEndMove()
+      movej(jInitialPosition, tTool, mNomSpeed)
+      waitEndMove()
+      statusDoAirex = colorOn
+      
+      call selectedClear()
+      bGlueGlass=false
+      call print("glueGlass done")
+    endIf
   endWhile
+
 end]]></Code>
   </Program>
 </Programs>
