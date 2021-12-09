@@ -24,6 +24,7 @@
     speed[2] = mSlow
   endIf
   
+  movej(appro(where, trZverySafe), tTool, speed[0])
   // -- move safely over location where and make sure you reach it. Do not blend!
   //    (the movej ensures that things do not hit Carteian position out of joint limits)
   movej(appro(where, trZsafe), tTool, speed[0])
