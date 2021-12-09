@@ -6,7 +6,7 @@
       <Parameter name="iniSpeed" type="mdesc" xsi:type="element" />
     </Parameters>
     <Code><![CDATA[begin
-  movej(appro(where, trUpTwo), tTool, iniSpeed)
+  movej(appro(where, trUpThree), tTool, iniSpeed)
   waitEndMove()
   movej(appro(where, trZclose), tTool, mSlow)
   waitEndMove()
