@@ -11,7 +11,7 @@
     <Program file="clkCleanupChuck2.pgx" />
     <Program file="clkDoAirex.pgx" />
     <Program file="clkDoModules.pgx" />
-    <Program file="clkDoTest.pgx" />
+    <Program file="clkGlueGlass.pgx" />
     <Program file="clkPark1.pgx" />
     <Program file="clkPark2.pgx" />
     <Program file="clkStop.pgx" />
@@ -44,6 +44,7 @@
     <Program file="selectedCheck.pgx" />
     <Program file="selectedClear.pgx" />
     <Program file="setSpeed.pgx" />
+    <Program file="setValveStatus.pgx" />
     <Program file="start.pgx" />
     <Program file="stop.pgx" />
     <Program file="toggleValve.pgx" />

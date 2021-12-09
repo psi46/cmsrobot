@@ -162,12 +162,6 @@
       "priority": 10
     },
     {
-      "id": "btn_doTest",
-      "event": "click",
-      "data": "glueGlass",
-      "priority": 10
-    },
-    {
       "id": "btn_CleanupChuck1",
       "event": "click",
       "data": "clkCleanupChuck1",
@@ -183,6 +177,12 @@
       "id": "btn_CleanupChuck2",
       "event": "click",
       "data": "clkCleanupChuck2",
+      "priority": 10
+    },
+    {
+      "id": "btn_doTest",
+      "event": "click",
+      "data": "clkGlueGlass",
       "priority": 10
     }
   ],

@@ -73,7 +73,7 @@
               movej(appro(gluePickPoint2[nIdx], trZsafe), tTool, mSlow)
 
               call moveDown(hdiFinal[nIdx], mExtremelySlow, trStamp)
-              call print("movinbg up again at " + toString("1.0", nIdx))
+              call print("moving up again at " + toString("1.0", nIdx))
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
             endIf
           endFor

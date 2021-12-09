@@ -4,7 +4,7 @@
     <Data name="bDoAirex" access="private" xsi:type="array" type="bool" size="1">
       <Value key="0" value="true" />
     </Data>
-    <Data name="bDoTest" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="bGlueGlass" access="private" xsi:type="array" type="bool" size="1" />
     <Data name="doJ206_EtherCAT_Box_1__CPX_FB37__Q0" access="public" xsi:type="array" type="dio" size="1">
       <Value key="0" link="J206_EtherCAT\Box_1_(CPX-FB37)\%Q0" />
     </Data>
@@ -372,16 +372,20 @@
       <Value key="2" accel="2" vel="2" decel="2" tmax="2" rmax="2" leave="2" reach="2" />
       <Value key="3" accel="5" vel="5" decel="5" tmax="5" rmax="5" leave="5" reach="5" />
       <Value key="4" accel="10" vel="10" decel="10" tmax="10" rmax="10" leave="10" reach="10" />
-      <Value key="5" accel="15" vel="15" decel="15" tmax="15" rmax="15" leave="10" reach="10" />
-      <Value key="6" accel="20" vel="20" decel="20" tmax="20" rmax="20" leave="10" reach="10" />
-      <Value key="7" accel="50" vel="50" decel="50" tmax="50" rmax="50" leave="20" reach="20" />
-      <Value key="8" accel="80" vel="80" decel="80" tmax="80" rmax="80" leave="20" reach="20" />
+      <Value key="5" accel="15" vel="15" decel="15" tmax="15" rmax="15" leave="20" reach="10" />
+      <Value key="6" accel="20" vel="20" decel="20" tmax="20" rmax="20" leave="20" reach="10" />
+      <Value key="7" accel="50" vel="50" decel="50" tmax="50" rmax="50" leave="40" reach="20" />
+      <Value key="8" accel="80" vel="80" decel="80" tmax="80" rmax="80" leave="40" reach="20" />
+      <Value key="9" leave="100" />
     </Data>
     <Data name="trDownTwo" access="private" xsi:type="array" type="trsf" size="1">
       <Value key="0" z="-2" />
     </Data>
     <Data name="trUpThree" access="private" xsi:type="array" type="trsf" size="1">
       <Value key="0" z="-9" />
+    </Data>
+    <Data name="trZverySafe" access="private" xsi:type="array" type="trsf" size="1">
+      <Value key="0" z="-80" />
     </Data>
   </Datas>
 </Database>

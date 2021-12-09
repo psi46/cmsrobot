@@ -853,3 +853,55 @@
 {"entry":{"val":"SP2 pendant is connected.","date":"2021-12-09T08:40:48","ts":"33.964275827","type":"key","lvl":"INFO","id":"0x2801"},"hash":"6bca0ad61b7c4aa92e"}
 {"entry":{"date":"2021-12-09T08:41:10","ts":"55.648588651","type":"msg","lvl":"INFO","id":"0x2402","val":"COM-PC: create session 127.0.0.1 on port 55669 id=#1"},"hash":"8ba6eee61d5fdf5da4"}
 {"entry":{"date":"2021-12-09T08:41:24","ts":"69.800034428","type":"msg","lvl":"INFO","id":"0x2402","val":"COM-PC: destroy session 127.0.0.1 on port 55669 id=#1"},"hash":"517321e13681962f7f"}
+{"entry":{"date":"2021-12-09T14:21:16","ts":"20461.024344939","type":"msg","lvl":"INFO","id":"0x2402","val":"COM-PC: create session 127.0.0.1 on port 59872 id=#2"},"hash":"e56ebbead92cdb335d"}
+{"entry":{"val":"Arm power enable request refused: cabinet working mode is remote or invalid.","date":"2021-12-09T14:22:18","ts":"20523.638914369","type":"key","lvl":"WARN","id":"0x4005"},"hash":"7443c0359655d4bd6d"}
+{"entry":{"val":"Settling arm power...","date":"2021-12-09T14:22:36","ts":"20541.199831850","type":"key","lvl":"INFO","id":"0x1603"},"hash":"e72600a9d273cac067"}
+{"entry":{"val":"Arm power settled.","date":"2021-12-09T14:22:37","ts":"20541.807780012","type":"key","lvl":"INFO","id":"0x1601"},"hash":"4df38a65e2c2d8d3fe"}
+{"entry":{"val":"Brakes: OPEN.","date":"2021-12-09T14:22:37","ts":"20542.242336818","type":"key","lvl":"INFO","id":"0x1403"},"hash":"7e12d7467cdaf4e85e"}
+{"entry":{"val":"Brakes: CLOSED.","date":"2021-12-09T14:25:58","ts":"20743.643801363","type":"key","lvl":"INFO","id":"0x1404"},"hash":"9094f001ceb04b7bf8"}
+{"entry":{"val":"Arm power shutdown...","date":"2021-12-09T14:25:59","ts":"20743.879762949","type":"key","lvl":"INFO","id":"0x1604"},"hash":"138f2a902e8e4b684e"}
+{"entry":{"val":"End of arm power shutdown phase.","date":"2021-12-09T14:25:59","ts":"20743.898498037","type":"key","lvl":"INFO","id":"0x1602"},"hash":"ef21572ca842d187ae"}
+{"entry":{"val":"Saving controller context...","date":"2021-12-09T14:26:02","ts":"20746.959772991","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"eea70151e47445d5f3"}
+{"entry":{"val":"CPU temperature: %g degC","data":[{"val":50.000000000}],"date":"2021-12-09T14:26:02","ts":"20747.187164962","type":"key","lvl":"INFO","id":"0x5B02"},"hash":"f23d7787680b18c01f"}
+{"entry":{"val":"Baseboard temperature: %g degC","data":[{"val":40.000000000}],"date":"2021-12-09T14:26:02","ts":"20747.187204550","type":"key","lvl":"INFO","id":"0x5B03"},"hash":"dfed30c25976e080c8"}
+{"entry":{"val":"CPU fan speed: %g RPM","data":[{"val":4000.000000000}],"date":"2021-12-09T14:26:02","ts":"20747.187254697","type":"key","lvl":"INFO","id":"0x5B04"},"hash":"3391dfc671248a9d63"}
+{"entry":{"val":"CPU Battery is OK","date":"2021-12-09T14:26:02","ts":"20747.187312761","type":"key","lvl":"INFO","id":"0x5B05"},"hash":"c7863e4daf1cca622f"}
+{"entry":{"val":"No CPU Overcurrent.","date":"2021-12-09T14:26:02","ts":"20747.187364371","type":"key","lvl":"INFO","id":"0x5B07"},"hash":"572f0e4ba993358778"}
+{"entry":{"val":"Arm power enable request refused: cabinet working mode is remote or invalid.","date":"2021-12-09T14:26:25","ts":"20770.586632188","type":"key","lvl":"WARN","id":"0x4005"},"hash":"e0f3c0eec9df41150f"}
+{"entry":{"val":"Settling arm power...","date":"2021-12-09T14:26:38","ts":"20782.962858555","type":"key","lvl":"INFO","id":"0x1603"},"hash":"8ba70b016e1602bcd0"}
+{"entry":{"val":"Arm power settled.","date":"2021-12-09T14:26:38","ts":"20783.565358443","type":"key","lvl":"INFO","id":"0x1601"},"hash":"6cdab42165dc431b4f"}
+{"entry":{"val":"Brakes: OPEN.","date":"2021-12-09T14:26:39","ts":"20783.999624641","type":"key","lvl":"INFO","id":"0x1403"},"hash":"54acf30b56980d22ef"}
+{"entry":{"val":"Brakes: CLOSED.","date":"2021-12-09T14:30:17","ts":"21001.743426825","type":"key","lvl":"INFO","id":"0x1404"},"hash":"29c9e8d7ffa18cbbdd"}
+{"entry":{"val":"Arm power shutdown...","date":"2021-12-09T14:30:17","ts":"21001.982320314","type":"key","lvl":"INFO","id":"0x1604"},"hash":"7f0753ca019cb3825b"}
+{"entry":{"val":"End of arm power shutdown phase.","date":"2021-12-09T14:30:17","ts":"21002.002568861","type":"key","lvl":"INFO","id":"0x1602"},"hash":"32564bace5e74a3d1d"}
+{"entry":{"val":"Saving controller context...","date":"2021-12-09T14:30:20","ts":"21005.240506358","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"0c56e5e577f639a1fa"}
+{"entry":{"val":"Arm power enable request refused: cabinet working mode is remote or invalid.","date":"2021-12-09T14:30:28","ts":"21012.873823484","type":"key","lvl":"WARN","id":"0x4005"},"hash":"b881e8f86dc7531245"}
+{"entry":{"val":"Settling arm power...","date":"2021-12-09T14:32:03","ts":"21108.589591655","type":"key","lvl":"INFO","id":"0x1603"},"hash":"78bfecd9e5ebe553dc"}
+{"entry":{"val":"Arm power settled.","date":"2021-12-09T14:32:04","ts":"21109.183832775","type":"key","lvl":"INFO","id":"0x1601"},"hash":"1ef9c1a9756304dc6f"}
+{"entry":{"val":"Brakes: OPEN.","date":"2021-12-09T14:32:05","ts":"21109.622094197","type":"key","lvl":"INFO","id":"0x1403"},"hash":"be5bfdad0c44fd1645"}
+{"entry":{"val":"Brakes: CLOSED.","date":"2021-12-09T14:46:56","ts":"22001.223926357","type":"key","lvl":"INFO","id":"0x1404"},"hash":"c4c0b83a00c1787669"}
+{"entry":{"val":"Arm power shutdown...","date":"2021-12-09T14:46:56","ts":"22001.466764338","type":"key","lvl":"INFO","id":"0x1604"},"hash":"e5157b3e8d95bdcbd1"}
+{"entry":{"val":"End of arm power shutdown phase.","date":"2021-12-09T14:46:56","ts":"22001.485665112","type":"key","lvl":"INFO","id":"0x1602"},"hash":"99fa4e8984a3b5b1c0"}
+{"entry":{"val":"Saving controller context...","date":"2021-12-09T14:46:59","ts":"22004.386959865","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"21118d69b56d1d6f71"}
+{"entry":{"val":"Arm power enable request refused: cabinet working mode is remote or invalid.","date":"2021-12-09T14:47:11","ts":"22015.941521761","type":"key","lvl":"WARN","id":"0x4005"},"hash":"95bd4e71f6b3c1bd60"}
+{"entry":{"val":"Settling arm power...","date":"2021-12-09T14:47:21","ts":"22025.761131729","type":"key","lvl":"INFO","id":"0x1603"},"hash":"1d5594594301e81f59"}
+{"entry":{"val":"Arm power settled.","date":"2021-12-09T14:47:21","ts":"22026.353805726","type":"key","lvl":"INFO","id":"0x1601"},"hash":"6029031502a44d7bd5"}
+{"entry":{"val":"Brakes: OPEN.","date":"2021-12-09T14:47:22","ts":"22026.790614977","type":"key","lvl":"INFO","id":"0x1403"},"hash":"4c88854f04126c252a"}
+{"entry":{"val":"Brakes: CLOSED.","date":"2021-12-09T15:13:17","ts":"23581.709566250","type":"key","lvl":"INFO","id":"0x1404"},"hash":"9c1d37b7f8b7e7d621"}
+{"entry":{"val":"Arm power shutdown...","date":"2021-12-09T15:13:17","ts":"23581.950053254","type":"key","lvl":"INFO","id":"0x1604"},"hash":"8ba993cc7b04a245df"}
+{"entry":{"val":"End of arm power shutdown phase.","date":"2021-12-09T15:13:17","ts":"23581.969770139","type":"key","lvl":"INFO","id":"0x1602"},"hash":"5756b596adb15c4668"}
+{"entry":{"val":"Saving controller context...","date":"2021-12-09T15:13:19","ts":"23584.678692415","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"cb46e652f1df6e86e5"}
+{"entry":{"val":"Arm power enable request refused: cabinet working mode is remote or invalid.","date":"2021-12-09T15:13:28","ts":"23593.478557636","type":"key","lvl":"WARN","id":"0x4005"},"hash":"8008592a4ac98d150c"}
+{"entry":{"val":"Settling arm power...","date":"2021-12-09T15:13:52","ts":"23617.603797808","type":"key","lvl":"INFO","id":"0x1603"},"hash":"f6a60a560d398b98c7"}
+{"entry":{"val":"Arm power settled.","date":"2021-12-09T15:13:53","ts":"23618.212501378","type":"key","lvl":"INFO","id":"0x1601"},"hash":"35642c6bfb8b5a4556"}
+{"entry":{"val":"Brakes: OPEN.","date":"2021-12-09T15:13:53","ts":"23618.642773818","type":"key","lvl":"INFO","id":"0x1403"},"hash":"98be702565f7036f73"}
+{"entry":{"val":"Saving controller context...","date":"2021-12-09T15:43:55","ts":"25420.078461980","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"5c6578929ad805c8d1"}
+{"entry":{"val":"The previous message appeared %d time(s)","data":[{"val":3}],"date":"2021-12-09T17:14:10","ts":"30827.352077610","type":"key","lvl":"INFO","id":"0x4A03"},"hash":"f43e0ebcb023ab2c40"}
+{"entry":{"val":"Brakes: CLOSED.","date":"2021-12-09T17:14:10","ts":"30835.631662616","type":"key","lvl":"INFO","id":"0x1404"},"hash":"e856f900ed807f3d2b"}
+{"entry":{"val":"Arm power shutdown...","date":"2021-12-09T17:14:11","ts":"30835.873957207","type":"key","lvl":"INFO","id":"0x1604"},"hash":"a5f1830e9e9ecc84c7"}
+{"entry":{"val":"End of arm power shutdown phase.","date":"2021-12-09T17:14:11","ts":"30835.893729222","type":"key","lvl":"INFO","id":"0x1602"},"hash":"75fe700d0ab2becb89"}
+{"entry":{"val":"Saving controller context...","date":"2021-12-09T17:14:12","ts":"30837.574723055","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"9850881c54312449fe"}
+{"entry":{"val":"Arm power enable request refused: cabinet working mode is remote or invalid.","date":"2021-12-09T17:14:24","ts":"30849.081966597","type":"key","lvl":"WARN","id":"0x4005"},"hash":"ca92531b3809ae6cda"}
+{"entry":{"val":"Settling arm power...","date":"2021-12-09T17:14:43","ts":"30868.236681805","type":"key","lvl":"INFO","id":"0x1603"},"hash":"487ab1416affb95e8d"}
+{"entry":{"val":"Arm power settled.","date":"2021-12-09T17:14:44","ts":"30868.838869385","type":"key","lvl":"INFO","id":"0x1601"},"hash":"b6d41da54ea9807c0c"}
+{"entry":{"val":"Brakes: OPEN.","date":"2021-12-09T17:14:44","ts":"30869.274635549","type":"key","lvl":"INFO","id":"0x1403"},"hash":"43f9371307a11348f4"}
