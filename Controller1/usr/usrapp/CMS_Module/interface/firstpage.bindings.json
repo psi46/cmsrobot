@@ -164,7 +164,7 @@
     {
       "id": "btn_doTest",
       "event": "click",
-      "data": "doTest",
+      "data": "glueGlass",
       "priority": 10
     },
     {
