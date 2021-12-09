@@ -7,3 +7,60 @@
 {"entry":{"date":"2021-04-13T08:48:09","type":"run","version":"3.0.0"}}
 {"entry":{"date":"2021-04-13T08:56:35","type":"run","version":"3.0.0"}}
 {"entry":{"date":"2021-04-13T08:57:59","ts":"86.012083912","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"77aca16b28e8d5f68f"}
+{"entry":{"date":"2021-04-13T09:08:08","type":"run","version":"3.0.0"}}
+{"entry":{"date":"2021-04-13T09:09:49","ts":"102.363125870","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"f11a12f2518b03b38b"}
+{"entry":{"date":"2021-09-27T09:42:01","type":"run","version":"3.0.0"}}
+{"entry":{"date":"2021-09-27T09:43:30","ts":"90.041819937","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"355f37617e2dc32d6d"}
+{"entry":{"date":"2021-09-29T14:02:45","ts":"188448.564918570","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"0c9fa7ebf83c99be91"}
+{"entry":{"date":"2021-09-29T14:02:55","ts":"188458.949269399","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"5a28060239092b8dc0"}
+{"entry":{"date":"2021-09-29T14:10:07","ts":"188890.768550048","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"e2301cb1fb03cccecc"}
+{"entry":{"date":"2021-09-29T14:10:07","ts":"188890.776403254","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"32caf903de2f780e49"}
+{"entry":{"date":"2021-09-29T14:10:08","ts":"188891.353624204","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"f04fe393864569ed3f"}
+{"entry":{"date":"2021-09-29T14:11:17","ts":"188960.491912487","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"a1aeec747809b3265f"}
+{"entry":{"date":"2021-09-29T14:11:17","ts":"188960.499966276","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"393d4d9b2e4994c196"}
+{"entry":{"date":"2021-09-29T14:11:29","ts":"188972.292448370","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"0ef91fc6e78cc61c51"}
+{"entry":{"date":"2021-09-29T14:47:36","ts":"191139.932655673","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"bd9c9add699f6f8b6d"}
+{"entry":{"date":"2021-09-29T14:47:36","ts":"191139.934423671","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"690830583ab42d3216"}
+{"entry":{"date":"2021-09-29T14:47:43","ts":"191147.179660722","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"ac6a3d8592794c733f"}
+{"entry":{"date":"2021-09-29T16:50:11","ts":"198494.542879153","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"8e89ccc20fbea2cbd2"}
+{"entry":{"date":"2021-09-29T16:50:11","ts":"198494.550309787","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"8740f3d0a475d4db06"}
+{"entry":{"date":"2021-09-29T16:50:11","ts":"198494.923488125","type":"msg","lvl":"ERROR","id":"0x5405","val":"(File clkPark2.pgx-line 9) Missing keyword : 'begin'"},"hash":"e4a08793fed93ffcc8"}
+{"entry":{"val":"The previous message appeared %d time(s)","data":[{"val":1}],"date":"2021-09-29T16:51:43","ts":"198519.862694687","type":"key","lvl":"INFO","id":"0x4A03"},"hash":"63ab7265f9c6a3bd62"}
+{"entry":{"date":"2021-09-29T16:51:43","ts":"198587.321397319","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"eb8ef6fd24aae36cf2"}
+{"entry":{"date":"2021-09-29T16:54:20","ts":"198743.692935808","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"94a91c38616c1d4374"}
+{"entry":{"date":"2021-09-29T16:54:20","ts":"198744.243031232","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"f1994a5f82914e8063"}
+{"entry":{"date":"2021-09-29T16:55:01","ts":"198785.050882502","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"827b358c6a7f16245e"}
+{"entry":{"date":"2021-09-29T16:55:01","ts":"198785.058492019","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"da414eb77adbcedbea"}
+{"entry":{"date":"2021-09-29T16:55:02","ts":"198785.579071057","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"1f9337f8819d6a1ea7"}
+{"entry":{"date":"2021-09-29T17:00:24","ts":"199108.185487872","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"d425dc39ce6c6199f1"}
+{"entry":{"date":"2021-09-29T17:00:25","ts":"199108.759622083","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"7c5c0f962829508863"}
+{"entry":{"date":"2021-09-30T10:54:06","ts":"263530.737743366","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"4edf56ba2f506da916"}
+{"entry":{"date":"2021-09-30T10:54:06","ts":"263531.280572668","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"143db269f02d0e03df"}
+{"entry":{"date":"2021-09-30T11:08:53","ts":"264418.727381709","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"35ce788811bb23fd13"}
+{"entry":{"date":"2021-09-30T11:09:03","ts":"264428.087080859","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"bdd6d5cac6d2c7b348"}
+{"entry":{"date":"2021-09-30T14:36:45","ts":"276890.159115408","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"90abe9770edc3132b2"}
+{"entry":{"date":"2021-09-30T14:36:45","ts":"276890.708478295","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"ba4ca8497f3242e14f"}
+{"entry":{"date":"2021-09-30T14:38:11","ts":"276976.602130981","type":"msg","lvl":"ERROR","id":"0x5404","val":"VAL3 runtime error. Cartesian position out of joint limits.. doAirexTask. "},"hash":"8896b4d51f7d398149"}
+{"entry":{"date":"2021-09-30T14:38:11","ts":"276976.602182886","type":"msg","lvl":"ERROR","id":"0x5404","val":"ERR 531 Cartesian position out of joint limits.. doAirexTask. "},"hash":"fa264e46f98492a5e4"}
+{"entry":{"date":"2021-09-30T14:40:28","ts":"277113.647934119","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"c6971133b9c4c8e517"}
+{"entry":{"date":"2021-09-30T14:40:28","ts":"277113.649207113","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"4fdfe1bd81b036bc07"}
+{"entry":{"date":"2021-09-30T14:40:29","ts":"277114.204873973","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"0de95f171b2b9e25fb"}
+{"entry":{"date":"2021-09-30T14:59:07","ts":"278232.526229651","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"a706653e516d8f9a5b"}
+{"entry":{"date":"2021-09-30T14:59:08","ts":"278233.124510860","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"a76803d12803920b41"}
+{"entry":{"date":"2021-09-30T15:57:07","ts":"281712.459607304","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"18f44cfda0ee10b72d"}
+{"entry":{"date":"2021-09-30T15:57:07","ts":"281712.987762135","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"a9d7e69db8781514e2"}
+{"entry":{"date":"2021-09-30T16:23:09","ts":"283274.308104051","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"d91b461dd2859c8a7b"}
+{"entry":{"date":"2021-09-30T16:23:09","ts":"283274.803029965","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"a4202e14a45f601ad0"}
+{"entry":{"date":"2021-09-30T17:23:00","ts":"286866.119695712","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"19ed81d2baf7cd59ab"}
+{"entry":{"date":"2021-09-30T17:23:00","ts":"286866.127362706","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"f7eed7963447b5b172"}
+{"entry":{"date":"2021-09-30T17:35:53","ts":"287638.626015814","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"d884d2cec7955aeef5"}
+{"entry":{"date":"2021-09-30T17:36:52","ts":"287697.240035400","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"550ccacd65a7aeb89f"}
+{"entry":{"date":"2021-09-30T17:36:52","ts":"287697.247696236","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"d04c5103df80e03f61"}
+{"entry":{"date":"2021-09-30T17:37:06","ts":"287711.807989098","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"de6b314adaa5d2285b"}
+{"entry":{"date":"2021-09-30T17:39:24","ts":"287850.175115657","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"88f8447017a530baa4"}
+{"entry":{"date":"2021-09-30T17:39:24","ts":"287850.182702007","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"b113253f70cd92badf"}
+{"entry":{"date":"2021-09-30T17:39:35","ts":"287860.718220025","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"81cad5cfb8d0659766"}
+{"entry":{"date":"2021-09-30T17:44:35","ts":"288161.049879591","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"1f755fd76f4219e372"}
+{"entry":{"date":"2021-09-30T17:44:35","ts":"288161.057835142","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"f876de0f759ffba35d"}
+{"entry":{"date":"2021-09-30T17:44:45","ts":"288170.700416589","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"709322d62c20d1449c"}
+{"entry":{"date":"2021-12-09T08:40:16","type":"run","version":"3.0.0"}}

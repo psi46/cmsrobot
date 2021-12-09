@@ -490,11 +490,6 @@
     },
     {
       "mode": 3,
-      "name": "moveStampUp",
-      "nodes": []
-    },
-    {
-      "mode": 3,
       "name": "doModules",
       "nodes": [
         {
@@ -601,42 +596,6 @@
     },
     {
       "mode": 3,
-      "name": "start",
-      "nodes": [
-        {
-          "start": 102,
-          "end": 151,
-          "isCollapsed": false
-        },
-        {
-          "start": 154,
-          "end": 239,
-          "isCollapsed": false
-        },
-        {
-          "start": 178,
-          "end": 231,
-          "isCollapsed": false
-        },
-        {
-          "start": 458,
-          "end": 550,
-          "isCollapsed": false
-        },
-        {
-          "start": 622,
-          "end": 684,
-          "isCollapsed": false
-        },
-        {
-          "start": 1882,
-          "end": 1973,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "moveDown",
       "nodes": [
         {
@@ -652,22 +611,6 @@
         {
           "start": 226,
           "end": 298,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck1",
-      "nodes": [
-        {
-          "start": 302,
-          "end": 934,
-          "isCollapsed": false
-        },
-        {
-          "start": 327,
-          "end": 925,
           "isCollapsed": false
         }
       ]
@@ -740,98 +683,155 @@
       "name": "doAirex",
       "nodes": [
         {
-          "start": 8,
-          "end": 5558,
+          "start": 240,
+          "end": 5852,
           "isCollapsed": false
         },
         {
-          "start": 36,
-          "end": 1119,
+          "start": 268,
+          "end": 1351,
           "isCollapsed": false
         },
         {
-          "start": 180,
-          "end": 1008,
+          "start": 412,
+          "end": 1240,
           "isCollapsed": false
         },
         {
-          "start": 294,
-          "end": 555,
+          "start": 526,
+          "end": 787,
           "isCollapsed": false
         },
         {
-          "start": 327,
-          "end": 540,
+          "start": 559,
+          "end": 772,
           "isCollapsed": false
         },
         {
-          "start": 562,
-          "end": 996,
+          "start": 794,
+          "end": 1228,
           "isCollapsed": false
         },
         {
-          "start": 697,
-          "end": 996,
+          "start": 929,
+          "end": 1228,
           "isCollapsed": false
         },
         {
-          "start": 730,
-          "end": 981,
+          "start": 962,
+          "end": 1213,
           "isCollapsed": false
         },
         {
-          "start": 1015,
-          "end": 1102,
+          "start": 1247,
+          "end": 1334,
           "isCollapsed": false
         },
         {
-          "start": 1191,
-          "end": 5547,
+          "start": 1423,
+          "end": 5841,
           "isCollapsed": false
         },
         {
-          "start": 1279,
-          "end": 3065,
+          "start": 1511,
+          "end": 3297,
           "isCollapsed": false
         },
         {
-          "start": 2032,
-          "end": 2752,
+          "start": 2264,
+          "end": 2984,
           "isCollapsed": false
         },
         {
-          "start": 2063,
-          "end": 2737,
+          "start": 2295,
+          "end": 2969,
           "isCollapsed": false
         },
         {
-          "start": 2128,
-          "end": 2721,
+          "start": 2360,
+          "end": 2953,
           "isCollapsed": false
         },
         {
-          "start": 3079,
-          "end": 3219,
+          "start": 3311,
+          "end": 3451,
           "isCollapsed": false
         },
         {
-          "start": 3149,
-          "end": 3207,
+          "start": 3381,
+          "end": 3439,
           "isCollapsed": false
         },
         {
-          "start": 3410,
-          "end": 5261,
+          "start": 3642,
+          "end": 5555,
           "isCollapsed": false
         },
         {
-          "start": 3439,
-          "end": 5248,
+          "start": 3671,
+          "end": 5542,
           "isCollapsed": false
         },
         {
-          "start": 3502,
-          "end": 5234,
+          "start": 3734,
+          "end": 5528,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveStampUp",
+      "nodes": []
+    },
+    {
+      "mode": 3,
+      "name": "start",
+      "nodes": [
+        {
+          "start": 112,
+          "end": 161,
+          "isCollapsed": false
+        },
+        {
+          "start": 164,
+          "end": 249,
+          "isCollapsed": false
+        },
+        {
+          "start": 188,
+          "end": 241,
+          "isCollapsed": false
+        },
+        {
+          "start": 468,
+          "end": 560,
+          "isCollapsed": false
+        },
+        {
+          "start": 632,
+          "end": 694,
+          "isCollapsed": false
+        },
+        {
+          "start": 1892,
+          "end": 1983,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck1",
+      "nodes": [
+        {
+          "start": 320,
+          "end": 946,
+          "isCollapsed": false
+        },
+        {
+          "start": 345,
+          "end": 937,
           "isCollapsed": false
         }
       ]
