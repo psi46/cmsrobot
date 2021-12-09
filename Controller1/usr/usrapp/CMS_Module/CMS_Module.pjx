@@ -36,7 +36,7 @@
     <Program file="clkValvePage.pgx" />
     <Program file="doAirex.pgx" />
     <Program file="doModules.pgx" />
-    <Program file="doTest.pgx" />
+    <Program file="glueGlass.pgx" />
     <Program file="moveDown.pgx" />
     <Program file="moveStampUp.pgx" />
     <Program file="park1.pgx" />
