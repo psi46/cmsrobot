@@ -6,7 +6,7 @@
     </Locals>
     <Code><![CDATA[begin
 
-  call print("Welcome to the TEPX module production")
+  call print("Welcome to TEPX module production 2021/12/09-01")
 
   // -- required for local automatic?
   if esStatus() == 1
