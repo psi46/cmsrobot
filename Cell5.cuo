@@ -18,8 +18,6 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\moveStampUp" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\print" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\interface" IsExpanded="true" />
     </Nodes>
   </Option>
