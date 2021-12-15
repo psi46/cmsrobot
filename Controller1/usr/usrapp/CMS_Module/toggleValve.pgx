@@ -126,8 +126,12 @@
   endIf
 
   // -- setup button colors for frontpage
-  if statusValves[airexValve[0]] == 1 and statusValves[airexValve[1]] == 1  and statusValves[airexValve[2]] == 1 and  statusValves[airexValve[3]] == 1 and statusValves[airexValve[4]] == 1 and statusValves[airexValve[5]] == 1
-    colorVacuumStatus1 = colorOn
+  if statusValves[hdiValve[0]] == 1 and statusValves[hdiValve[1]] == 1  and statusValves[hdiValve[2]] == 1 and  statusValves[hdiValve[3]] == 1 and statusValves[hdiValve[4]] == 1 and statusValves[hdiValve[5]] == 1
+    if statusValves[sensorValve[0]] == 1 and statusValves[sensorValve[1]] == 1  and statusValves[sensorValve[2]] == 1 and  statusValves[sensorValve[3]] == 1 and statusValves[sensorValve[4]] == 1 and statusValves[sensorValve[5]] == 1
+      colorVacuumStatus1 = colorOn
+    else 
+      colorVacuumStatus1 = colorOff
+    endIf
   else
     colorVacuumStatus1 = colorOff
   endIf
