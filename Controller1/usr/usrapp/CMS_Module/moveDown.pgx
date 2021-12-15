@@ -5,6 +5,7 @@
       <Parameter name="where" type="pointRs" xsi:type="element" />
       <Parameter name="finalSpeed" type="mdesc" xsi:type="element" />
       <Parameter name="finalAppro" type="trsf" xsi:type="element" />
+      <Parameter name="meticulous" type="bool" xsi:type="element" />
     </Parameters>
     <Locals>
       <Local name="speed" type="mdesc" xsi:type="array" size="3" />
@@ -24,11 +25,14 @@
     speed[2] = mSlow
   endIf
   
-  movej(appro(where, trZverySafe), tTool, speed[0])
-  // -- move safely over location where and make sure you reach it. Do not blend!
-  //    (the movej ensures that things do not hit Carteian position out of joint limits)
+  if meticulous
+    movej(appro(where, trZverySafe), tTool, speed[0])
+  endIf
+  
   movej(appro(where, trZsafe), tTool, speed[0])
-  waitEndMove()
+  if meticulous
+    waitEndMove()
+  endIf
   // -- move down with decreasing speeds. Not sure whether this gets "blended" away
   movej(appro(where, trZclose), tTool, speed[1])
   movej(appro(where, finalAppro), tTool, speed[2])
