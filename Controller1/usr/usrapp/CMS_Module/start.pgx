@@ -6,7 +6,7 @@
     </Locals>
     <Code><![CDATA[begin
 
-  call print("Welcome to TEPX module production 2021/12/10-01")
+  call print("Welcome to TEPX module production 2021/12/15-09")
 
   // -- required for local automatic?
   if esStatus() == 1
@@ -82,7 +82,7 @@
   statusDoModules     = colorGray
   statusCleanupChuck2 = colorGray
   
-  speedFactor = 1
+  speedFactor = 3
   call setSpeed()
   
   // -- display user page
