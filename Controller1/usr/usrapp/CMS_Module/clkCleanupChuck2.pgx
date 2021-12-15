@@ -14,7 +14,7 @@
   for nIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nIdx]==true)
       // -- move over final hdi position (where the chuck is from gluing) and down
-      call moveDown(hdiFinal[nIdx], mVerySlow, trZero)
+      call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true)
       //movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
       //movel(hdiFinal[nIdx], tTool, mVerySlow)
       waitEndMove()
