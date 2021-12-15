@@ -7,7 +7,7 @@
     mVerySlow      = mSpeedArray[1]
     mSlow          = mSpeedArray[2]
     mNomSpeed      = mSpeedArray[4]
-    mFast          = mSpeedArray[6]
+    mFast          = mSpeedArray[5]
   elseIf speedFactor == 2
     mExtremelySlow = mSpeedArray[0]
     mVerySlow      = mSpeedArray[2]
@@ -21,16 +21,16 @@
     mNomSpeed      = mSpeedArray[6]
     mFast          = mSpeedArray[8]
   elseIf speedFactor == 4
-    mExtremelySlow = mSpeedArray[2]
+    mExtremelySlow = mSpeedArray[0]
     mVerySlow      = mSpeedArray[4]
     mSlow          = mSpeedArray[5]
     mNomSpeed      = mSpeedArray[7]
     mFast          = mSpeedArray[9]
   elseIf speedFactor >= 5
-    mExtremelySlow = mSpeedArray[4]
-    mVerySlow      = mSpeedArray[6]
-    mSlow          = mSpeedArray[7]
-    mNomSpeed      = mSpeedArray[8]
+    mExtremelySlow = mSpeedArray[3]
+    mVerySlow      = mSpeedArray[4]
+    mSlow          = mSpeedArray[5]
+    mNomSpeed      = mSpeedArray[7]
     mFast          = mSpeedArray[9]
 endIf
   
