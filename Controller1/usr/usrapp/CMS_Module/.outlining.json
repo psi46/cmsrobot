@@ -239,11 +239,6 @@
     },
     {
       "mode": 3,
-      "name": "moveStampUp",
-      "nodes": []
-    },
-    {
-      "mode": 3,
       "name": "clkGlueGlass",
       "nodes": []
     },
@@ -674,143 +669,6 @@
     },
     {
       "mode": 3,
-      "name": "moveDown",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 306,
-          "isCollapsed": false
-        },
-        {
-          "start": 122,
-          "end": 223,
-          "isCollapsed": false
-        },
-        {
-          "start": 226,
-          "end": 298,
-          "isCollapsed": false
-        },
-        {
-          "start": 312,
-          "end": 387,
-          "isCollapsed": false
-        },
-        {
-          "start": 441,
-          "end": 480,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "glueGlass",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 5469,
-          "isCollapsed": false
-        },
-        {
-          "start": 36,
-          "end": 1021,
-          "isCollapsed": false
-        },
-        {
-          "start": 189,
-          "end": 908,
-          "isCollapsed": false
-        },
-        {
-          "start": 303,
-          "end": 512,
-          "isCollapsed": false
-        },
-        {
-          "start": 331,
-          "end": 497,
-          "isCollapsed": false
-        },
-        {
-          "start": 519,
-          "end": 896,
-          "isCollapsed": false
-        },
-        {
-          "start": 654,
-          "end": 896,
-          "isCollapsed": false
-        },
-        {
-          "start": 682,
-          "end": 881,
-          "isCollapsed": false
-        },
-        {
-          "start": 915,
-          "end": 1004,
-          "isCollapsed": false
-        },
-        {
-          "start": 1093,
-          "end": 5458,
-          "isCollapsed": false
-        },
-        {
-          "start": 1148,
-          "end": 3004,
-          "isCollapsed": false
-        },
-        {
-          "start": 1904,
-          "end": 2613,
-          "isCollapsed": false
-        },
-        {
-          "start": 1930,
-          "end": 2598,
-          "isCollapsed": false
-        },
-        {
-          "start": 2018,
-          "end": 2582,
-          "isCollapsed": false
-        },
-        {
-          "start": 2653,
-          "end": 2992,
-          "isCollapsed": false
-        },
-        {
-          "start": 3018,
-          "end": 3148,
-          "isCollapsed": false
-        },
-        {
-          "start": 3083,
-          "end": 3136,
-          "isCollapsed": false
-        },
-        {
-          "start": 3334,
-          "end": 5201,
-          "isCollapsed": false
-        },
-        {
-          "start": 3358,
-          "end": 5188,
-          "isCollapsed": false
-        },
-        {
-          "start": 3442,
-          "end": 5174,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "setSpeed",
       "nodes": [
         {
@@ -1062,6 +920,164 @@
         {
           "start": 3647,
           "end": 3685,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveStampUp",
+      "nodes": [
+        {
+          "start": 58,
+          "end": 113,
+          "isCollapsed": false
+        },
+        {
+          "start": 162,
+          "end": 217,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveDown",
+      "nodes": [
+        {
+          "start": 54,
+          "end": 330,
+          "isCollapsed": false
+        },
+        {
+          "start": 154,
+          "end": 251,
+          "isCollapsed": false
+        },
+        {
+          "start": 254,
+          "end": 322,
+          "isCollapsed": false
+        },
+        {
+          "start": 477,
+          "end": 516,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "glueGlass",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 6052,
+          "isCollapsed": false
+        },
+        {
+          "start": 36,
+          "end": 1424,
+          "isCollapsed": false
+        },
+        {
+          "start": 189,
+          "end": 1311,
+          "isCollapsed": false
+        },
+        {
+          "start": 303,
+          "end": 697,
+          "isCollapsed": false
+        },
+        {
+          "start": 331,
+          "end": 498,
+          "isCollapsed": false
+        },
+        {
+          "start": 509,
+          "end": 682,
+          "isCollapsed": false
+        },
+        {
+          "start": 704,
+          "end": 1299,
+          "isCollapsed": false
+        },
+        {
+          "start": 839,
+          "end": 1299,
+          "isCollapsed": false
+        },
+        {
+          "start": 867,
+          "end": 1067,
+          "isCollapsed": false
+        },
+        {
+          "start": 1078,
+          "end": 1284,
+          "isCollapsed": false
+        },
+        {
+          "start": 1318,
+          "end": 1407,
+          "isCollapsed": false
+        },
+        {
+          "start": 1496,
+          "end": 6041,
+          "isCollapsed": false
+        },
+        {
+          "start": 1551,
+          "end": 3548,
+          "isCollapsed": false
+        },
+        {
+          "start": 2426,
+          "end": 3135,
+          "isCollapsed": false
+        },
+        {
+          "start": 2452,
+          "end": 3120,
+          "isCollapsed": false
+        },
+        {
+          "start": 2540,
+          "end": 3104,
+          "isCollapsed": false
+        },
+        {
+          "start": 3175,
+          "end": 3536,
+          "isCollapsed": false
+        },
+        {
+          "start": 3562,
+          "end": 3692,
+          "isCollapsed": false
+        },
+        {
+          "start": 3627,
+          "end": 3680,
+          "isCollapsed": false
+        },
+        {
+          "start": 3895,
+          "end": 5788,
+          "isCollapsed": false
+        },
+        {
+          "start": 3919,
+          "end": 5775,
+          "isCollapsed": false
+        },
+        {
+          "start": 4003,
+          "end": 5761,
           "isCollapsed": false
         }
       ]
