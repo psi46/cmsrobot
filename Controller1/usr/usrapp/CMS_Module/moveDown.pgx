@@ -11,23 +11,24 @@
       <Local name="speed" type="mdesc" xsi:type="array" size="3" />
     </Locals>
     <Code><![CDATA[begin
-  if finalSpeed == mExtremelySlow
-    speed[0] = mNomSpeed
-    speed[1] = mVerySlow
-    speed[2] = mExtremelySlow
-  elseIf finalSpeed == mVerySlow
+  // Note: finalSpeed is not taken literally!
+  if finalSpeed == mVerySlow
     speed[0] = mNomSpeed
     speed[1] = mSlow
     speed[2] = mVerySlow
-  else 
+  elseIf finalSpeed == mSlow
     speed[0] = mFast
     speed[1] = mNomSpeed
+    speed[2] = mVerySlow
+  else 
+    speed[0] = mFast
+    speed[1] = mFast
     speed[2] = mSlow
   endIf
   
-  if meticulous
-    movej(appro(where, trZverySafe), tTool, speed[0])
-  endIf
+  //  if meticulous
+  //    movej(appro(where, trZverySafe), tTool, speed[0])
+  //  endIf
   
   movej(appro(where, trZsafe), tTool, speed[0])
   if meticulous

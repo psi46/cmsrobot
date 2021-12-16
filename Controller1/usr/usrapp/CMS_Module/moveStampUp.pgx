@@ -7,11 +7,16 @@
     </Parameters>
     <Code><![CDATA[begin
   movej(appro(where, trUpThree), tTool, iniSpeed)
-  waitEndMove()
+  if iniSpeed == mExtremelySlow
+    waitEndMove()
+  endIf
   movej(appro(where, trZclose), tTool, mSlow)
-  waitEndMove()
+  if iniSpeed == mExtremelySlow
+    waitEndMove()
+  endIf
   movej(appro(where, trZsafe), tTool, mNomSpeed)
-  waitEndMove()
+  // maybe not required as no chucks around?
+  // waitEndMove()
 end]]></Code>
   </Program>
 </Programs>
