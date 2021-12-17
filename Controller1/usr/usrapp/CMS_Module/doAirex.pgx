@@ -129,7 +129,9 @@
             call moveDown(airexInitial[nAirexIdx], mSlow, trZero, true)
         
             // -- release airex vacuum to allow picking up
-            call toggleValve(airexValve[nAirexIdx])
+            if statusValves[airexValve[nAirexIdx]]==1
+              call toggleValve(airexValve[nAirexIdx])
+            endIf
             delay(waitShort)
             switchVac0=true
             switchVac1=true
