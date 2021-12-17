@@ -83,6 +83,7 @@
             
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
+              // -- FIXME: Not sure about the following meticulous = true!?
               call moveDown(hdiFinal[nIdx], mSlow, trStamp, true)
               delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
@@ -91,15 +92,13 @@
         endFor
 
         // -- Drop glue stamp
-        if bGlueGlass==true
-          call setSpeed()
-          call print("put away glue stamp")
-          //movel(appro(moduleGlueStampEnd, trZsafe), tTool, mFast)
-          call moveDown(moduleGlueStampEnd, mSlow, trZero, true)
-          waitEndMove()
-          switchMagnet = false
-          movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
-        endIf
+        call setSpeed()
+        call print("put away glue stamp")
+        call moveDown(moduleGlueStampEnd, mSlow, trZero, true)
+        waitEndMove()
+        switchMagnet = false
+        movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
+      
       endIf
       
       if !bSelectItem
@@ -107,9 +106,6 @@
       else 
         call print("handling selected glasses")
       endIf
-      
-      // -- move over chuck2 position
-      // not necessary movel(appro(chuck2[0], trZsafe), tTool, mNomSpeed)
       
       // -- pick weighted vacuum chucks and lift airex frames to HDIs
       for nIdx=0 to 5
@@ -143,10 +139,8 @@
             // -- move up with hdi glass
             call print("placing hdi glass " + toString("1.0", nIdx))
             movel(appro(airexFinal[nIdx], trZclose), tTool, mSlow)
-            // waitEndMove()
             movel(appro(airexFinal[nIdx], trZsafe), tTool, mNomSpeed)
-            // likely not required waitEndMove()
-          
+
             // -- move to final airex position and put down 
             call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true)
             switchVac0   = false
