@@ -8,7 +8,7 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\mdesc" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\string" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\tool" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\trsf" IsExpanded="true" />
     </Nodes>
@@ -18,6 +18,7 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\start" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\interface" IsExpanded="true" />
     </Nodes>
   </Option>
@@ -46,7 +47,7 @@
     </ExpressionWatches>
   </Option>
   <Option Name="3DView">
-    <_3DView Visible="true" />
+    <_3DView Visible="false" />
   </Option>
   <Option Name="SynchronizerMode">
     <Synchronizers>
