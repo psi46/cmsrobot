@@ -6,6 +6,7 @@
     </Locals>
     <Code><![CDATA[begin
   while true
+    delay(1)
     if bDoModules==true
       call selectedCheck()
       call print("starting doModules")
@@ -47,19 +48,22 @@
       statusDoModules = colorRunning
       call setSpeed()
       
-      if !bSkipGlue[0]
+      if bSkipGlue[0] == false
         call print("picking glue stamp")
         // -- pick glue stamp
         call moveDown(moduleGlueStampHome, mSlow, trZero, false)
         waitEndMove()
-        switchMagnet = true
+        movel(appro(moduleGlueStampHome, trPressTwo), tTool, mVerySlow)
+        waitEndMove()
+        delay(waitShort)
+        switchMagnet=true
         movel(appro(moduleGlueStampHome, trZsafe), tTool, mSlow)
 
         // -- dip stamp into glue before starting the normal procedure
-        call moveDown(glueFirstPoint[1], mVerySlow, trZero, false)
+        call moveDown(glueFirstPoint[1], mSlow, trZero, false)
         waitEndMove()
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mSlow)
+        call moveStampUp(glueFirstPoint[1], mSlow)
 
         // -- apply glue stamp to all positions  
         //    divide approach onto /from glue position into two steps
@@ -88,7 +92,8 @@
           call setSpeed()
           call print("put away glue stamp")
           movel(appro(moduleGlueStampEnd, trZsafe), tTool, mFast)
-          call moveDown(moduleGlueStampEnd, mVerySlow, trZero, true)
+          call moveDown(moduleGlueStampEnd, mSlow, trZero, true)
+          waitEndMove()
           switchMagnet = false
           movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
           waitEndMove()
@@ -101,17 +106,15 @@
         call print("handling selected modules")
       endIf
       
-      // -- move over chuck2 position
-      movel(appro(chuck2[0], trZsafe), tTool, mNomSpeed)
-      
       // -- pick weighted vacuum chucks and lift airex frames to HDIs
       for nIdx=0 to 5
         if !bSelectItem or (bSelectedItems[nIdx]==true)
           call setSpeed()
           if bDoModules==true
             // -- move over/to chuck
-            call moveDown(chuck2[nIdx], mSlow, trZero, true)
+            call moveDown(chuck2[nIdx], mSlow, trZero, false)
             // -- the following cures the click when the chuck 'jumps' up a bit
+            waitEndMove()
             movel(appro(chuck2[nIdx], trPressTwo), tTool, mVerySlow)          
             waitEndMove()
 
@@ -119,11 +122,11 @@
             switchMagnet = true
             delay(waitShort)
             call print("picking module " + toString("1.0", nIdx))
-            movel(appro(chuck2[nIdx], trZsafe), tTool, mVerySlow)
+            movel(appro(chuck2[nIdx], trZsafe), tTool, mSlow)
             waitEndMove()
             
             // -- move to hdi initial location (where the airex frame had been glued) and lower
-            call moveDown(airexFinal[nIdx], mVerySlow, trZero, true)
+            call moveDown(airexFinal[nIdx], mSlow, trZero, true)
         
             // -- release hdi vacuum to allow picking up
             call toggleValve(hdiValve[nIdx])
@@ -135,9 +138,7 @@
             // -- move up
             call print("placing hdi " + toString("1.0", nIdx))
             movel(appro(airexFinal[nIdx], trZclose), tTool, mSlow)
-            // likely not required waitEndMove()
             movel(appro(airexFinal[nIdx], trZsafe), tTool, mNomSpeed)
-            // likely not required waitEndMove()
             
             // -- move to final location
             call moveDown(hdiFinal[nIdx], mExtremelySlow, trZero, true)
@@ -159,7 +160,7 @@
       // -- move back somewhere
       call print("parking robot")
       waitEndMove()
-      movej(jInitialPosition, tTool, mNomSpeed)
+      movej(jInitialPosition, tTool, mFast)
       waitEndMove()
       statusDoModules = colorOn
       

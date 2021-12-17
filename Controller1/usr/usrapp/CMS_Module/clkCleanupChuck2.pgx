@@ -13,39 +13,43 @@
   // -- pick vacuum chuck2's and put them back to their original place
   for nIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nIdx]==true)
+      call print("put away chuck " + toString("1.0", nIdx))
       // -- move over final hdi position (where the chuck is from gluing) and down
-      call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true)
+      call moveDown(hdiFinal[nIdx], mSlow, trZero, true)
       //movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
       //movel(hdiFinal[nIdx], tTool, mVerySlow)
-      waitEndMove()
    
       // -- lift chuck2
       switchMagnet=true
       delay(waitShort)
       movel(appro(hdiFinal[nIdx], trZsafe), tTool, mSlow)
-
+      waitEndMove()
+      
       // -- move over/to initial chuck position
-      movel(appro(chuck2[nIdx], trZsafe), tTool, mNomSpeed)
-      waitEndMove()
-      movel(chuck2[nIdx], tTool, mVerySlow)
-      waitEndMove()
+      // -- for edge positions make a curve to avoid hitting side bar
+      if nIdx == 0 or nIdx == 3
+        movej(appro(airexInitial[1], trZsafe), tTool, mFast)
+      endIf
+      call moveDown(chuck2[nIdx], mSlow, trZero, true)
 
       // -- release it
       switchMagnet=false
 
       // -- move up 
-      movel(appro(chuck2[nIdx], trZsafe) ,tTool, mSlow)
+      movel(appro(chuck2[nIdx], trZsafe), tTool, mSlow)
     endIf
   endFor
  
   // -- move back somewhere
+  call print("parking robot")
   waitEndMove()
-  movej(jInitialPosition, tTool, mNomSpeed)
+  movej(jInitialPosition, tTool, mFast)
   waitEndMove()
   call print("cleanup (modules) done")
   statusCleanupChuck2 = colorOn
   statusDoModules = colorGray
   call selectedClear()
+  
 end]]></Code>
   </Program>
 </Programs>

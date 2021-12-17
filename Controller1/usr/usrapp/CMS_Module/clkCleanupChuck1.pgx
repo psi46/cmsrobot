@@ -9,11 +9,10 @@
   statusCleanupChuck1 = colorRunning
 
   call selectedCheck()
-  
   call print("cleanup (airex) start")
   // -- move over airex chuck position
-  movel(appro(airexFinal[0], trZsafe), tTool, mNomSpeed)
-  waitEndMove()  
+  //movel(appro(airexFinal[0], trZsafe), tTool, mNomSpeed)
+  //waitEndMove()  
  
   // -- pick vacuum chuck1's and put them back to their original place
   for nAirexIdx=0 to 5
