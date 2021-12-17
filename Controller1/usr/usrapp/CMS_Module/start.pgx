@@ -6,8 +6,8 @@
     </Locals>
     <Code><![CDATA[begin
 
-  call print("Welcome to TEPX module production 2021/12/16-11")
-
+  call print("Welcome to TEPX module production")
+  version = "2021/12/17-02"
   // -- required for local automatic?
   if esStatus() == 1
     setSafetyRestart()
@@ -82,7 +82,9 @@
   statusDoModules     = colorGray
   statusCleanupChuck2 = colorGray
   
-  speedFactor = 3
+  // -- 4 is the production setting (mExtremelySlow = mSpeedArray[0])
+  // -- all the rest have faster mExtremelySlow
+  speedFactor = 4
   call setSpeed()
   
   // -- display user page
