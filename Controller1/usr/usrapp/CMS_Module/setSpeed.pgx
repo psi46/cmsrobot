@@ -3,19 +3,19 @@
   <Program name="setSpeed">
     <Code><![CDATA[begin
   if speedFactor <= 1
-    mExtremelySlow = mSpeedArray[0]
+    mExtremelySlow = mSpeedArray[1]
     mVerySlow      = mSpeedArray[1]
     mSlow          = mSpeedArray[2]
     mNomSpeed      = mSpeedArray[4]
     mFast          = mSpeedArray[5]
   elseIf speedFactor == 2
-    mExtremelySlow = mSpeedArray[0]
+    mExtremelySlow = mSpeedArray[2]
     mVerySlow      = mSpeedArray[2]
     mSlow          = mSpeedArray[3]
     mNomSpeed      = mSpeedArray[5]
     mFast          = mSpeedArray[7]
    elseIf speedFactor == 3
-    mExtremelySlow = mSpeedArray[0]
+    mExtremelySlow = mSpeedArray[3]
     mVerySlow      = mSpeedArray[3]
     mSlow          = mSpeedArray[4]
     mNomSpeed      = mSpeedArray[6]
