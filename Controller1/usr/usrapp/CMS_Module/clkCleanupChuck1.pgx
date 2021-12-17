@@ -18,16 +18,22 @@
   // -- pick vacuum chuck1's and put them back to their original place
   for nAirexIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
+      call print("put away chuck " + toString("1.0", nAirexIdx))
       // -- move over final airex position (where the chuck is from gluing) and down
-      call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero, true)
+      call moveDown(airexFinal[nAirexIdx], mSlow, trZero, true)
    
       // -- lift chuck1
       switchMagnet=true
       delay(waitShort)
-      movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mVerySlow)
-
-      // -- move over/to initial chuck position
-      call moveDown(chuck1[nAirexIdx], mVerySlow, trZero, true)
+      movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mSlow)
+      waitEndMove()
+      
+      // -- move over/to initial chuck position 
+      // -- for edge positions make a curve to avoid hitting side bar
+      if nAirexIdx == 0 or nAirexIdx == 3
+        movej(appro(airexInitial[1], trZsafe), tTool, mFast)
+      endIf
+      call moveDown(chuck1[nAirexIdx], mSlow, trZero, true)
 
       // -- release it
       switchMagnet=false
@@ -38,8 +44,9 @@
   endFor
  
   // -- move back somewhere
+  call print("parking robot")
   waitEndMove()
-  movej(jInitialPosition, tTool, mNomSpeed)
+  movej(jInitialPosition, tTool, mFast)
   waitEndMove()
   statusCleanupChuck1 = colorOn
   statusDoAirex = colorGray
