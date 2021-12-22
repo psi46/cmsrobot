@@ -10,4 +10,12 @@
     <Float name="timeOut" value="5" />
     <String name="flowControl" value="none" />
   </serialPort>
+  <socketSrv>
+    <String name="name" value="server" />
+    <String name="desc" value="" />
+    <Uint name="portNumber" value="1001" />
+    <Int name="endOfString" value="10" />
+    <Float name="timeOut" value="-0.001" />
+    <Bool name="nagle" value="false" />
+  </socketSrv>
 </sio>

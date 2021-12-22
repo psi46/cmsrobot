@@ -7,7 +7,7 @@
     <Code><![CDATA[begin
 
   call print("Welcome to TEPX module production")
-  version = "2021/12/17-06"
+  version = "2021/12/22-05"
   // -- required for local automatic?
   if esStatus() == 1
     setSafetyRestart()
@@ -17,7 +17,6 @@
       enablePower()
     endIf
   endIf
-
 
   // -- define colors for valve buttons
   colorOff     = "beige"
@@ -96,6 +95,7 @@
   movej(jInitialPosition, tTool, mNomSpeed)
   waitEndMove()
 
+  // taskCreate "socketServerTask", 10, socketServer() 
   taskCreate "doAirexTask", 10, doAirex()
   taskCreate "doModulesTask", 10, doModules()
   taskCreate "doGlueGlass", 10, glueGlass()

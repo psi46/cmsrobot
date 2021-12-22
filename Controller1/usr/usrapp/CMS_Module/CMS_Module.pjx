@@ -45,6 +45,7 @@
     <Program file="selectedClear.pgx" />
     <Program file="setSpeed.pgx" />
     <Program file="setValveStatus.pgx" />
+    <Program file="socketServer.pgx" />
     <Program file="start.pgx" />
     <Program file="stop.pgx" />
     <Program file="toggleValve.pgx" />

@@ -192,6 +192,12 @@
       "event": "click",
       "data": "clkGlueGlass",
       "priority": 10
+    },
+    {
+      "id": "btn3",
+      "event": "click",
+      "data": "socketServer",
+      "priority": 10
     }
   ],
   "events": []
