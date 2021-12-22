@@ -8,9 +8,8 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\string" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\tool" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\trsf" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\bool" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\num" IsExpanded="true" />
     </Nodes>
   </Option>
   <Option Name="CellExplorer">
@@ -18,6 +17,7 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\socketServer" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\start" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\interface" IsExpanded="true" />
     </Nodes>
@@ -27,9 +27,6 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\CMS_Module" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module\world[0]" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module\world[0]\pSomewhere" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module\jointRs" IsExpanded="true" />
     </Nodes>
   </Option>
   <Option Name="Breakpoints">
@@ -47,7 +44,7 @@
     </ExpressionWatches>
   </Option>
   <Option Name="3DView">
-    <_3DView Visible="false" />
+    <_3DView Visible="true" />
   </Option>
   <Option Name="SynchronizerMode">
     <Synchronizers>
