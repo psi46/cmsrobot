@@ -152,12 +152,6 @@
       "priority": 10
     },
     {
-      "id": "btn2",
-      "event": "click",
-      "data": "clkStop",
-      "priority": 10
-    },
-    {
       "id": "btnPark2",
       "event": "click",
       "data": "clkPark2",

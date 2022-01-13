@@ -14,7 +14,6 @@
     <Program file="clkGlueGlass.pgx" />
     <Program file="clkPark1.pgx" />
     <Program file="clkPark2.pgx" />
-    <Program file="clkStop.pgx" />
     <Program file="clkValve0.pgx" />
     <Program file="clkValve1.pgx" />
     <Program file="clkValve10.pgx" />
