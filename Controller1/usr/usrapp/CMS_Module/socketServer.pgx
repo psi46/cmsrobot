@@ -10,7 +10,8 @@
     <Code><![CDATA[begin
   clearBuffer(sioSockets_server)
   call print("TCP/IP server is ready")
-
+  delay(2)
+  
   // wait the client has sent one message 
   sReceiveMsg=""
   do
@@ -19,9 +20,10 @@
   until l_nResult!=1 or l_nReceiveByte==13
   
   call print("receive: " + sReceiveMsg)
-  
+  delay(1)
+
   // write
-  ? sSendMsg = "Hello I'm the Staubli server " 
+  ? sSendMsg = "Hello I'm the cms-ts2-60 server " 
   for i = 0 to len(sSendMsg)-1
     l_nResult=sioSet(sioSockets_server, asc(sSendMsg,i)) 
     if l_nResult != 1
