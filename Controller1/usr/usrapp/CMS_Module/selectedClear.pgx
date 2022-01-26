@@ -10,7 +10,8 @@
     bSelectedItems[4] = true
     bSelectedItems[5] = true
   endIf
-  bSelectItem = false
+  bSelectItem  = false
+  bSkipGlue[0] = false
 end]]></Code>
   </Program>
 </Programs>
