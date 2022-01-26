@@ -3,10 +3,11 @@
   <Program name="doModules">
     <Locals>
       <Local name="nIdx" type="num" xsi:type="array" size="1" />
+      <Local name="vacuumCheckDone" type="bool" xsi:type="array" size="1" />
     </Locals>
     <Code><![CDATA[begin
+  vacuumCheckDone = false
   while true
-    delay(1)
     if bDoModules==true
       call selectedCheck()
       call print("starting doModules")
@@ -37,14 +38,15 @@
           endIf
         endFor
       endIf
-      
+      vacuumCheckDone = true
       if bDoModules == false
         call print("Fix missing vacuum and try again")
+        vacuumCheckDone = false
       endIf
     endIf
     
     // -- return above does not work. It terminates the task!
-    if bDoModules==true
+    if bDoModules==true and vacuumCheckDone==true
       statusDoModules = colorRunning
       call setSpeed()
       
@@ -61,7 +63,7 @@
 
         // -- dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[1], mSlow, trZero, false)
-        waitEndMove()
+        //waitEndMove()
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[1], mSlow)
 
@@ -73,6 +75,7 @@
           if !bSelectItem or (bSelectedItems[nIdx]==true)
             call setSpeed()
             if bDoModules==true
+              call print("getting glue for position " + toString("1.0", nAirexIdx))
               call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)
               delay(waitGlue)
 
@@ -80,7 +83,7 @@
               
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              call moveDown(hdiFinal[nIdx], mSlow, trStamp, true)
+              call moveDown(hdiFinal[nIdx], mSlow, trStamp, false)
               delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
             endIf
@@ -88,16 +91,12 @@
         endFor
         
         // -- Drop glue stamp
-        if bDoModules==true
-          call setSpeed()
-          call print("put away glue stamp")
-          movel(appro(moduleGlueStampEnd, trZsafe), tTool, mFast)
-          call moveDown(moduleGlueStampEnd, mSlow, trZero, true)
-          waitEndMove()
-          switchMagnet = false
-          movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
-          waitEndMove()
-        endIf
+        call setSpeed()
+        call print("put away glue stamp")
+        call moveDown(moduleGlueStampEnd, mSlow, trPressTwo, true)
+        waitEndMove()
+        switchMagnet = false
+        movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
       endIf
       
       if !bSelectItem
@@ -123,10 +122,10 @@
             delay(waitShort)
             call print("picking module " + toString("1.0", nIdx))
             movel(appro(chuck2[nIdx], trZsafe), tTool, mSlow)
-            waitEndMove()
+            // waitEndMove()
             
             // -- move to hdi initial location (where the airex frame had been glued) and lower
-            call moveDown(airexFinal[nIdx], mSlow, trZero, true)
+            call moveDown(airexFinal[nIdx], mSlow, trZero, false)
         
             // -- release hdi vacuum to allow picking up
             call toggleValve(hdiValve[nIdx])
@@ -141,17 +140,17 @@
             movel(appro(airexFinal[nIdx], trZsafe), tTool, mNomSpeed)
             
             // -- move to final location
-            call moveDown(hdiFinal[nIdx], mExtremelySlow, trZero, true)
-            switchVac0=false
-            switchVac1=false
-            switchMagnet=false
+            call moveDown(hdiFinal[nIdx], mExtremelySlow, trZero, false)
+            switchVac0   = false
+            switchVac1   = false
+            switchMagnet = false
 
             delay(waitShort)
 
             // -- move up again
             movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
             movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
-            waitEndMove()
+            //waitEndMove()
           endIf
 
         endIf
@@ -159,7 +158,7 @@
 
       // -- move back somewhere
       call print("parking robot")
-      waitEndMove()
+      //waitEndMove()
       movej(jInitialPosition, tTool, mFast)
       waitEndMove()
       statusDoModules = colorOn
@@ -168,8 +167,6 @@
       bDoModules = false
       call print("glue modules done")
     endIf
-
-    delay(waitShort)
   endWhile
 
 end]]></Code>

@@ -3,16 +3,15 @@
   <Program name="doAirex">
     <Locals>
       <Local name="nAirexIdx" type="num" xsi:type="array" size="1" />
+      <Local name="vacuumCheckDone" type="bool" xsi:type="array" size="1" />
     </Locals>
     <Code><![CDATA[begin
-  // FIXME: I need a local variable to ensure that the vacuum check is run before the real work!
-  // Else a race condition exists that the 'real work' could be activated before the check is done. 
-  // the delay(1) below is bogus!
+  vacuumCheckDone = false
   while true
-    delay(1)
     if bDoAirex==true
       call selectedCheck()
       call print("starting doAirex")
+      statusDoAirex = colorRunning
       
       // -- check that relevant vacuum is active
       if !bSelectItem
@@ -39,15 +38,16 @@
           endIf
         endFor
       endIf
+      vacuumCheckDone = true
       if bDoAirex == false
         call print("Fix missing vacuum and try again")
+        vacuumCheckDone = false
       endIf
-      
+
     endIf
     
     // -- return above does not work. It terminates the task!
-    if bDoAirex==true
-      statusDoAirex = colorRunning
+    if bDoAirex==true and vacuumCheckDone==true
       call setSpeed()
       
       if bSkipGlue[0]==false
@@ -75,6 +75,7 @@
           if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
             call setSpeed()
             if bDoAirex==true
+              call print("getting glue for position " + toString("1.0", nAirexIdx))
               call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false)         
               delay(waitGlue)
               
@@ -82,7 +83,6 @@
             
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
-              // -- FIXME: Not sure about the following meticulous = true!?
               call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, false)
               delay(waitGlue)
               call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
@@ -93,11 +93,10 @@
         // -- Drop glue stamp
         call setSpeed()
         call print("put away glue stamp")
-        call moveDown(airexGlueStampEnd, mSlow, trPressTwo, true)
+        call moveDown(airexGlueStampEnd, mSlow, trPressTwo, false)
         waitEndMove()
         switchMagnet = false
         movel(appro(airexGlueStampEnd, trZsafe), tTool, mNomSpeed)
-
       endIf
       
       if !bSelectItem
@@ -125,7 +124,7 @@
             movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mSlow)
             //waitEndMove()
           
-            // -- move with chuck to airex position //CHECK
+            // -- move with chuck to airex position 
             call moveDown(airexInitial[nAirexIdx], mSlow, trZero, false)
         
             // -- release airex vacuum to allow picking up
@@ -142,7 +141,7 @@
             movel(appro(airexInitial[nAirexIdx], trZclose), tTool, mSlow)
             movel(appro(airexInitial[nAirexIdx], trZsafe), tTool, mNomSpeed)
           
-            // -- move to final airex position and put down  //CHECK
+            // -- move to final airex position and put down 
             call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero, false)
             switchVac0   = false
             switchVac1   = false
@@ -153,14 +152,14 @@
             // -- move up again
             movel(appro(airexFinal[nAirexIdx], trZclose), tTool, mSlow)
             movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mNomSpeed)
-            waitEndMove()
+            //waitEndMove()
           endIf
         endIf
       endFor
 
       // -- move back somewhere
       call print("parking robot")
-      waitEndMove()
+      //waitEndMove()
       movej(jInitialPosition, tTool, mFast)
       waitEndMove()
       statusDoAirex = colorOn

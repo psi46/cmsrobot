@@ -25,7 +25,7 @@
       switchMagnet=true
       delay(waitShort)
       movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mSlow)
-      waitEndMove()
+      //waitEndMove()
       
       // -- move over/to initial chuck position 
       // -- for edge positions make a curve to avoid hitting side bar
