@@ -19,6 +19,9 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\doAirex" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\doModules" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\moveDown" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\socketServer" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\start" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\interface" IsExpanded="true" />

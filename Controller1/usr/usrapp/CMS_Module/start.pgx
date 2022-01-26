@@ -7,7 +7,7 @@
     <Code><![CDATA[begin
 
   call print("Welcome to TEPX module production")
-  version = "2022/01/26-08"
+  version = "2022/01/26-10"
   // -- required for local automatic?
   if esStatus() == 1
     setSafetyRestart()

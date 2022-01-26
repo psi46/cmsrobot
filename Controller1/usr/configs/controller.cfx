@@ -69,5 +69,5 @@
   <Bool name="logging" value="true" />
   <Bool name="cpuExtPowerSupply" value="false" />
   <Float name="lliCycleTime" value="-1" />
-  <Float name="powerHourCount" value="163.391413" />
+  <Float name="powerHourCount" value="163.536676" />
 </controller>
