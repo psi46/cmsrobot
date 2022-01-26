@@ -63,7 +63,6 @@
 
         // -- dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[1], mSlow, trZero, false)
-        //waitEndMove()
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[1], mSlow)
 
@@ -75,7 +74,7 @@
           if !bSelectItem or (bSelectedItems[nIdx]==true)
             call setSpeed()
             if bDoModules==true
-              call print("getting glue for position " + toString("1.0", nAirexIdx))
+              call print("getting glue for position " + toString("1.0", nIdx))
               call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)
               delay(waitGlue)
 
@@ -122,7 +121,6 @@
             delay(waitShort)
             call print("picking module " + toString("1.0", nIdx))
             movel(appro(chuck2[nIdx], trZsafe), tTool, mSlow)
-            // waitEndMove()
             
             // -- move to hdi initial location (where the airex frame had been glued) and lower
             call moveDown(airexFinal[nIdx], mSlow, trZero, false)
@@ -150,7 +148,6 @@
             // -- move up again
             movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
             movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
-            //waitEndMove()
           endIf
 
         endIf
@@ -158,7 +155,6 @@
 
       // -- move back somewhere
       call print("parking robot")
-      //waitEndMove()
       movej(jInitialPosition, tTool, mFast)
       waitEndMove()
       statusDoModules = colorOn

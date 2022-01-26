@@ -62,8 +62,8 @@
         movel(appro(airexGlueStampHome, trZsafe), tTool, mSlow)
         
         // -- dip stamp into glue before starting the normal procedure
+        call print("pre-dip glue stamp")
         call moveDown(glueFirstPoint[0], mSlow, trZero, false)
-        //waitEndMove()
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mSlow)
       
@@ -122,7 +122,6 @@
             delay(waitShort)
             call print("picking airex frame " + toString("1.0", nAirexIdx))
             movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mSlow)
-            //waitEndMove()
           
             // -- move with chuck to airex position 
             call moveDown(airexInitial[nAirexIdx], mSlow, trZero, false)
@@ -152,7 +151,6 @@
             // -- move up again
             movel(appro(airexFinal[nAirexIdx], trZclose), tTool, mSlow)
             movel(appro(airexFinal[nAirexIdx], trZsafe), tTool, mNomSpeed)
-            //waitEndMove()
           endIf
         endIf
       endFor
