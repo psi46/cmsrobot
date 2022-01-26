@@ -19,7 +19,7 @@
     if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
       call print("put away chuck " + toString("1.0", nAirexIdx))
       // -- move over final airex position (where the chuck is from gluing) and down
-      call moveDown(airexFinal[nAirexIdx], mSlow, trZero, true)
+      call moveDown(airexFinal[nAirexIdx], mSlow, trZero, false)
    
       // -- lift chuck1
       switchMagnet=true
@@ -32,7 +32,7 @@
       if nAirexIdx == 0 or nAirexIdx == 3
         movej(appro(airexInitial[1], trZsafe), tTool, mFast)
       endIf
-      call moveDown(chuck1[nAirexIdx], mSlow, trZero, true)
+      call moveDown(chuck1[nAirexIdx], mSlow, trZero, false)
 
       // -- release it
       switchMagnet=false

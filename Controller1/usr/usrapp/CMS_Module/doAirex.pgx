@@ -63,7 +63,7 @@
         
         // -- dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[0], mSlow, trZero, false)
-        waitEndMove()
+        //waitEndMove()
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mSlow)
       
@@ -83,7 +83,7 @@
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
               // -- FIXME: Not sure about the following meticulous = true!?
-              call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, true)
+              call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, false)
               delay(waitGlue)
               call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
             endIf
@@ -93,7 +93,7 @@
         // -- Drop glue stamp
         call setSpeed()
         call print("put away glue stamp")
-        call moveDown(airexGlueStampEnd, mSlow, trZero, true)
+        call moveDown(airexGlueStampEnd, mSlow, trPressTwo, true)
         waitEndMove()
         switchMagnet = false
         movel(appro(airexGlueStampEnd, trZsafe), tTool, mNomSpeed)
@@ -123,10 +123,10 @@
             delay(waitShort)
             call print("picking airex frame " + toString("1.0", nAirexIdx))
             movel(appro(chuck1[nAirexIdx], trZsafe), tTool, mSlow)
-            waitEndMove()
+            //waitEndMove()
           
-            // -- move with chuck to airex position
-            call moveDown(airexInitial[nAirexIdx], mSlow, trZero, true)
+            // -- move with chuck to airex position //CHECK
+            call moveDown(airexInitial[nAirexIdx], mSlow, trZero, false)
         
             // -- release airex vacuum to allow picking up
             if statusValves[airexValve[nAirexIdx]]==1
@@ -142,8 +142,8 @@
             movel(appro(airexInitial[nAirexIdx], trZclose), tTool, mSlow)
             movel(appro(airexInitial[nAirexIdx], trZsafe), tTool, mNomSpeed)
           
-            // -- move to final airex position and put down 
-            call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero, true)
+            // -- move to final airex position and put down  //CHECK
+            call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero, false)
             switchVac0   = false
             switchVac1   = false
             switchMagnet = false
