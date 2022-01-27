@@ -7,6 +7,8 @@
       <Local name="l_nResult" type="num" xsi:type="array" size="1" />
       <Local name="l_nReceiveByte" type="num" xsi:type="array" size="1" />
       <Local name="numSendMsg" type="num" xsi:type="array" size="255" />
+      <Local name="nVal" type="num" xsi:type="array" size="6" />
+      <Local name="parseString" type="string" xsi:type="array" size="1" />
     </Locals>
     <Code><![CDATA[begin
   clearBuffer(sioSockets_server)
@@ -33,12 +35,32 @@
       strTCPIP = sReceiveMsg
       delay(0.5)  
       
-      if find(strTCPIP, "goRemote") == 0
-        //        pGoRemote[0] = {134,	249,	-90.69, 0., 0., 0.}  
-        pGoRemoteTarget[0].trsf.x = 130
-        pGoRemoteTarget[0].trsf.y = 150
-        pGoRemoteTarget[0].trsf.z = -80
-        pGoRemoteTarget[0].trsf.rx = 180.0
+      parseString = strTCPIP
+      if find(parseString, "goRemote") == 0  
+        parseString = delete(parseString, len("goRemote "), 0)     
+        if len(parseString) > 2
+          i = 0
+          do
+            parseString = toNum(parseString, nVal[i], l_bError)
+            // call print(toString("4.2", i) + "  " + toString("6.2", nVal[i]))
+            i = i + 1
+          until(parseString=="") or (l_bError != true) or i == 5
+          
+          pGoRemoteTarget[0].trsf.x = nVal[0]
+          pGoRemoteTarget[0].trsf.y = nVal[1]
+          pGoRemoteTarget[0].trsf.z = nVal[2]
+          pGoRemoteTarget[0].trsf.rx = nVal[3]
+          pGoRemoteTarget[0].trsf.ry = nVal[4]
+          pGoRemoteTarget[0].trsf.rz = nVal[5]
+        else
+          pGoRemoteTarget[0].trsf.x = airexFinal[0].trsf.x
+          pGoRemoteTarget[0].trsf.y = airexFinal[0].trsf.y
+          pGoRemoteTarget[0].trsf.z = airexFinal[0].trsf.z
+          pGoRemoteTarget[0].trsf.rx = airexFinal[0].trsf.rx
+          pGoRemoteTarget[0].trsf.ry = airexFinal[0].trsf.ry
+          pGoRemoteTarget[0].trsf.rz = airexFinal[0].trsf.rz
+        endIf
+        
         call goRemote()
       endIf
       
