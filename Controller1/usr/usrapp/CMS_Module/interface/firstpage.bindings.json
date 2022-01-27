@@ -136,6 +136,22 @@
       "size": 1,
       "direction": "r",
       "refresh": 1
+    },
+    {
+      "id": "txtTCPIP",
+      "attribute": "value",
+      "data": "strTCPIP[0]",
+      "size": 1,
+      "direction": "rw",
+      "refresh": 1
+    },
+    {
+      "id": "chk6",
+      "attribute": "checked",
+      "data": "bSockets[0]",
+      "size": 1,
+      "direction": "rw",
+      "refresh": 1
     }
   ],
   "callbacks": [

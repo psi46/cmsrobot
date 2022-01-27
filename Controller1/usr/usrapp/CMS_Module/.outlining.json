@@ -845,27 +845,6 @@
     },
     {
       "mode": 3,
-      "name": "socketServer",
-      "nodes": [
-        {
-          "start": 154,
-          "end": 308,
-          "isCollapsed": false
-        },
-        {
-          "start": 428,
-          "end": 601,
-          "isCollapsed": false
-        },
-        {
-          "start": 519,
-          "end": 592,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "clkCleanupChuck1",
       "nodes": [
         {
@@ -1108,43 +1087,74 @@
       "name": "start",
       "nodes": [
         {
-          "start": 125,
-          "end": 174,
+          "start": 191,
+          "end": 240,
           "isCollapsed": false
         },
         {
-          "start": 177,
-          "end": 262,
+          "start": 243,
+          "end": 328,
           "isCollapsed": false
         },
         {
-          "start": 201,
-          "end": 254,
+          "start": 267,
+          "end": 320,
           "isCollapsed": false
         },
         {
-          "start": 504,
-          "end": 668,
+          "start": 570,
+          "end": 734,
           "isCollapsed": false
         },
         {
-          "start": 529,
-          "end": 659,
+          "start": 595,
+          "end": 725,
           "isCollapsed": false
         },
         {
-          "start": 604,
-          "end": 649,
+          "start": 670,
+          "end": 715,
           "isCollapsed": false
         },
         {
-          "start": 740,
-          "end": 802,
+          "start": 806,
+          "end": 868,
           "isCollapsed": false
         },
         {
-          "start": 2243,
-          "end": 2334,
+          "start": 2392,
+          "end": 2483,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "goRemote",
+      "nodes": []
+    },
+    {
+      "mode": 3,
+      "name": "socketServer",
+      "nodes": [
+        {
+          "start": 101,
+          "end": 1705,
+          "isCollapsed": false
+        },
+        {
+          "start": 145,
+          "end": 1694,
+          "isCollapsed": false
+        },
+        {
+          "start": 163,
+          "end": 591,
+          "isCollapsed": false
+        },
+        {
+          "start": 712,
+          "end": 1011,
           "isCollapsed": false
         }
       ]

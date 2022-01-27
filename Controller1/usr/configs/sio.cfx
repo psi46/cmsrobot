@@ -23,7 +23,7 @@
     <String name="name" value="server" />
     <String name="desc" value="" />
     <Uint name="portNumber" value="1001" />
-    <Int name="endOfString" value="10" />
+    <Int name="endOfString" value="13" />
     <Float name="timeOut" value="-0.001" />
     <Bool name="nagle" value="false" />
   </socketSrv>

@@ -36,6 +36,7 @@
     <Program file="doAirex.pgx" />
     <Program file="doModules.pgx" />
     <Program file="glueGlass.pgx" />
+    <Program file="goRemote.pgx" />
     <Program file="moveDown.pgx" />
     <Program file="moveStampUp.pgx" />
     <Program file="park1.pgx" />

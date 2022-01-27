@@ -98,3 +98,6 @@
 {"entry":{"date":"2022-01-26T10:49:55","ts":"632.106883479","type":"msg","lvl":"WARN","id":"0x5401","val":"Application has ended, pending motion was cancelled."},"hash":"511b408fd39e2b9669"}
 {"entry":{"date":"2022-01-26T10:49:55","ts":"632.108439748","type":"msg","lvl":"INFO","id":"0x5403","val":"Application 'CMS_Module' stopped."},"hash":"a67a685417e47b1481"}
 {"entry":{"date":"2022-01-26T10:50:07","ts":"643.716403261","type":"msg","lvl":"INFO","id":"0x5402","val":"Application 'CMS_Module' started."},"hash":"7c577c6b03627ecf25"}
+{"entry":{"date":"2022-01-27T09:25:32","type":"run","version":"3.0.0"}}
+{"entry":{"date":"2022-01-27T10:46:58","type":"run","version":"3.0.0"}}
+{"entry":{"date":"2022-01-27T16:08:02","type":"run","version":"3.0.0"}}

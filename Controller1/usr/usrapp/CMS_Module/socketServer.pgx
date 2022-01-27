@@ -23,7 +23,7 @@
         sReceiveMsg = sReceiveMsg + chr(l_nReceiveByte) 
     
         // Note: 10 = LF
-        //       13 = CR
+        //       13 = CR // this is set as "End of string"
         // Linux  - Lines end with only a <LF> character
         // Macintosh (Mac OSX) - Lines end with only a <LF> character
         // NOTE: tcpip.swift sends a 13?!?!
