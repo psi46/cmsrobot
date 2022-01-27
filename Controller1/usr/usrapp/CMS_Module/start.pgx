@@ -7,7 +7,10 @@
     <Code><![CDATA[begin
 
   call print("Welcome to TEPX module production")
-  version = "2022/01/27-10"
+  version = "2022/01/27-18"
+  strTCPIP = "TCP/IP sockets not activated"
+  bSockets = false
+  
   // -- required for local automatic?
   if esStatus() == 1
     setSafetyRestart()
@@ -99,7 +102,8 @@
   taskCreate "doModulesTask", 10, doModules()
   taskCreate "doGlueGlass", 10, glueGlass()
 
- // taskCreate "socketServerTask", 10, socketServer() 
+  // Note: This is activated only after enabling arm power or move/hold button?! 
+  taskCreate "socketServerTask", 10, socketServer() 
   
   
   while true

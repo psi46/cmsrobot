@@ -10,36 +10,59 @@
     </Locals>
     <Code><![CDATA[begin
   clearBuffer(sioSockets_server)
-  call print("TCP/IP server is ready")
+  strTCPIP = "TCP/IP sockets server is ready"
+  delay(0)
+  
   while true
-    // wait the client has sent one message 
+    
     sReceiveMsg=""
     
-    do
-      l_nResult = sioGet(sioSockets_server, l_nReceiveByte)
-      sReceiveMsg = sReceiveMsg + chr(l_nReceiveByte) 
-    until l_nResult!=1 or l_nReceiveByte==13
-    call print("receive ->" + sReceiveMsg + "<-")
+    if bSockets
+      do
+        l_nResult = sioGet(sioSockets_server, l_nReceiveByte)
+        sReceiveMsg = sReceiveMsg + chr(l_nReceiveByte) 
     
-    //    sSendMsg = "ss received ->" + sReceiveMsg + "<-"
-//    for i = 0 to len(sSendMsg)
-//      numSendMsg[i] = asc(sSendMsg[i],0)  
-//    endFor
-//    sioSet(sioSockets_server, numSendMsg)
+        // Note: 10 = LF
+        //       13 = CR
+        // Linux  - Lines end with only a <LF> character
+        // Macintosh (Mac OSX) - Lines end with only a <LF> character
+        // NOTE: tcpip.swift sends a 13?!?!
+      until l_nResult!=1 or l_nReceiveByte==13
+    
+      //call print("receive ->" + sReceiveMsg + "<-")
+      strTCPIP = sReceiveMsg
+      delay(0.5)  
+      
+      if find(strTCPIP, "goRemote") == 0
+        //        pGoRemote[0] = {134,	249,	-90.69, 0., 0., 0.}  
+        pGoRemoteTarget[0].trsf.x = 130
+        pGoRemoteTarget[0].trsf.y = 150
+        pGoRemoteTarget[0].trsf.z = -80
+        pGoRemoteTarget[0].trsf.rx = 180.0
+        call goRemote()
+      endIf
+      
+    
+      //    sSendMsg = "ss received ->" + sReceiveMsg + "<-"
+      //    for i = 0 to len(sSendMsg)
+      //      numSendMsg[i] = asc(sSendMsg[i],0)  
+      //    endFor
+      //    sioSet(sioSockets_server, numSendMsg)
 
-    //sioSet()
-    //    // write
-    //    ? sSendMsg = "Hello I'm the cms-ts2-60 server " 
-    //    for i = 0 to len(sSendMsg)-1
-    //      l_nResult=sioSet(sioSockets_server, asc(sSendMsg,i)) 
-    //      if l_nResult != 1
-    //        i = len(sSendMsg)
-    //        l_bError = true
-    //      endIf
-    //    endFor
-    //    // connection will close
-    //    ? "TCP/IP server end"
-    //    wait(false)
+      //sioSet()
+      //    // write
+      //    ? sSendMsg = "Hello I'm the cms-ts2-60 server " 
+      //    for i = 0 to len(sSendMsg)-1
+      //      l_nResult=sioSet(sioSockets_server, asc(sSendMsg,i)) 
+      //      if l_nResult != 1
+      //        i = len(sSendMsg)
+      //        l_bError = true
+      //      endIf
+      //    endFor
+      //    // connection will close
+      //    ? "TCP/IP server end"
+      //    wait(false)
+    endIf
   endWhile
 end]]></Code>
   </Program>
