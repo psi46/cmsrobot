@@ -1084,6 +1084,47 @@
     },
     {
       "mode": 3,
+      "name": "socketServer",
+      "nodes": [
+        {
+          "start": 101,
+          "end": 2556,
+          "isCollapsed": false
+        },
+        {
+          "start": 145,
+          "end": 2545,
+          "isCollapsed": false
+        },
+        {
+          "start": 163,
+          "end": 591,
+          "isCollapsed": false
+        },
+        {
+          "start": 741,
+          "end": 1862,
+          "isCollapsed": false
+        },
+        {
+          "start": 857,
+          "end": 1817,
+          "isCollapsed": false
+        },
+        {
+          "start": 907,
+          "end": 1140,
+          "isCollapsed": false
+        },
+        {
+          "start": 1439,
+          "end": 1803,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "start",
       "nodes": [
         {
@@ -1132,32 +1173,6 @@
       "mode": 3,
       "name": "goRemote",
       "nodes": []
-    },
-    {
-      "mode": 3,
-      "name": "socketServer",
-      "nodes": [
-        {
-          "start": 101,
-          "end": 1705,
-          "isCollapsed": false
-        },
-        {
-          "start": 145,
-          "end": 1694,
-          "isCollapsed": false
-        },
-        {
-          "start": 163,
-          "end": 591,
-          "isCollapsed": false
-        },
-        {
-          "start": 712,
-          "end": 1011,
-          "isCollapsed": false
-        }
-      ]
     }
   ]
 }
