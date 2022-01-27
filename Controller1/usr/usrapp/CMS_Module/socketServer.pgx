@@ -6,34 +6,41 @@
       <Local name="l_bError" type="bool" xsi:type="array" size="1" />
       <Local name="l_nResult" type="num" xsi:type="array" size="1" />
       <Local name="l_nReceiveByte" type="num" xsi:type="array" size="1" />
+      <Local name="numSendMsg" type="num" xsi:type="array" size="255" />
     </Locals>
     <Code><![CDATA[begin
   clearBuffer(sioSockets_server)
   call print("TCP/IP server is ready")
-  delay(2)
-  
-  // wait the client has sent one message 
-  sReceiveMsg=""
-  do
-    l_nResult = sioGet(sioSockets_server, l_nReceiveByte)
-    sReceiveMsg = sReceiveMsg+chr(l_nReceiveByte) 
-  until l_nResult!=1 or l_nReceiveByte==13
-  
-  call print("receive: " + sReceiveMsg)
-  delay(1)
+  while true
+    // wait the client has sent one message 
+    sReceiveMsg=""
+    
+    do
+      l_nResult = sioGet(sioSockets_server, l_nReceiveByte)
+      sReceiveMsg = sReceiveMsg + chr(l_nReceiveByte) 
+    until l_nResult!=1 or l_nReceiveByte==13
+    call print("receive ->" + sReceiveMsg + "<-")
+    
+    //    sSendMsg = "ss received ->" + sReceiveMsg + "<-"
+//    for i = 0 to len(sSendMsg)
+//      numSendMsg[i] = asc(sSendMsg[i],0)  
+//    endFor
+//    sioSet(sioSockets_server, numSendMsg)
 
-  // write
-  ? sSendMsg = "Hello I'm the cms-ts2-60 server " 
-  for i = 0 to len(sSendMsg)-1
-    l_nResult=sioSet(sioSockets_server, asc(sSendMsg,i)) 
-    if l_nResult != 1
-      i = len(sSendMsg)
-      l_bError = true
-    endIf
-  endFor
-  // connection will close
-  ? "TCP/IP server end"
-  wait(false)
+    //sioSet()
+    //    // write
+    //    ? sSendMsg = "Hello I'm the cms-ts2-60 server " 
+    //    for i = 0 to len(sSendMsg)-1
+    //      l_nResult=sioSet(sioSockets_server, asc(sSendMsg,i)) 
+    //      if l_nResult != 1
+    //        i = len(sSendMsg)
+    //        l_bError = true
+    //      endIf
+    //    endFor
+    //    // connection will close
+    //    ? "TCP/IP server end"
+    //    wait(false)
+  endWhile
 end]]></Code>
   </Program>
 </Programs>
