@@ -64,7 +64,7 @@
         // -- dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[1], mSlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[1], mSlow)
+        call moveStampUp(glueFirstPoint[1], mVerySlow)
 
         // -- apply glue stamp to all positions  
         //    divide approach onto /from glue position into two steps
@@ -159,7 +159,7 @@
       waitEndMove()
       statusDoModules = colorOn
       
-      call selectedClear()
+      //call selectedClear()
       bDoModules = false
       call print("glue modules done")
     endIf

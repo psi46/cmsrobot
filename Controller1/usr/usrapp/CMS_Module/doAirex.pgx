@@ -65,7 +65,7 @@
         call print("pre-dip glue stamp")
         call moveDown(glueFirstPoint[0], mSlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mSlow)
+        call moveStampUp(glueFirstPoint[0], mVerySlow)
       
         // -- apply glue stamp to all positions:
         //    divide approach onto /from glue position into two steps
@@ -162,7 +162,7 @@
       waitEndMove()
       statusDoAirex = colorOn
       
-      call selectedClear()
+      //call selectedClear()
       bDoAirex=false
       call print("glue airex done")
     endIf
