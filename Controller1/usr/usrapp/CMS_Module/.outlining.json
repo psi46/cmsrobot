@@ -682,117 +682,6 @@
     },
     {
       "mode": 3,
-      "name": "glueGlass",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 5806,
-          "isCollapsed": false
-        },
-        {
-          "start": 36,
-          "end": 1424,
-          "isCollapsed": false
-        },
-        {
-          "start": 189,
-          "end": 1311,
-          "isCollapsed": false
-        },
-        {
-          "start": 303,
-          "end": 697,
-          "isCollapsed": false
-        },
-        {
-          "start": 331,
-          "end": 498,
-          "isCollapsed": false
-        },
-        {
-          "start": 509,
-          "end": 682,
-          "isCollapsed": false
-        },
-        {
-          "start": 704,
-          "end": 1299,
-          "isCollapsed": false
-        },
-        {
-          "start": 839,
-          "end": 1299,
-          "isCollapsed": false
-        },
-        {
-          "start": 867,
-          "end": 1067,
-          "isCollapsed": false
-        },
-        {
-          "start": 1078,
-          "end": 1284,
-          "isCollapsed": false
-        },
-        {
-          "start": 1318,
-          "end": 1407,
-          "isCollapsed": false
-        },
-        {
-          "start": 1496,
-          "end": 5795,
-          "isCollapsed": false
-        },
-        {
-          "start": 1551,
-          "end": 3509,
-          "isCollapsed": false
-        },
-        {
-          "start": 2426,
-          "end": 3211,
-          "isCollapsed": false
-        },
-        {
-          "start": 2452,
-          "end": 3196,
-          "isCollapsed": false
-        },
-        {
-          "start": 2540,
-          "end": 3180,
-          "isCollapsed": false
-        },
-        {
-          "start": 3523,
-          "end": 3653,
-          "isCollapsed": false
-        },
-        {
-          "start": 3588,
-          "end": 3641,
-          "isCollapsed": false
-        },
-        {
-          "start": 3737,
-          "end": 5542,
-          "isCollapsed": false
-        },
-        {
-          "start": 3761,
-          "end": 5529,
-          "isCollapsed": false
-        },
-        {
-          "start": 3845,
-          "end": 5515,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "setSpeed",
       "nodes": [
         {
@@ -818,255 +707,6 @@
         {
           "start": 829,
           "end": 1032,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck2",
-      "nodes": [
-        {
-          "start": 203,
-          "end": 1166,
-          "isCollapsed": false
-        },
-        {
-          "start": 223,
-          "end": 1157,
-          "isCollapsed": false
-        },
-        {
-          "start": 867,
-          "end": 965,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck1",
-      "nodes": [
-        {
-          "start": 321,
-          "end": 1228,
-          "isCollapsed": false
-        },
-        {
-          "start": 346,
-          "end": 1219,
-          "isCollapsed": false
-        },
-        {
-          "start": 908,
-          "end": 1016,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "doAirex",
-      "nodes": [
-        {
-          "start": 34,
-          "end": 5942,
-          "isCollapsed": false
-        },
-        {
-          "start": 49,
-          "end": 1320,
-          "isCollapsed": false
-        },
-        {
-          "start": 228,
-          "end": 1154,
-          "isCollapsed": false
-        },
-        {
-          "start": 342,
-          "end": 701,
-          "isCollapsed": false
-        },
-        {
-          "start": 473,
-          "end": 686,
-          "isCollapsed": false
-        },
-        {
-          "start": 708,
-          "end": 1142,
-          "isCollapsed": false
-        },
-        {
-          "start": 843,
-          "end": 1142,
-          "isCollapsed": false
-        },
-        {
-          "start": 876,
-          "end": 1127,
-          "isCollapsed": false
-        },
-        {
-          "start": 1190,
-          "end": 1309,
-          "isCollapsed": false
-        },
-        {
-          "start": 1392,
-          "end": 5931,
-          "isCollapsed": false
-        },
-        {
-          "start": 1471,
-          "end": 3496,
-          "isCollapsed": false
-        },
-        {
-          "start": 2371,
-          "end": 3202,
-          "isCollapsed": false
-        },
-        {
-          "start": 2402,
-          "end": 3187,
-          "isCollapsed": false
-        },
-        {
-          "start": 2495,
-          "end": 3171,
-          "isCollapsed": false
-        },
-        {
-          "start": 3510,
-          "end": 3650,
-          "isCollapsed": false
-        },
-        {
-          "start": 3580,
-          "end": 3638,
-          "isCollapsed": false
-        },
-        {
-          "start": 3734,
-          "end": 5647,
-          "isCollapsed": false
-        },
-        {
-          "start": 3763,
-          "end": 5634,
-          "isCollapsed": false
-        },
-        {
-          "start": 3852,
-          "end": 5620,
-          "isCollapsed": false
-        },
-        {
-          "start": 4650,
-          "end": 4763,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "doModules",
-      "nodes": [
-        {
-          "start": 34,
-          "end": 5591,
-          "isCollapsed": false
-        },
-        {
-          "start": 49,
-          "end": 1232,
-          "isCollapsed": false
-        },
-        {
-          "start": 266,
-          "end": 1065,
-          "isCollapsed": false
-        },
-        {
-          "start": 380,
-          "end": 629,
-          "isCollapsed": false
-        },
-        {
-          "start": 408,
-          "end": 614,
-          "isCollapsed": false
-        },
-        {
-          "start": 636,
-          "end": 1053,
-          "isCollapsed": false
-        },
-        {
-          "start": 771,
-          "end": 1053,
-          "isCollapsed": false
-        },
-        {
-          "start": 799,
-          "end": 1038,
-          "isCollapsed": false
-        },
-        {
-          "start": 1101,
-          "end": 1222,
-          "isCollapsed": false
-        },
-        {
-          "start": 1304,
-          "end": 5580,
-          "isCollapsed": false
-        },
-        {
-          "start": 1422,
-          "end": 3336,
-          "isCollapsed": false
-        },
-        {
-          "start": 2265,
-          "end": 3033,
-          "isCollapsed": false
-        },
-        {
-          "start": 2291,
-          "end": 3018,
-          "isCollapsed": false
-        },
-        {
-          "start": 2379,
-          "end": 3002,
-          "isCollapsed": false
-        },
-        {
-          "start": 3350,
-          "end": 3480,
-          "isCollapsed": false
-        },
-        {
-          "start": 3415,
-          "end": 3468,
-          "isCollapsed": false
-        },
-        {
-          "start": 3564,
-          "end": 5310,
-          "isCollapsed": false
-        },
-        {
-          "start": 3588,
-          "end": 5297,
-          "isCollapsed": false
-        },
-        {
-          "start": 3672,
-          "end": 5282,
           "isCollapsed": false
         }
       ]
@@ -1125,6 +765,386 @@
     },
     {
       "mode": 3,
+      "name": "goRemote",
+      "nodes": []
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck1",
+      "nodes": [
+        {
+          "start": 321,
+          "end": 1414,
+          "isCollapsed": false
+        },
+        {
+          "start": 346,
+          "end": 1405,
+          "isCollapsed": false
+        },
+        {
+          "start": 625,
+          "end": 733,
+          "isCollapsed": false
+        },
+        {
+          "start": 1094,
+          "end": 1202,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck2",
+      "nodes": [
+        {
+          "start": 203,
+          "end": 1230,
+          "isCollapsed": false
+        },
+        {
+          "start": 223,
+          "end": 1221,
+          "isCollapsed": false
+        },
+        {
+          "start": 490,
+          "end": 588,
+          "isCollapsed": false
+        },
+        {
+          "start": 931,
+          "end": 1029,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "glueGlass",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 5850,
+          "isCollapsed": false
+        },
+        {
+          "start": 36,
+          "end": 1424,
+          "isCollapsed": false
+        },
+        {
+          "start": 189,
+          "end": 1311,
+          "isCollapsed": false
+        },
+        {
+          "start": 303,
+          "end": 697,
+          "isCollapsed": false
+        },
+        {
+          "start": 331,
+          "end": 498,
+          "isCollapsed": false
+        },
+        {
+          "start": 509,
+          "end": 682,
+          "isCollapsed": false
+        },
+        {
+          "start": 704,
+          "end": 1299,
+          "isCollapsed": false
+        },
+        {
+          "start": 839,
+          "end": 1299,
+          "isCollapsed": false
+        },
+        {
+          "start": 867,
+          "end": 1067,
+          "isCollapsed": false
+        },
+        {
+          "start": 1078,
+          "end": 1284,
+          "isCollapsed": false
+        },
+        {
+          "start": 1318,
+          "end": 1407,
+          "isCollapsed": false
+        },
+        {
+          "start": 1496,
+          "end": 5839,
+          "isCollapsed": false
+        },
+        {
+          "start": 1551,
+          "end": 3534,
+          "isCollapsed": false
+        },
+        {
+          "start": 2445,
+          "end": 3238,
+          "isCollapsed": false
+        },
+        {
+          "start": 2471,
+          "end": 3223,
+          "isCollapsed": false
+        },
+        {
+          "start": 2559,
+          "end": 3207,
+          "isCollapsed": false
+        },
+        {
+          "start": 3548,
+          "end": 3678,
+          "isCollapsed": false
+        },
+        {
+          "start": 3613,
+          "end": 3666,
+          "isCollapsed": false
+        },
+        {
+          "start": 3762,
+          "end": 5582,
+          "isCollapsed": false
+        },
+        {
+          "start": 3786,
+          "end": 5569,
+          "isCollapsed": false
+        },
+        {
+          "start": 3870,
+          "end": 5555,
+          "isCollapsed": false
+        },
+        {
+          "start": 4654,
+          "end": 4753,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "doAirex",
+      "nodes": [
+        {
+          "start": 34,
+          "end": 5952,
+          "isCollapsed": false
+        },
+        {
+          "start": 49,
+          "end": 1320,
+          "isCollapsed": false
+        },
+        {
+          "start": 228,
+          "end": 1154,
+          "isCollapsed": false
+        },
+        {
+          "start": 342,
+          "end": 701,
+          "isCollapsed": false
+        },
+        {
+          "start": 473,
+          "end": 686,
+          "isCollapsed": false
+        },
+        {
+          "start": 708,
+          "end": 1142,
+          "isCollapsed": false
+        },
+        {
+          "start": 843,
+          "end": 1142,
+          "isCollapsed": false
+        },
+        {
+          "start": 876,
+          "end": 1127,
+          "isCollapsed": false
+        },
+        {
+          "start": 1190,
+          "end": 1309,
+          "isCollapsed": false
+        },
+        {
+          "start": 1392,
+          "end": 5941,
+          "isCollapsed": false
+        },
+        {
+          "start": 1471,
+          "end": 3504,
+          "isCollapsed": false
+        },
+        {
+          "start": 2375,
+          "end": 3210,
+          "isCollapsed": false
+        },
+        {
+          "start": 2406,
+          "end": 3195,
+          "isCollapsed": false
+        },
+        {
+          "start": 2499,
+          "end": 3179,
+          "isCollapsed": false
+        },
+        {
+          "start": 3518,
+          "end": 3658,
+          "isCollapsed": false
+        },
+        {
+          "start": 3588,
+          "end": 3646,
+          "isCollapsed": false
+        },
+        {
+          "start": 3742,
+          "end": 5655,
+          "isCollapsed": false
+        },
+        {
+          "start": 3771,
+          "end": 5642,
+          "isCollapsed": false
+        },
+        {
+          "start": 3860,
+          "end": 5628,
+          "isCollapsed": false
+        },
+        {
+          "start": 4658,
+          "end": 4771,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "doModules",
+      "nodes": [
+        {
+          "start": 34,
+          "end": 5596,
+          "isCollapsed": false
+        },
+        {
+          "start": 49,
+          "end": 1232,
+          "isCollapsed": false
+        },
+        {
+          "start": 266,
+          "end": 1065,
+          "isCollapsed": false
+        },
+        {
+          "start": 380,
+          "end": 629,
+          "isCollapsed": false
+        },
+        {
+          "start": 408,
+          "end": 614,
+          "isCollapsed": false
+        },
+        {
+          "start": 636,
+          "end": 1053,
+          "isCollapsed": false
+        },
+        {
+          "start": 771,
+          "end": 1053,
+          "isCollapsed": false
+        },
+        {
+          "start": 799,
+          "end": 1038,
+          "isCollapsed": false
+        },
+        {
+          "start": 1101,
+          "end": 1222,
+          "isCollapsed": false
+        },
+        {
+          "start": 1304,
+          "end": 5585,
+          "isCollapsed": false
+        },
+        {
+          "start": 1422,
+          "end": 3344,
+          "isCollapsed": false
+        },
+        {
+          "start": 2269,
+          "end": 3041,
+          "isCollapsed": false
+        },
+        {
+          "start": 2295,
+          "end": 3026,
+          "isCollapsed": false
+        },
+        {
+          "start": 2383,
+          "end": 3010,
+          "isCollapsed": false
+        },
+        {
+          "start": 3358,
+          "end": 3488,
+          "isCollapsed": false
+        },
+        {
+          "start": 3423,
+          "end": 3476,
+          "isCollapsed": false
+        },
+        {
+          "start": 3572,
+          "end": 5313,
+          "isCollapsed": false
+        },
+        {
+          "start": 3596,
+          "end": 5300,
+          "isCollapsed": false
+        },
+        {
+          "start": 3680,
+          "end": 5285,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "start",
       "nodes": [
         {
@@ -1168,11 +1188,6 @@
           "isCollapsed": false
         }
       ]
-    },
-    {
-      "mode": 3,
-      "name": "goRemote",
-      "nodes": []
     }
   ]
 }

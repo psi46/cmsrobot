@@ -84,7 +84,7 @@
             
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              call moveDown(hdiFinal[nIdx], mSlow, trStamp, true)
+              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false)
               delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
             endIf
@@ -94,7 +94,7 @@
         // -- Drop glue stamp
         call setSpeed()
         call print("put away glue stamp")
-        call moveDown(moduleGlueStampEnd, mSlow, trZero, true)
+        call moveDown(moduleGlueStampEnd, mSlow, trPressTwo, false)
         waitEndMove()
         switchMagnet = false
         movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)

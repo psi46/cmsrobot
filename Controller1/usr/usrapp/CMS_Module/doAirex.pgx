@@ -83,7 +83,7 @@
             
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
-              call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, false)
+              call moveDown(airexFinal[nAirexIdx], mVerySlow, trStamp, false)
               delay(waitGlue)
               call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
             endIf
