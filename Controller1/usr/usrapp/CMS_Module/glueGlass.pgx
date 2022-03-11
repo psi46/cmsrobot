@@ -63,8 +63,8 @@
         movel(appro(moduleGlueStampHome, trZsafe), tTool, mSlow)
 
         // -- dip stamp into glue before starting the normal procedure
+        call print("pre-dip glue stamp")
         call moveDown(glueFirstPoint[1], mSlow, trZero, false)
-        waitEndMove()
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[1], mSlow)
       
@@ -76,6 +76,7 @@
           if !bSelectItem or (bSelectedItems[nIdx]==true)
             call setSpeed()
             if bGlueGlass==true
+              call print("getting glue for position " + toString("1.0", nIdx))
               call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)         
               delay(waitGlue)
               
@@ -83,7 +84,6 @@
             
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              // -- FIXME: Not sure about the following meticulous = true!?
               call moveDown(hdiFinal[nIdx], mSlow, trStamp, true)
               delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
@@ -98,7 +98,6 @@
         waitEndMove()
         switchMagnet = false
         movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
-      
       endIf
       
       if !bSelectItem
@@ -124,13 +123,14 @@
             delay(waitShort)
             call print("picking module frame " + toString("1.0", nIdx))
             movel(appro(chuck2[nIdx], trZsafe), tTool, mSlow)
-            waitEndMove()
           
             // -- move with chuck to hdi glass position
             call moveDown(airexFinal[nIdx], mSlow, trZero, true)
         
             // -- release hdi vacuum to allow picking up hdi glass
-            call toggleValve(hdiValve[nIdx])
+            if statusValves[hdiValve[nIdx]]==1
+              call toggleValve(hdiValve[nIdx])
+            endIf
             delay(waitShort)
             switchVac0=true
             switchVac1=true
@@ -152,18 +152,17 @@
             // -- move up again
             movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
             movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
-            waitEndMove()
           endIf
         endIf
       endFor
 
       // -- move back somewhere
       call print("parking robot")
-      waitEndMove()
+      //waitEndMove()
       movej(jInitialPosition, tTool, mFast)
       waitEndMove()
       
-      call selectedClear()
+      //call selectedClear()
       bGlueGlass=false
       call print("glueGlass done")
     endIf
