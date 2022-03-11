@@ -19,6 +19,11 @@
     if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
       call print("put away chuck " + toString("1.0", nAirexIdx))
       // -- move over final airex position (where the chuck is from gluing) and down
+      // -- for edge positions make a curve to avoid hitting side bar
+      if nAirexIdx == 0 or nAirexIdx == 3
+        movej(appro(airexInitial[1], trZsafe), tTool, mFast)
+      endIf
+
       call moveDown(airexFinal[nAirexIdx], mSlow, trZero, false)
    
       // -- lift chuck1
@@ -50,7 +55,7 @@
   statusCleanupChuck1 = colorOn
   statusDoAirex = colorGray
   call print("cleanup (airex) done")
-  call selectedClear()
+  //call selectedClear()
     
 end]]></Code>
   </Program>

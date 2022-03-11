@@ -15,9 +15,12 @@
     if !bSelectItem or (bSelectedItems[nIdx]==true)
       call print("put away chuck " + toString("1.0", nIdx))
       // -- move over final hdi position (where the chuck is from gluing) and down
+      // -- for edge positions make a curve to avoid hitting side bar
+      if nIdx == 0 or nIdx == 3
+        movej(appro(airexInitial[1], trZsafe), tTool, mFast)
+      endIf
+
       call moveDown(hdiFinal[nIdx], mSlow, trZero, true)
-      //movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
-      //movel(hdiFinal[nIdx], tTool, mVerySlow)
    
       // -- lift chuck2
       switchMagnet=true
@@ -48,7 +51,7 @@
   call print("cleanup (modules) done")
   statusCleanupChuck2 = colorOn
   statusDoModules = colorGray
-  call selectedClear()
+  //call selectedClear()
   
 end]]></Code>
   </Program>
