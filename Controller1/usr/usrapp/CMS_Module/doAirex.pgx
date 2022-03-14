@@ -63,7 +63,7 @@
         
         // -- dip stamp into glue before starting the normal procedure
         call print("pre-dip glue stamp")
-        call moveDown(glueFirstPoint[0], mSlow, trZero, false)
+        call moveDown(glueFirstPoint[0], mSlow, trDownTwo, false)
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mVerySlow)
       
@@ -83,9 +83,9 @@
             
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
-              call moveDown(airexFinal[nAirexIdx], mVerySlow, trStamp, false)
+              call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, false)
               delay(waitGlue)
-              call moveStampUp(airexFinal[nAirexIdx], mExtremelySlow)
+              call moveStampUp(airexFinal[nAirexIdx], mVerySlow)
             endIf
           endIf
         endFor
