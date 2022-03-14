@@ -13,7 +13,7 @@
     <Code><![CDATA[begin
   // Note: finalSpeed is not taken literally!
   if finalSpeed == mVerySlow
-    speed[0] = mNomSpeed
+    speed[0] = mFast
     speed[1] = mSlow
     speed[2] = mVerySlow
   elseIf finalSpeed == mSlow
