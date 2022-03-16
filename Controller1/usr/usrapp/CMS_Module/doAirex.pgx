@@ -8,6 +8,12 @@
     <Code><![CDATA[begin
   vacuumCheckDone = false
   while true
+    if bEndProgram==true
+      statusDoAirex = colorError
+      call parkEndProgram()
+      return
+    endIf
+    
     if bDoAirex==true
       call selectedCheck()
       call print("starting doAirex")
@@ -60,6 +66,12 @@
         delay(waitShort)
         switchMagnet=true
         movel(appro(airexGlueStampHome, trZsafe), tTool, mSlow)
+
+        if bEndProgram==true
+          statusDoAirex = colorError
+          call parkEndProgram()
+          return
+        endIf
         
         // -- dip stamp into glue before starting the normal procedure
         call print("pre-dip glue stamp")
@@ -67,6 +79,11 @@
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mVerySlow)
       
+        if bEndProgram==true
+          statusDoAirex = colorError
+          call parkEndProgram()
+          return
+        endIf
         // -- apply glue stamp to all positions:
         //    divide approach onto /from glue position into two steps
         //    (1) slowly to trApproach above it
@@ -75,11 +92,25 @@
           if !bSelectItem or (bSelectedItems[nAirexIdx]==true)
             call setSpeed()
             if bDoAirex==true
+
+              if bEndProgram==true
+                statusDoAirex = colorError
+                call parkEndProgram()
+                return
+              endIf
+
               call print("getting glue for position " + toString("1.0", nAirexIdx))
               call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false)         
               delay(waitGlue)
               
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
+              
+              if bEndProgram==true
+                statusDoAirex = colorError
+                call parkEndProgram()
+                return
+              endIf
+
             
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))

@@ -11,6 +11,7 @@
     <Program file="clkCleanupChuck2.pgx" />
     <Program file="clkDoAirex.pgx" />
     <Program file="clkDoModules.pgx" />
+    <Program file="clkEndProgram.pgx" />
     <Program file="clkGlueGlass.pgx" />
     <Program file="clkPark1.pgx" />
     <Program file="clkPark2.pgx" />
@@ -40,6 +41,7 @@
     <Program file="moveDown.pgx" />
     <Program file="moveStampUp.pgx" />
     <Program file="park1.pgx" />
+    <Program file="parkEndProgram.pgx" />
     <Program file="print.pgx" />
     <Program file="selectedCheck.pgx" />
     <Program file="selectedClear.pgx" />

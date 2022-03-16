@@ -208,6 +208,12 @@
       "event": "click",
       "data": "socketServer",
       "priority": 10
+    },
+    {
+      "id": "btn_EndProgram",
+      "event": "click",
+      "data": "clkEndProgram",
+      "priority": 10
     }
   ],
   "events": []
