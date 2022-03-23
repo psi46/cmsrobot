@@ -10,6 +10,7 @@
 
   call selectedCheck()
   call print("cleanup (modules) start")
+ 
   // -- pick vacuum chuck2's and put them back to their original place
   for nIdx=0 to 5
     if !bSelectItem or (bSelectedItems[nIdx]==true)
@@ -20,20 +21,20 @@
         movej(appro(airexInitial[1], trZsafe), tTool, mFast)
       endIf
 
-      call moveDown(hdiFinal[nIdx], mSlow, trZero, true)
+      call moveDown(hdiFinal[nIdx], mSlow, trPressTwo, false)
    
       // -- lift chuck2
       switchMagnet=true
       delay(waitShort)
       movel(appro(hdiFinal[nIdx], trZsafe), tTool, mSlow)
-      waitEndMove()
+      //waitEndMove()
       
       // -- move over/to initial chuck position
       // -- for edge positions make a curve to avoid hitting side bar
       if nIdx == 0 or nIdx == 3
         movej(appro(airexInitial[1], trZsafe), tTool, mFast)
       endIf
-      call moveDown(chuck2[nIdx], mSlow, trZero, true)
+      call moveDown(chuck2[nIdx], mSlow, trZero, false)
 
       // -- release it
       switchMagnet=false

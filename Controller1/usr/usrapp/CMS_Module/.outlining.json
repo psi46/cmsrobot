@@ -744,58 +744,6 @@
     },
     {
       "mode": 3,
-      "name": "clkCleanupChuck1",
-      "nodes": [
-        {
-          "start": 321,
-          "end": 1414,
-          "isCollapsed": false
-        },
-        {
-          "start": 346,
-          "end": 1405,
-          "isCollapsed": false
-        },
-        {
-          "start": 625,
-          "end": 733,
-          "isCollapsed": false
-        },
-        {
-          "start": 1094,
-          "end": 1202,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck2",
-      "nodes": [
-        {
-          "start": 203,
-          "end": 1230,
-          "isCollapsed": false
-        },
-        {
-          "start": 223,
-          "end": 1221,
-          "isCollapsed": false
-        },
-        {
-          "start": 490,
-          "end": 588,
-          "isCollapsed": false
-        },
-        {
-          "start": 931,
-          "end": 1029,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "glueGlass",
       "nodes": [
         {
@@ -1177,6 +1125,58 @@
       "mode": 3,
       "name": "parkEndProgram",
       "nodes": []
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck1",
+      "nodes": [
+        {
+          "start": 202,
+          "end": 1295,
+          "isCollapsed": false
+        },
+        {
+          "start": 227,
+          "end": 1286,
+          "isCollapsed": false
+        },
+        {
+          "start": 506,
+          "end": 614,
+          "isCollapsed": false
+        },
+        {
+          "start": 975,
+          "end": 1083,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "clkCleanupChuck2",
+      "nodes": [
+        {
+          "start": 205,
+          "end": 1240,
+          "isCollapsed": false
+        },
+        {
+          "start": 225,
+          "end": 1231,
+          "isCollapsed": false
+        },
+        {
+          "start": 492,
+          "end": 590,
+          "isCollapsed": false
+        },
+        {
+          "start": 940,
+          "end": 1038,
+          "isCollapsed": false
+        }
+      ]
     },
     {
       "mode": 3,
