@@ -64,7 +64,7 @@
 
         // -- dip stamp into glue before starting the normal procedure
         call print("pre-dip glue stamp")
-        call moveDown(glueFirstPoint[1], mSlow, trZero, false)
+        call moveDown(glueFirstPoint[1], mSlow, trDownTwo, false)
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[1], mSlow)
       
@@ -77,7 +77,7 @@
             call setSpeed()
             if bGlueGlass==true
               call print("getting glue for position " + toString("1.0", nIdx))
-              call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)         
+              call moveDown(gluePickPoint2[nIdx], mSlow, trDownTwo, false)         
               delay(waitGlue)
               
               call moveStampUp(gluePickPoint2[nIdx], mVerySlow)

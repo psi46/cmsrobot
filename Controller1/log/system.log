@@ -2610,3 +2610,10 @@
 {"entry":{"val":"New profile : %s.","data":[{"val":"maintenance"}],"date":"2022-03-11T08:43:43","ts":"2.789927700","type":"key","lvl":"INFO","id":"0x2201"},"hash":"be31de2db1e79e8449"}
 {"entry":{"date":"2022-03-11T08:43:43","ts":"2.881314700","type":"msg","lvl":"INFO","id":"0x2401","val":"End of controller initialization"},"hash":"10c23db869f7ff134b"}
 {"entry":{"val":"Working mode : automatic.","date":"2022-03-11T08:43:43","ts":"2.917803300","type":"key","lvl":"INFO","id":"0x1801"},"hash":"cf6d15d8ed5e2f6545"}
+{"entry":{"val":"Saving controller context...","date":"2022-03-17T08:31:28","ts":"517677.375194599","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"bb96a3234192ebd965"}
+{"entry":{"val":"CPU temperature: %g degC","data":[{"val":50.000000000}],"date":"2022-03-17T08:31:28","ts":"517677.623202199","type":"key","lvl":"INFO","id":"0x5B02"},"hash":"f323a612f55220bef6"}
+{"entry":{"val":"Baseboard temperature: %g degC","data":[{"val":40.000000000}],"date":"2022-03-17T08:31:28","ts":"517677.623264499","type":"key","lvl":"INFO","id":"0x5B03"},"hash":"884cb95bed91ba6bd5"}
+{"entry":{"val":"CPU fan speed: %g RPM","data":[{"val":4000.000000000}],"date":"2022-03-17T08:31:28","ts":"517677.623295699","type":"key","lvl":"INFO","id":"0x5B04"},"hash":"3a7550ef84b0629fc0"}
+{"entry":{"val":"CPU Battery is OK","date":"2022-03-17T08:31:28","ts":"517677.623358799","type":"key","lvl":"INFO","id":"0x5B05"},"hash":"aaed91c68961e9aec4"}
+{"entry":{"val":"No CPU Overcurrent.","date":"2022-03-17T08:31:28","ts":"517677.623412100","type":"key","lvl":"INFO","id":"0x5B07"},"hash":"8b7e5a2b5f937fa0a4"}
+{"entry":{"val":"Saving controller context...","date":"2022-03-17T08:34:36","ts":"517865.307756900","type":"key","lvl":"INFO","id":"0x5B01"},"hash":"cd6a34dff6e3fd2cec"}

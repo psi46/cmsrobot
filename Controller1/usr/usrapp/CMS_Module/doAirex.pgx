@@ -100,7 +100,7 @@
               endIf
 
               call print("getting glue for position " + toString("1.0", nAirexIdx))
-              call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false)         
+              call moveDown(gluePickPoint[nAirexIdx], mSlow, trDownTwo, false)         
               delay(waitGlue)
               
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
