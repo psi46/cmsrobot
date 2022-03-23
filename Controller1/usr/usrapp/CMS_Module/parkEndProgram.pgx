@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="parkEndProgram">
+    <Code><![CDATA[begin
+  call print("end program, put robot into safe state")
+  // -- move over end of foil, drop anything connected  
+  call moveDown(parkEndPoint, mFast, trZero, false)
+  switchMagnet = false
+  switchVac0   = false
+  switchVac1   = false
+  
+  // -- move up
+  movej(appro(parkEndPoint, trZsafe), tTool, mFast)
+  waitEndMove()
+  
+  // -- move to normal rest position
+  resetMotion()
+  movej(jInitialPosition, tTool, mFast)
+  waitEndMove()
+end]]></Code>
+  </Program>
+</Programs>
