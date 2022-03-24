@@ -61,10 +61,13 @@
         switchMagnet=true
         movel(appro(moduleGlueStampHome, trZsafe), tTool, mSlow)
 
-        // -- dip stamp into glue before starting the normal procedure
-        call moveDown(glueFirstPoint[1], mSlow, trDownTwo, false)
+        // -- double-dip stamp into glue before starting the normal procedure
+        call moveDown(glueFirstPoint[1], mSlow, trZero, false)
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[1], mVerySlow)
+        call moveDown(glueFirstPoint[0], mSlow, trZero, false)
+        delay(waitGlue)
+        call moveStampUp(glueFirstPoint[0], mVerySlow)
 
         // -- apply glue stamp to all positions  
         //    divide approach onto /from glue position into two steps
@@ -75,7 +78,7 @@
             call setSpeed()
             if bDoModules==true
               call print("getting glue for position " + toString("1.0", nIdx))
-              call moveDown(gluePickPoint2[nIdx], mSlow, trDownTwo, false)
+              call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)
               delay(waitGlue)
 
               call moveStampUp(gluePickPoint2[nIdx], mVerySlow)

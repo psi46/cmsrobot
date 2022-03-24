@@ -73,9 +73,11 @@
           return
         endIf
         
-        // -- dip stamp into glue before starting the normal procedure
-        call print("pre-dip glue stamp")
-        call moveDown(glueFirstPoint[0], mSlow, trDownTwo, false)
+        // -- double-dip stamp into glue before starting the normal procedure
+        call moveDown(glueFirstPoint[1], mSlow, trZero, false)
+        delay(waitGlue)
+        call moveStampUp(glueFirstPoint[1], mVerySlow)
+        call moveDown(glueFirstPoint[0], mSlow, trZero, false)
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mVerySlow)
       
@@ -100,7 +102,7 @@
               endIf
 
               call print("getting glue for position " + toString("1.0", nAirexIdx))
-              call moveDown(gluePickPoint[nAirexIdx], mSlow, trDownTwo, false)         
+              call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false)         
               delay(waitGlue)
               
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
