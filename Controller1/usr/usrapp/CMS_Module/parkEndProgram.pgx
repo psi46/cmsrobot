@@ -3,6 +3,8 @@
   <Program name="parkEndProgram">
     <Code><![CDATA[begin
   call print("end program, put robot into safe state")
+  // -- move up to safe z position from wherever you are 
+  movej(appro(here(tTool, world), trZverySafe), tTool, mSlow)
   // -- move over end of foil, drop anything connected  
   call moveDown(parkEndPoint, mFast, trZero, false)
   switchMagnet = false
