@@ -8,11 +8,7 @@
     <Code><![CDATA[begin
   vacuumCheckDone = false
   while true
-    if bEndProgram==true
-      statusDoAirex = colorError
-      call parkEndProgram()
-      return
-    endIf
+    call parkEndProgram()
     
     if bDoAirex==true
       call selectedCheck()
@@ -23,7 +19,7 @@
       if !bSelectItem
         // -- check all
         call print("check vacuum on all")
-        delay(waitGlue)
+        delay(waitShort)
         for nAirexIdx = 0 to 5
           // -- check only the sensor valves, not the AIREX frame valves (don't care about those)
           if statusValves[sensorValve[nAirexIdx]] == 0
@@ -35,7 +31,7 @@
       else 
         // -- check only those that are selected
         call print("check vacuum on selection")
-        delay(waitGlue)
+        delay(waitShort)
         for nAirexIdx = 0 to 5
           if statusValves[sensorValve[nAirexIdx]] == 0 and (bSelectedItems[nAirexIdx]==true)
             bDoAirex = false
@@ -67,11 +63,7 @@
         switchMagnet=true
         movel(appro(airexGlueStampHome, trZsafe), tTool, mSlow)
 
-        if bEndProgram==true
-          statusDoAirex = colorError
-          call parkEndProgram()
-          return
-        endIf
+        call parkEndProgram()        
         
         // -- double-dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[1], mSlow, trZero, false)
@@ -81,11 +73,8 @@
         delay(waitGlue)
         call moveStampUp(glueFirstPoint[0], mVerySlow)
       
-        if bEndProgram==true
-          statusDoAirex = colorError
-          call parkEndProgram()
-          return
-        endIf
+        call parkEndProgram()
+        
         // -- apply glue stamp to all positions:
         //    divide approach onto /from glue position into two steps
         //    (1) slowly to trApproach above it
@@ -95,11 +84,7 @@
             call setSpeed()
             if bDoAirex==true
 
-              if bEndProgram==true
-                statusDoAirex = colorError
-                call parkEndProgram()
-                return
-              endIf
+              call parkEndProgram()
 
               call print("getting glue for position " + toString("1.0", nAirexIdx))
               call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false)         
@@ -107,12 +92,7 @@
               
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
               
-              if bEndProgram==true
-                statusDoAirex = colorError
-                call parkEndProgram()
-                return
-              endIf
-
+              call parkEndProgram()
             
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
@@ -172,6 +152,8 @@
             call print("placing airex frame " + toString("1.0", nAirexIdx))
             movel(appro(airexInitial[nAirexIdx], trZclose), tTool, mSlow)
             movel(appro(airexInitial[nAirexIdx], trZsafe), tTool, mNomSpeed)
+
+            call parkEndProgram()
           
             // -- move to final airex position and put down 
             call moveDown(airexFinal[nAirexIdx], mVerySlow, trZero, false)
