@@ -68,10 +68,10 @@
         call print("pre-dip glue stamp")
         call moveDown(glueFirstPoint[1], mSlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[1], mSlow)
+        call moveStampUp(glueFirstPoint[1], mVerySlow)
         call moveDown(glueFirstPoint[0], mSlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mSlow)
+        call moveStampUp(glueFirstPoint[0], mVerySlow)
       
         call parkEndProgram()
         
