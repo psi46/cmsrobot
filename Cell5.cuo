@@ -8,7 +8,7 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\pointRs" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\trsf" IsExpanded="true" />
     </Nodes>
   </Option>
   <Option Name="CellExplorer">
@@ -16,12 +16,7 @@
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
       <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\doAirex" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\doModules" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\goRemote" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\moveDown" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\socketServer" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\start" IsExpanded="true" />
+      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\interface" IsExpanded="true" />
     </Nodes>
   </Option>
   <Option Name="GeometryView">
@@ -32,8 +27,6 @@
       <Node Path="Cell5\Controller1\CMS_Module\world[0]" IsExpanded="true" />
       <Node Path="Cell5\Controller1\CMS_Module\world[0]\fPalette" IsExpanded="true" />
       <Node Path="Cell5\Controller1\CMS_Module\world[0]\fPalette\fPalette[0]" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module\world[0]\fPalette\fPalette[0]\airexFinal" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module\world[0]\fPalette\fPalette[0]\chuck1" IsExpanded="true" />
     </Nodes>
   </Option>
   <Option Name="Breakpoints">

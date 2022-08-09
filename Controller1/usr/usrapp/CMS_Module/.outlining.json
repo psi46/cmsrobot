@@ -640,53 +640,6 @@
     },
     {
       "mode": 3,
-      "name": "moveStampUp",
-      "nodes": [
-        {
-          "start": 58,
-          "end": 113,
-          "isCollapsed": false
-        },
-        {
-          "start": 162,
-          "end": 217,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "setSpeed",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 1038,
-          "isCollapsed": false
-        },
-        {
-          "start": 210,
-          "end": 413,
-          "isCollapsed": false
-        },
-        {
-          "start": 417,
-          "end": 620,
-          "isCollapsed": false
-        },
-        {
-          "start": 623,
-          "end": 826,
-          "isCollapsed": false
-        },
-        {
-          "start": 829,
-          "end": 1032,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "selectedClear",
       "nodes": [
         {
@@ -1034,11 +987,42 @@
     },
     {
       "mode": 3,
+      "name": "setSpeed",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 1038,
+          "isCollapsed": false
+        },
+        {
+          "start": 210,
+          "end": 413,
+          "isCollapsed": false
+        },
+        {
+          "start": 417,
+          "end": 620,
+          "isCollapsed": false
+        },
+        {
+          "start": 623,
+          "end": 826,
+          "isCollapsed": false
+        },
+        {
+          "start": 829,
+          "end": 1032,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "glueGlass",
       "nodes": [
         {
           "start": 8,
-          "end": 6274,
+          "end": 6279,
           "isCollapsed": false
         },
         {
@@ -1093,57 +1077,57 @@
         },
         {
           "start": 1498,
-          "end": 6263,
+          "end": 6268,
           "isCollapsed": false
         },
         {
           "start": 1553,
-          "end": 3804,
+          "end": 3809,
           "isCollapsed": false
         },
         {
-          "start": 2662,
-          "end": 3508,
+          "start": 2669,
+          "end": 3513,
           "isCollapsed": false
         },
         {
-          "start": 2688,
-          "end": 3493,
+          "start": 2695,
+          "end": 3498,
           "isCollapsed": false
         },
         {
-          "start": 2776,
-          "end": 3477,
+          "start": 2783,
+          "end": 3482,
           "isCollapsed": false
         },
         {
-          "start": 3818,
-          "end": 3948,
+          "start": 3823,
+          "end": 3953,
           "isCollapsed": false
         },
         {
-          "start": 3883,
-          "end": 3936,
+          "start": 3888,
+          "end": 3941,
           "isCollapsed": false
         },
         {
-          "start": 4032,
-          "end": 6006,
+          "start": 4037,
+          "end": 6011,
           "isCollapsed": false
         },
         {
-          "start": 4056,
-          "end": 5993,
+          "start": 4061,
+          "end": 5998,
           "isCollapsed": false
         },
         {
-          "start": 4140,
-          "end": 5979,
+          "start": 4145,
+          "end": 5984,
           "isCollapsed": false
         },
         {
-          "start": 5008,
-          "end": 5107,
+          "start": 5013,
+          "end": 5112,
           "isCollapsed": false
         }
       ]
@@ -1154,7 +1138,7 @@
       "nodes": [
         {
           "start": 8,
-          "end": 1092,
+          "end": 1421,
           "isCollapsed": false
         }
       ]
@@ -1201,6 +1185,22 @@
         {
           "start": 2415,
           "end": 2506,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveStampUp",
+      "nodes": [
+        {
+          "start": 58,
+          "end": 113,
+          "isCollapsed": false
+        },
+        {
+          "start": 162,
+          "end": 217,
           "isCollapsed": false
         }
       ]
