@@ -76,7 +76,7 @@
         call parkEndProgram()
         
         // -- apply glue stamp to all positions:
-        //    divide approach onto /from glue position into two steps
+        //    divide approach onto/from glue position into two steps
         //    (1) slowly to trApproach above it
         //    (2) extremely slowly up from glue to trApproach 
         for nIdx=0 to 5
@@ -94,7 +94,7 @@
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
               call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false)
-              //delay(waitGlue)
+              delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
             endIf
           endIf
