@@ -13,24 +13,30 @@
     resetMotion()
 
     // -- move up to safe z position from wherever you are 
+    call print("end program: move up")  
     movej(appro(here(tTool, world), trZsafe), tTool, mSlow)
     waitEndMove()
   
-    // -- move over end of foil, drop anything connected  
+    // -- move over end of foil, deposit anything connected  
+    call print("end program: move to appro(parkEndPoint, trZsafe)")
     movej(appro(parkEndPoint, trZsafe), tTool, mNomSpeed)
     waitEndMove()
+    call print("end program: move to appro(parkEndPoint, trZero)")
     movej(appro(parkEndPoint, trZero), tTool, mSlow)
     waitEndMove()
-    
+    call print("end program: drop tool")
     switchMagnet = false
     switchVac0   = false
     switchVac1   = false
-  
+    delay(1)
+    
     // -- move up
+    call print("end program: move up")
     movej(appro(parkEndPoint, trZsafe), tTool, mNomSpeed)
     waitEndMove()
   
     // -- move to normal rest position
+    call print("end program: move to normal rest position")
     movej(jInitialPosition, tTool, mFast)
     waitEndMove()
     resetMotion()
