@@ -697,32 +697,6 @@
     },
     {
       "mode": 3,
-      "name": "moveDown",
-      "nodes": [
-        {
-          "start": 54,
-          "end": 326,
-          "isCollapsed": false
-        },
-        {
-          "start": 150,
-          "end": 247,
-          "isCollapsed": false
-        },
-        {
-          "start": 250,
-          "end": 318,
-          "isCollapsed": false
-        },
-        {
-          "start": 473,
-          "end": 512,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "clkEndProgram",
       "nodes": []
     },
@@ -1145,6 +1119,22 @@
     },
     {
       "mode": 3,
+      "name": "moveStampUp",
+      "nodes": [
+        {
+          "start": 58,
+          "end": 113,
+          "isCollapsed": false
+        },
+        {
+          "start": 162,
+          "end": 217,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "start",
       "nodes": [
         {
@@ -1191,16 +1181,26 @@
     },
     {
       "mode": 3,
-      "name": "moveStampUp",
+      "name": "moveDown",
       "nodes": [
         {
-          "start": 58,
-          "end": 113,
+          "start": 54,
+          "end": 326,
           "isCollapsed": false
         },
         {
-          "start": 162,
-          "end": 217,
+          "start": 150,
+          "end": 247,
+          "isCollapsed": false
+        },
+        {
+          "start": 250,
+          "end": 318,
+          "isCollapsed": false
+        },
+        {
+          "start": 478,
+          "end": 517,
           "isCollapsed": false
         }
       ]

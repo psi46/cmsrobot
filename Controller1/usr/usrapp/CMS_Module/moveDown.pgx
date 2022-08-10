@@ -30,13 +30,13 @@
   //    movej(appro(where, trZverySafe), tTool, speed[0])
   //  endIf
   
-  movej(appro(where, trZsafe), tTool, speed[0])
+  movej(appro(where, trZsafe*trXY), tTool, speed[0])
   if meticulous
     waitEndMove()
   endIf
   // -- move down with decreasing speeds. Not sure whether this gets "blended" away
-  movej(appro(where, trZclose), tTool, speed[1])
-  movej(appro(where, finalAppro), tTool, speed[2])
+  movej(appro(where, trZclose*trXY), tTool, speed[1])
+  movej(appro(where, finalAppro*trXY), tTool, speed[2])
   waitEndMove()
 end]]></Code>
   </Program>
