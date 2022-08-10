@@ -7,7 +7,7 @@
     <Code><![CDATA[begin
 
   call print("Welcome to TEPX module production")
-  version = "2022/08/10-02"
+  version = "2022/08/10-07"
   strTCPIP = "TCP/IP sockets not activated"
   bSockets = false
   
@@ -110,6 +110,7 @@
   while true
     jPosition = herej()
     sPosition = toString("6.3", jPosition.j3)
+    sMovementID = toString("6.3", getMoveId())
   endWhile
   
 end]]></Code>

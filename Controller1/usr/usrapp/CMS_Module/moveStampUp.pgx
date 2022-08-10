@@ -14,9 +14,7 @@
   if iniSpeed == mExtremelySlow
     waitEndMove()
   endIf
-  movej(appro(where, trZsafe), tTool, mNomSpeed)
-  // maybe not required as no chucks around?
-  // waitEndMove()
+  movej(appro(where, trZsafe), tTool, mSlow)
 end]]></Code>
   </Program>
 </Programs>

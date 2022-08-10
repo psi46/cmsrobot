@@ -152,6 +152,14 @@
       "size": 1,
       "direction": "rw",
       "refresh": 1
+    },
+    {
+      "id": "txtID",
+      "attribute": "value",
+      "data": "sMovementID[0]",
+      "size": 1,
+      "direction": "r",
+      "refresh": 1
     }
   ],
   "callbacks": [
