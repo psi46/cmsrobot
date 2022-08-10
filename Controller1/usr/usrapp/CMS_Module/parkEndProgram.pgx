@@ -15,18 +15,19 @@
 
     jPos = herej()
     call print("end program: stopMove at here.z = "  + toString("6.3", jPos.j3))
+    delay(1)
     stopMove()
    
-    jPos = herej()
+   // jPos = herej()
     call print("end program: resetMotion at here.z = "  + toString("6.3", jPos.j3))
-    
+    delay(1) 
     resetMotion()
   
     
     // -- move up to safe z position from wherever you are 
-    jPos = herej()
-    call print("end program: move up from here.z = "  + toString("6.3", jPos.j3))
-    movel(appro(here(tTool, world), trZsafe), tTool, mSlow)
+    jPos.j3 = 70
+    call print("end program: move up")
+    movej(jPos, tTool, mSlow)
     waitEndMove()
   
     // -- move over end of foil, deposit anything connected  
