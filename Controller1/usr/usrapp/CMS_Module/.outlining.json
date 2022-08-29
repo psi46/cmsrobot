@@ -992,11 +992,43 @@
     },
     {
       "mode": 3,
+      "name": "parkEndProgram",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 1664,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveStampUp",
+      "nodes": [
+        {
+          "start": 58,
+          "end": 113,
+          "isCollapsed": false
+        },
+        {
+          "start": 119,
+          "end": 281,
+          "isCollapsed": false
+        },
+        {
+          "start": 221,
+          "end": 273,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "glueGlass",
       "nodes": [
         {
           "start": 8,
-          "end": 6279,
+          "end": 6393,
           "isCollapsed": false
         },
         {
@@ -1051,57 +1083,57 @@
         },
         {
           "start": 1498,
-          "end": 6268,
+          "end": 6382,
           "isCollapsed": false
         },
         {
           "start": 1553,
-          "end": 3809,
+          "end": 3923,
           "isCollapsed": false
         },
         {
-          "start": 2669,
-          "end": 3513,
+          "start": 2704,
+          "end": 3627,
           "isCollapsed": false
         },
         {
-          "start": 2695,
-          "end": 3498,
+          "start": 2730,
+          "end": 3612,
           "isCollapsed": false
         },
         {
-          "start": 2783,
-          "end": 3482,
+          "start": 2818,
+          "end": 3596,
           "isCollapsed": false
         },
         {
-          "start": 3823,
-          "end": 3953,
+          "start": 3937,
+          "end": 4067,
           "isCollapsed": false
         },
         {
-          "start": 3888,
-          "end": 3941,
+          "start": 4002,
+          "end": 4055,
           "isCollapsed": false
         },
         {
-          "start": 4037,
-          "end": 6011,
+          "start": 4151,
+          "end": 6125,
           "isCollapsed": false
         },
         {
-          "start": 4061,
-          "end": 5998,
+          "start": 4175,
+          "end": 6112,
           "isCollapsed": false
         },
         {
-          "start": 4145,
-          "end": 5984,
+          "start": 4259,
+          "end": 6098,
           "isCollapsed": false
         },
         {
-          "start": 5013,
-          "end": 5112,
+          "start": 5127,
+          "end": 5226,
           "isCollapsed": false
         }
       ]
@@ -1112,49 +1144,22 @@
       "nodes": [
         {
           "start": 54,
-          "end": 326,
+          "end": 330,
           "isCollapsed": false
         },
         {
-          "start": 150,
-          "end": 247,
+          "start": 154,
+          "end": 251,
           "isCollapsed": false
         },
         {
-          "start": 250,
-          "end": 318,
+          "start": 254,
+          "end": 322,
           "isCollapsed": false
         },
         {
-          "start": 478,
-          "end": 517,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "moveStampUp",
-      "nodes": [
-        {
-          "start": 58,
-          "end": 113,
-          "isCollapsed": false
-        },
-        {
-          "start": 166,
-          "end": 221,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "parkEndProgram",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 1664,
+          "start": 389,
+          "end": 428,
           "isCollapsed": false
         }
       ]

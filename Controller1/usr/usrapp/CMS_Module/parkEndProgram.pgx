@@ -15,12 +15,12 @@
 
     jPos = herej()
     call print("end program: stopMove at here.z = "  + toString("6.3", jPos.j3))
-    delay(1)
     stopMove()
+    delay(2)
    
    // jPos = herej()
     call print("end program: resetMotion at here.z = "  + toString("6.3", jPos.j3))
-    delay(1) 
+    delay(2) 
     resetMotion()
   
     

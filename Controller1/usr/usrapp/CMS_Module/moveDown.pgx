@@ -13,7 +13,7 @@
     <Code><![CDATA[begin
   // Note: finalSpeed is not taken literally!
   if finalSpeed == mVerySlow
-    speed[0] = mFast
+    speed[0] = mNomSpeed
     speed[1] = mSlow
     speed[2] = mVerySlow
   elseIf finalSpeed == mSlow
@@ -26,14 +26,11 @@
     speed[2] = mSlow
   endIf
   
-  //  if meticulous
-  //    movej(appro(where, trZverySafe), tTool, speed[0])
-  //  endIf
-  
   movej(appro(where, trZsafe*trXY), tTool, speed[0])
   if meticulous
     waitEndMove()
   endIf
+  
   // -- move down with decreasing speeds. Not sure whether this gets "blended" away
   movej(appro(where, trZclose*trXY), tTool, speed[1])
   movej(appro(where, finalAppro*trXY), tTool, speed[2])

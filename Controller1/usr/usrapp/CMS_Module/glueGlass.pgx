@@ -66,13 +66,14 @@
 
         // -- double-dip stamp into glue before starting the normal procedure
         call print("pre-dip glue stamp")
-        call moveDown(glueFirstPoint[1], mSlow, trZero, false)
+        call moveDown(glueFirstPoint[1], mVerySlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[1], mVerySlow)
-        call moveDown(glueFirstPoint[0], mSlow, trZero, false)
+        movel(appro(glueFirstPoint[1], trZsafe), tTool, mNomSpeed)
+
+        call moveDown(glueFirstPoint[0], mVerySlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mVerySlow)
-      
+        movel(appro(glueFirstPoint[0], trZsafe), tTool, mNomSpeed)
+        
         call parkEndProgram()
         
         // -- apply glue stamp to all positions:
@@ -84,10 +85,11 @@
             call setSpeed()
             if bGlueGlass==true
               call print("getting glue for position " + toString("1.0", nIdx))
-              call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)         
+              call moveDown(gluePickPoint2[nIdx], mVerySlow, trZero, false)         
               delay(waitGlue)
               
-              call moveStampUp(gluePickPoint2[nIdx], mVerySlow)
+              // call moveStampUp(gluePickPoint2[nIdx], mSlow)
+              movel(appro(gluePickPoint2[nIdx], trZsafe), tTool, mNomSpeed)
             
               call parkEndProgram()
               

@@ -10,10 +10,14 @@
   if iniSpeed == mExtremelySlow
     waitEndMove()
   endIf
-  movej(appro(where, trZclose), tTool, mVerySlow)
+  
   if iniSpeed == mExtremelySlow
+    movej(appro(where, trZclose), tTool, mVerySlow)
     waitEndMove()
+  else
+    movej(appro(where, trZclose), tTool, mSlow)
   endIf
+  
   movej(appro(where, trZsafe), tTool, mSlow)
 end]]></Code>
   </Program>

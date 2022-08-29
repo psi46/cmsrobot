@@ -7,7 +7,7 @@
     <Code><![CDATA[begin
 
   call print("Welcome to TEPX module production")
-  version = "2022/08/10-09"
+  version = "2022/08/29-06"
   strTCPIP = "TCP/IP sockets not activated"
   bSockets = false
   
