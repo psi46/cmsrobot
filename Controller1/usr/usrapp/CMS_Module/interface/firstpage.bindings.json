@@ -222,6 +222,18 @@
       "event": "click",
       "data": "clkEndProgram",
       "priority": 10
+    },
+    {
+      "id": "btn2",
+      "event": "click",
+      "data": "clkAllOn",
+      "priority": 10
+    },
+    {
+      "id": "btn2_Copy1",
+      "event": "click",
+      "data": "clkAllOff",
+      "priority": 10
     }
   ],
   "events": []
