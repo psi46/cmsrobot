@@ -1024,122 +1024,6 @@
     },
     {
       "mode": 3,
-      "name": "glueGlass",
-      "nodes": [
-        {
-          "start": 8,
-          "end": 6393,
-          "isCollapsed": false
-        },
-        {
-          "start": 36,
-          "end": 1426,
-          "isCollapsed": false
-        },
-        {
-          "start": 189,
-          "end": 1313,
-          "isCollapsed": false
-        },
-        {
-          "start": 304,
-          "end": 698,
-          "isCollapsed": false
-        },
-        {
-          "start": 332,
-          "end": 499,
-          "isCollapsed": false
-        },
-        {
-          "start": 510,
-          "end": 683,
-          "isCollapsed": false
-        },
-        {
-          "start": 705,
-          "end": 1301,
-          "isCollapsed": false
-        },
-        {
-          "start": 841,
-          "end": 1301,
-          "isCollapsed": false
-        },
-        {
-          "start": 869,
-          "end": 1069,
-          "isCollapsed": false
-        },
-        {
-          "start": 1080,
-          "end": 1286,
-          "isCollapsed": false
-        },
-        {
-          "start": 1320,
-          "end": 1409,
-          "isCollapsed": false
-        },
-        {
-          "start": 1498,
-          "end": 6382,
-          "isCollapsed": false
-        },
-        {
-          "start": 1553,
-          "end": 3923,
-          "isCollapsed": false
-        },
-        {
-          "start": 2704,
-          "end": 3627,
-          "isCollapsed": false
-        },
-        {
-          "start": 2730,
-          "end": 3612,
-          "isCollapsed": false
-        },
-        {
-          "start": 2818,
-          "end": 3596,
-          "isCollapsed": false
-        },
-        {
-          "start": 3937,
-          "end": 4067,
-          "isCollapsed": false
-        },
-        {
-          "start": 4002,
-          "end": 4055,
-          "isCollapsed": false
-        },
-        {
-          "start": 4151,
-          "end": 6125,
-          "isCollapsed": false
-        },
-        {
-          "start": 4175,
-          "end": 6112,
-          "isCollapsed": false
-        },
-        {
-          "start": 4259,
-          "end": 6098,
-          "isCollapsed": false
-        },
-        {
-          "start": 5127,
-          "end": 5226,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "moveDown",
       "nodes": [
         {
@@ -1206,6 +1090,122 @@
         {
           "start": 2415,
           "end": 2553,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "glueGlass",
+      "nodes": [
+        {
+          "start": 8,
+          "end": 6553,
+          "isCollapsed": false
+        },
+        {
+          "start": 36,
+          "end": 1426,
+          "isCollapsed": false
+        },
+        {
+          "start": 189,
+          "end": 1313,
+          "isCollapsed": false
+        },
+        {
+          "start": 304,
+          "end": 698,
+          "isCollapsed": false
+        },
+        {
+          "start": 332,
+          "end": 499,
+          "isCollapsed": false
+        },
+        {
+          "start": 510,
+          "end": 683,
+          "isCollapsed": false
+        },
+        {
+          "start": 705,
+          "end": 1301,
+          "isCollapsed": false
+        },
+        {
+          "start": 841,
+          "end": 1301,
+          "isCollapsed": false
+        },
+        {
+          "start": 869,
+          "end": 1069,
+          "isCollapsed": false
+        },
+        {
+          "start": 1080,
+          "end": 1286,
+          "isCollapsed": false
+        },
+        {
+          "start": 1320,
+          "end": 1409,
+          "isCollapsed": false
+        },
+        {
+          "start": 1498,
+          "end": 6542,
+          "isCollapsed": false
+        },
+        {
+          "start": 1553,
+          "end": 4083,
+          "isCollapsed": false
+        },
+        {
+          "start": 2864,
+          "end": 3787,
+          "isCollapsed": false
+        },
+        {
+          "start": 2890,
+          "end": 3772,
+          "isCollapsed": false
+        },
+        {
+          "start": 2978,
+          "end": 3756,
+          "isCollapsed": false
+        },
+        {
+          "start": 4097,
+          "end": 4227,
+          "isCollapsed": false
+        },
+        {
+          "start": 4162,
+          "end": 4215,
+          "isCollapsed": false
+        },
+        {
+          "start": 4311,
+          "end": 6285,
+          "isCollapsed": false
+        },
+        {
+          "start": 4335,
+          "end": 6272,
+          "isCollapsed": false
+        },
+        {
+          "start": 4419,
+          "end": 6258,
+          "isCollapsed": false
+        },
+        {
+          "start": 5287,
+          "end": 5386,
           "isCollapsed": false
         }
       ]
