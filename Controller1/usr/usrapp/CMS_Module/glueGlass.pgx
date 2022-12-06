@@ -94,7 +94,9 @@
               
               // call moveStampUp(gluePickPoint2[nIdx], mSlow)
               movel(appro(gluePickPoint2[nIdx], trZclose), tTool, mVerySlow)
-            
+              waitEndMove()
+              movel(appro(gluePickPoint2[nIdx], trZverySafe), tTool, mNomSpeed)
+
               call parkEndProgram()
               
               // -- move to where the glue should be applied (the final hdi position)
