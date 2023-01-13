@@ -1,32 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CellUserOptions>
-  <Controller Name="Controller1">
-    <Application>Disk://CMS_Module/CMS_Module.pjx</Application>
-  </Controller>
   <Option Name="DataTreeView">
     <Nodes>
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
     </Nodes>
   </Option>
   <Option Name="CellExplorer">
     <Nodes>
       <Node Path="Cell5" IsExpanded="true" />
       <Node Path="Cell5\Controller1" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\parkEndProgram" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\Disk:##CMS_Module#CMS_Module.pjx\interface" IsExpanded="true" />
     </Nodes>
   </Option>
-  <Option Name="GeometryView">
-    <Nodes>
-      <Node Path="Cell5" IsExpanded="true" />
-      <Node Path="Cell5\Controller1" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module" IsExpanded="true" />
-      <Node Path="Cell5\Controller1\CMS_Module\world[0]" IsExpanded="true" />
-    </Nodes>
-  </Option>
+  <Option Name="GeometryView" />
   <Option Name="Breakpoints">
     <Breakpoints />
   </Option>

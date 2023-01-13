@@ -61,13 +61,22 @@
         switchMagnet=true
         movel(appro(moduleGlueStampHome, trZsafe), tTool, mSlow)
 
+        call parkEndProgram()
+        
         // -- double-dip stamp into glue before starting the normal procedure
-        call moveDown(glueFirstPoint[1], mSlow, trZero, false)
+        call print("pre-dip glue stamp")
+        call moveDown(glueFirstPoint[1], mVerySlow, trOne, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[1], mVerySlow)
-        call moveDown(glueFirstPoint[0], mSlow, trZero, false)
+        movel(appro(glueFirstPoint[1], trZclose), tTool, mVerySlow)
+        movel(appro(glueFirstPoint[0], trZclose), tTool, mNomSpeed)
+
+        movel(appro(glueFirstPoint[0], trOne), tTool, mVerySlow)
+        waitEndMove()
+        //call moveDown(glueFirstPoint[0], mVerySlow, trZero, false)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mVerySlow)
+        movel(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
+        
+        call parkEndProgram()
 
         // -- apply glue stamp to all positions  
         //    divide approach onto /from glue position into two steps
@@ -78,15 +87,21 @@
             call setSpeed()
             if bDoModules==true
               call print("getting glue for position " + toString("1.0", nIdx))
-              call moveDown(gluePickPoint2[nIdx], mSlow, trZero, false)
+              call moveDown(gluePickPoint2[nIdx], mVerySlow, trOne, false)
+              waitEndMove()
               delay(waitGlue)
 
-              call moveStampUp(gluePickPoint2[nIdx], mVerySlow)
-              
+//              call moveStampUp(gluePickPoint2[nIdx], mVerySlow)
+              movel(appro(gluePickPoint2[nIdx], trZclose), tTool, mVerySlow)
+              waitEndMove()
+              movel(appro(gluePickPoint2[nIdx], trZverySafe), tTool, mNomSpeed)
+
+              call parkEndProgram()
+             
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              call moveDown(hdiFinal[nIdx], mSlow, trStamp, false)
-              //delay(waitGlue)
+              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false)
+              delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
             endIf
           endIf
@@ -95,7 +110,7 @@
         // -- Drop glue stamp
         call setSpeed()
         call print("put away glue stamp")
-        call moveDown(moduleGlueStampEnd, mSlow, trPressTwo, true)
+        call moveDown(moduleGlueStampEnd, mSlow, trPressTwo, false)
         waitEndMove()
         switchMagnet = false
         movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
