@@ -72,7 +72,7 @@
         movel(appro(glueFirstPoint[0], trZclose), tTool, mNomSpeed)
 
         movel(appro(glueFirstPoint[0], trOne), tTool, mVerySlow)
-        waitEndMove()
+        //waitEndMove()
         //call moveDown(glueFirstPoint[0], mVerySlow, trZero, false)
         delay(waitGlue)
         movel(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
