@@ -88,13 +88,12 @@
             call setSpeed()
             if bGlueGlass==true
               call print("getting glue for position " + toString("1.0", nIdx))
-              call moveDown(gluePickPoint2[nIdx], mVerySlow, trOne, false)         
+              call moveDown(gluePickPoint2[nIdx], mSlow, trOne, false)         
               waitEndMove()
               delay(waitGlue)
               
-              // call moveStampUp(gluePickPoint2[nIdx], mSlow)
               movel(appro(gluePickPoint2[nIdx], trZclose), tTool, mVerySlow)
-              waitEndMove()
+              //waitEndMove()
               movel(appro(gluePickPoint2[nIdx], trZverySafe), tTool, mNomSpeed)
 
               call parkEndProgram()
