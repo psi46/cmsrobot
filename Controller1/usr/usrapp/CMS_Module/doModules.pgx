@@ -158,7 +158,6 @@
             movel(appro(airexFinal[nIdx], trZsafe), tTool, mNomSpeed)
             
             // -- move to final location
-            trXYCorrectionHDI = trXYZero
             call moveDown(hdiFinal[nIdx], mVerySlow, trZero, false, trXYCorrectionHDI)
             switchVac0   = false
             switchVac1   = false

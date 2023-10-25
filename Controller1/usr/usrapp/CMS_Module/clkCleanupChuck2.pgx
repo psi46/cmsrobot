@@ -21,7 +21,7 @@
         movej(appro(airexInitial[1], trZsafe), tTool, mFast)
       endIf
 
-      call moveDown(hdiFinal[nIdx], mSlow, trPressTwo, false, trXYZero)
+      call moveDown(hdiFinal[nIdx], mSlow, trPressTwo, false, trXYCorrectionHDI)
    
       // -- lift chuck2
       switchMagnet=true

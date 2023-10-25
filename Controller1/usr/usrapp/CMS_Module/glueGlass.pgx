@@ -167,7 +167,6 @@
             call parkEndProgram()
 
             // -- move to final HDI position and put down 
-            trXYCorrectionHDI = trXYCorrection1
             call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYCorrectionHDI)
             switchVac0   = false
             switchVac1   = false
