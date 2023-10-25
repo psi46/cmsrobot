@@ -1024,11 +1024,47 @@
     },
     {
       "mode": 3,
+      "name": "clkCleanupChuck2",
+      "nodes": [
+        {
+          "start": 205,
+          "end": 1406,
+          "isCollapsed": false
+        },
+        {
+          "start": 225,
+          "end": 1397,
+          "isCollapsed": false
+        },
+        {
+          "start": 492,
+          "end": 590,
+          "isCollapsed": false
+        },
+        {
+          "start": 612,
+          "end": 727,
+          "isCollapsed": false
+        },
+        {
+          "start": 667,
+          "end": 715,
+          "isCollapsed": false
+        },
+        {
+          "start": 1096,
+          "end": 1194,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "glueGlass",
       "nodes": [
         {
           "start": 8,
-          "end": 6919,
+          "end": 7122,
           "isCollapsed": false
         },
         {
@@ -1083,7 +1119,7 @@
         },
         {
           "start": 1498,
-          "end": 6908,
+          "end": 7111,
           "isCollapsed": false
         },
         {
@@ -1118,48 +1154,32 @@
         },
         {
           "start": 4640,
-          "end": 6651,
+          "end": 6854,
           "isCollapsed": false
         },
         {
           "start": 4664,
-          "end": 6638,
+          "end": 6841,
           "isCollapsed": false
         },
         {
           "start": 4748,
-          "end": 6624,
+          "end": 6827,
           "isCollapsed": false
         },
         {
           "start": 5636,
           "end": 5735,
           "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck2",
-      "nodes": [
+        },
         {
-          "start": 205,
-          "end": 1269,
+          "start": 6225,
+          "end": 6364,
           "isCollapsed": false
         },
         {
-          "start": 225,
-          "end": 1260,
-          "isCollapsed": false
-        },
-        {
-          "start": 492,
-          "end": 590,
-          "isCollapsed": false
-        },
-        {
-          "start": 959,
-          "end": 1057,
+          "start": 6292,
+          "end": 6346,
           "isCollapsed": false
         }
       ]

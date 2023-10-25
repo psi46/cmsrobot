@@ -167,19 +167,26 @@
             call parkEndProgram()
 
             // -- move to final HDI position and put down 
+            // test
+            if(nIdx==3)
+              trXYCorrectionHDI = trXYZero
+            else
+              trXYCorrectionHDI = trXYCorrection1
+            endIf
+            
             call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYCorrectionHDI)
-            switchVac0   = false
-            switchVac1   = false
-            switchMagnet = false
+              switchVac0   = false
+              switchVac1   = false
+              switchMagnet = false
 
-            delay(waitShort)
+              delay(waitShort)
 
-            // -- move up again
-            movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
-            movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
+              // -- move up again
+              movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
+              movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
 
-            call parkEndProgram()
-          endIf
+              call parkEndProgram()
+            endIf
         endIf
       endFor
 
