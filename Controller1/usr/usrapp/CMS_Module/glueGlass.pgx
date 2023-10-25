@@ -100,10 +100,12 @@
               
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYZero)
+              // call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYZero)
+              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYstampOffset)
               waitEndMove()
               delay(waitGlue)
-              call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
+              // call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYZero)
+              call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYstampOffset)
             endIf
           endIf
         endFor

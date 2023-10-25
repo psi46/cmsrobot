@@ -4,21 +4,22 @@
     <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
       <Parameter name="where" type="pointRs" xsi:type="element" />
       <Parameter name="iniSpeed" type="mdesc" xsi:type="element" />
+      <Parameter name="xyTrsf" type="trsf" xsi:type="element" />
     </Parameters>
     <Code><![CDATA[begin
-  movej(appro(where, trUpThree), tTool, iniSpeed)
+  movej(appro(where, trUpThree*xyTrsf), tTool, iniSpeed)
   if iniSpeed == mExtremelySlow
     waitEndMove()
   endIf
   
   if iniSpeed == mExtremelySlow
-    movej(appro(where, trZclose), tTool, mVerySlow)
+    movej(appro(where, trZclose*xyTrsf), tTool, mVerySlow)
     waitEndMove()
   else
-    movej(appro(where, trZclose), tTool, mSlow)
+    movej(appro(where, trZclose*xyTrsf), tTool, mSlow)
   endIf
   
-  movej(appro(where, trZsafe), tTool, mSlow)
+  movej(appro(where, trZsafe*xyTrsf), tTool, mSlow)
 end]]></Code>
   </Program>
 </Programs>

@@ -68,10 +68,10 @@
         // -- double-dip stamp into glue before starting the normal procedure
         call moveDown(glueFirstPoint[1], mSlow, trZero, false, trXYZero)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[1], mVerySlow)
+        call moveStampUp(glueFirstPoint[1], mVerySlow, trXYZero)
         call moveDown(glueFirstPoint[0], mSlow, trZero, false, trXYZero)
         delay(waitGlue)
-        call moveStampUp(glueFirstPoint[0], mVerySlow)
+        call moveStampUp(glueFirstPoint[0], mVerySlow, trXYZero)
       
         call parkEndProgram()
         
@@ -90,7 +90,7 @@
               call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false, trXYZero)         
               delay(waitGlue)
               
-              call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow)
+              call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow, trXYZero)
               
               call parkEndProgram()
             
@@ -98,7 +98,7 @@
               call print("applying glue to position " + toString("1.0", nAirexIdx))
               call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, false, trXYZero)
               delay(waitGlue)
-              call moveStampUp(airexFinal[nAirexIdx], mVerySlow)
+              call moveStampUp(airexFinal[nAirexIdx], mVerySlow, trXYZero)
             endIf
           endIf
         endFor

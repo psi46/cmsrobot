@@ -91,7 +91,7 @@
               waitEndMove()
               delay(waitGlue)
 
-//              call moveStampUp(gluePickPoint2[nIdx], mVerySlow)
+//              call moveStampUp(gluePickPoint2[nIdx], mVerySlow, trXYZero)
               movel(appro(gluePickPoint2[nIdx], trZclose), tTool, mVerySlow)
               waitEndMove()
               movel(appro(gluePickPoint2[nIdx], trZverySafe), tTool, mNomSpeed)
@@ -102,7 +102,7 @@
               call print("applying glue to position " + toString("1.0", nIdx))
               call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYZero)
               delay(waitGlue)
-              call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
+              call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYZero)
             endIf
           endIf
         endFor
