@@ -6,6 +6,7 @@
       <Parameter name="finalSpeed" type="mdesc" xsi:type="element" />
       <Parameter name="finalAppro" type="trsf" xsi:type="element" />
       <Parameter name="meticulous" type="bool" xsi:type="element" />
+      <Parameter name="xyTrsf" type="trsf" xsi:type="element" />
     </Parameters>
     <Locals>
       <Local name="speed" type="mdesc" xsi:type="array" size="3" />
@@ -13,7 +14,8 @@
     <Code><![CDATA[begin
   // Note: finalSpeed is not taken literally!
   if finalSpeed == mVerySlow
-    speed[0] = mNomSpeed
+    speed[0] = mFast
+    //speed[0] = mVeryFast
     speed[1] = mSlow
     speed[2] = mVerySlow
   elseIf finalSpeed == mSlow
@@ -26,14 +28,14 @@
     speed[2] = mSlow
   endIf
   
-  movej(appro(where, trZsafe*trXY), tTool, speed[0])
+  movej(appro(where, trZsafe*xyTrsf), tTool, speed[0])
   if meticulous
     waitEndMove()
   endIf
   
   // -- move down with decreasing speeds. Not sure whether this gets "blended" away
-  movej(appro(where, trZclose*trXY), tTool, speed[1])
-  movej(appro(where, finalAppro*trXY), tTool, speed[2])
+  movej(appro(where, trZclose*xyTrsf), tTool, speed[1])
+  movej(appro(where, finalAppro*xyTrsf), tTool, speed[2])
   waitEndMove()
 end]]></Code>
   </Program>

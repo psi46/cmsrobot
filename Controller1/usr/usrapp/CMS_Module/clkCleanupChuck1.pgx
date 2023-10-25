@@ -21,7 +21,7 @@
         movej(appro(airexInitial[1], trZsafe), tTool, mFast)
       endIf
 
-      call moveDown(airexFinal[nAirexIdx], mSlow, trZero, false)
+      call moveDown(airexFinal[nAirexIdx], mSlow, trZero, false, trXYZero)
    
       // -- lift chuck1
       switchMagnet=true
@@ -34,7 +34,7 @@
       if nAirexIdx == 0 or nAirexIdx == 3
         movej(appro(airexInitial[1], trZsafe), tTool, mFast)
       endIf
-      call moveDown(chuck1[nAirexIdx], mSlow, trZero, false)
+      call moveDown(chuck1[nAirexIdx], mSlow, trZero, false, trXYZero)
 
       // -- release it
       switchMagnet=false

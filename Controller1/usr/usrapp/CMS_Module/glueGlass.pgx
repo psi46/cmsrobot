@@ -54,7 +54,7 @@
       if bSkipGlue[0]==false
         call print("picking module glue stamp")
         // -- pick glue stamp
-        call moveDown(moduleGlueStampHome, mSlow, trZero, false)
+        call moveDown(moduleGlueStampHome, mSlow, trZero, false, trXYZero)
         waitEndMove()
         movel(appro(moduleGlueStampHome, trPressTwo), tTool, mVerySlow)
         waitEndMove()
@@ -66,14 +66,14 @@
 
         // -- double-dip stamp into glue before starting the normal procedure
         call print("pre-dip glue stamp")
-        call moveDown(glueFirstPoint[1], mVerySlow, trOne, false)
+        call moveDown(glueFirstPoint[1], mVerySlow, trOne, false, trXYZero)
         delay(waitGlue)
         movel(appro(glueFirstPoint[1], trZclose), tTool, mVerySlow)
         movel(appro(glueFirstPoint[0], trZclose), tTool, mNomSpeed)
 
         movel(appro(glueFirstPoint[0], trOne), tTool, mVerySlow)
         waitEndMove()
-        //call moveDown(glueFirstPoint[0], mVerySlow, trZero, false)
+        //call moveDown(glueFirstPoint[0], mVerySlow, trZero, false, trXYZero)
         delay(waitGlue)
         movel(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
         
@@ -88,7 +88,7 @@
             call setSpeed()
             if bGlueGlass==true
               call print("getting glue for position " + toString("1.0", nIdx))
-              call moveDown(gluePickPoint2[nIdx], mSlow, trOne, false)         
+              call moveDown(gluePickPoint2[nIdx], mSlow, trOne, false, trXYZero)         
               waitEndMove()
               delay(waitGlue)
               
@@ -100,7 +100,7 @@
               
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false)
+              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYZero)
               waitEndMove()
               delay(waitGlue)
               call moveStampUp(hdiFinal[nIdx], mExtremelySlow)
@@ -111,7 +111,7 @@
         // -- Drop glue stamp
         call setSpeed()
         call print("put away glue stamp")
-        call moveDown(moduleGlueStampEnd, mSlow, trPressTwo, false)
+        call moveDown(moduleGlueStampEnd, mSlow, trPressTwo, false, trXYZero)
         waitEndMove()
         switchMagnet = false
         movel(appro(moduleGlueStampEnd, trZsafe), tTool, mNomSpeed)
@@ -129,7 +129,7 @@
           call setSpeed()
           if bGlueGlass==true
             // -- move over/to chuck
-            call moveDown(chuck2[nIdx], mSlow, trZero, false)
+            call moveDown(chuck2[nIdx], mSlow, trZero, false, trXYZero)
             // -- the following cures the click when the chuck 'jumps' up a bit
             waitEndMove()
             movel(appro(chuck2[nIdx], trPressTwo), tTool, mVerySlow)
@@ -146,7 +146,7 @@
             call parkEndProgram()
             
             // -- move with chuck to hdi glass position
-            call moveDown(airexFinal[nIdx], mSlow, trZero, true)
+            call moveDown(airexFinal[nIdx], mSlow, trZero, true, trXYZero)
         
             // -- release hdi vacuum to allow picking up hdi glass
             if statusValves[hdiValve[nIdx]]==1
@@ -165,7 +165,7 @@
             call parkEndProgram()
 
             // -- move to final airex position and put down 
-            call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true)
+            call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYZero)
             switchVac0   = false
             switchVac1   = false
             switchMagnet = false
