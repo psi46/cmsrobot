@@ -166,8 +166,9 @@
 
             call parkEndProgram()
 
-            // -- move to final airex position and put down 
-            call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYZero)
+            // -- move to final HDI position and put down 
+            trXYCorrectionHDI = trXYZero
+            call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYCorrectionHDI)
             switchVac0   = false
             switchVac1   = false
             switchMagnet = false
