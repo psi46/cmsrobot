@@ -100,12 +100,12 @@
               
               // -- move to where the glue should be applied (the final hdi position)
               call print("applying glue to position " + toString("1.0", nIdx))
-              // call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYZero)
-              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYstampOffset)
+              call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYZero)
+              //call moveDown(hdiFinal[nIdx], mVerySlow, trStamp, false, trXYstampOffset)
               waitEndMove()
               delay(waitGlue)
-              // call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYZero)
-              call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYstampOffset)
+              call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYZero)
+              //call moveStampUp(hdiFinal[nIdx], mExtremelySlow, trXYstampOffset)
             endIf
           endIf
         endFor
@@ -148,7 +148,7 @@
             call parkEndProgram()
             
             // -- move with chuck to hdi glass position
-            call moveDown(airexFinal[nIdx], mSlow, trZero, true, trXYZero)
+            call moveDown(glassInitial[nIdx], mSlow, trZero, true, trXYZero)
         
             // -- release hdi vacuum to allow picking up hdi glass
             if statusValves[hdiValve[nIdx]]==1
@@ -161,20 +161,13 @@
 
             // -- move up with hdi glass
             call print("placing hdi glass " + toString("1.0", nIdx))
-            movel(appro(airexFinal[nIdx], trZclose), tTool, mSlow)
-            movel(appro(airexFinal[nIdx], trZsafe), tTool, mNomSpeed)
+            movel(appro(glassInitial[nIdx], trZclose), tTool, mSlow)
+            movel(appro(glassInitial[nIdx], trZsafe), tTool, mNomSpeed)
 
             call parkEndProgram()
 
-            // -- move to final HDI position and put down 
-            // test
-            if(nIdx==3)
-              trXYCorrectionHDI = trXYZero
-            else
-              trXYCorrectionHDI = trXYCorrection1
-            endIf
-            
-            call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYCorrectionHDI)
+            // -- move to final HDI position and put down             
+            call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYZero)
               switchVac0   = false
               switchVac1   = false
               switchMagnet = false

@@ -744,32 +744,6 @@
     },
     {
       "mode": 3,
-      "name": "moveDown",
-      "nodes": [
-        {
-          "start": 54,
-          "end": 353,
-          "isCollapsed": false
-        },
-        {
-          "start": 177,
-          "end": 274,
-          "isCollapsed": false
-        },
-        {
-          "start": 277,
-          "end": 345,
-          "isCollapsed": false
-        },
-        {
-          "start": 414,
-          "end": 453,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "clkCleanupChuck1",
       "nodes": [
         {
@@ -1060,11 +1034,37 @@
     },
     {
       "mode": 3,
+      "name": "moveDown",
+      "nodes": [
+        {
+          "start": 54,
+          "end": 353,
+          "isCollapsed": false
+        },
+        {
+          "start": 177,
+          "end": 274,
+          "isCollapsed": false
+        },
+        {
+          "start": 277,
+          "end": 345,
+          "isCollapsed": false
+        },
+        {
+          "start": 464,
+          "end": 503,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "glueGlass",
       "nodes": [
         {
           "start": 8,
-          "end": 7122,
+          "end": 6944,
           "isCollapsed": false
         },
         {
@@ -1119,67 +1119,57 @@
         },
         {
           "start": 1498,
-          "end": 7111,
+          "end": 6933,
           "isCollapsed": false
         },
         {
           "start": 1553,
-          "end": 4412,
+          "end": 4410,
           "isCollapsed": false
         },
         {
           "start": 2892,
-          "end": 4106,
+          "end": 4104,
           "isCollapsed": false
         },
         {
           "start": 2918,
-          "end": 4091,
+          "end": 4089,
           "isCollapsed": false
         },
         {
           "start": 3006,
-          "end": 4075,
+          "end": 4073,
           "isCollapsed": false
         },
         {
-          "start": 4426,
-          "end": 4556,
+          "start": 4424,
+          "end": 4554,
           "isCollapsed": false
         },
         {
-          "start": 4491,
-          "end": 4544,
+          "start": 4489,
+          "end": 4542,
           "isCollapsed": false
         },
         {
-          "start": 4640,
-          "end": 6854,
+          "start": 4638,
+          "end": 6676,
           "isCollapsed": false
         },
         {
-          "start": 4664,
-          "end": 6841,
+          "start": 4662,
+          "end": 6663,
           "isCollapsed": false
         },
         {
-          "start": 4748,
-          "end": 6827,
+          "start": 4746,
+          "end": 6649,
           "isCollapsed": false
         },
         {
           "start": 5636,
           "end": 5735,
-          "isCollapsed": false
-        },
-        {
-          "start": 6225,
-          "end": 6364,
-          "isCollapsed": false
-        },
-        {
-          "start": 6292,
-          "end": 6346,
           "isCollapsed": false
         }
       ]
