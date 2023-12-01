@@ -15,13 +15,12 @@
   // Note: finalSpeed is not taken literally!
   if finalSpeed == mVerySlow
     speed[0] = mFast
-    //speed[0] = mVeryFast
     speed[1] = mSlow
     speed[2] = mVerySlow
   elseIf finalSpeed == mSlow
     speed[0] = mFast
-    speed[1] = mNomSpeed
-    speed[2] = mVerySlow
+    speed[1] = mSlow
+    speed[2] = mSlow
   else 
     speed[0] = mFast
     speed[1] = mFast

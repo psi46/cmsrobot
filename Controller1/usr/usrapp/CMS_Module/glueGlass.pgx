@@ -54,7 +54,7 @@
       if bSkipGlue[0]==false
         call print("picking module glue stamp")
         // -- pick glue stamp
-        call moveDown(moduleGlueStampHome, mSlow, trZero, false, trXYZero)
+        call moveDown(moduleGlueStampHome, mFast, trZero, false, trXYZero)
         waitEndMove()
         movel(appro(moduleGlueStampHome, trPressTwo), tTool, mVerySlow)
         waitEndMove()
@@ -66,17 +66,16 @@
 
         // -- double-dip stamp into glue before starting the normal procedure
         call print("pre-dip glue stamp")
-        call moveDown(glueFirstPoint[1], mVerySlow, trOne, false, trXYZero)
-        delay(waitGlue)
-        movel(appro(glueFirstPoint[1], trZclose), tTool, mVerySlow)
-        movel(appro(glueFirstPoint[0], trZclose), tTool, mNomSpeed)
-
-        movel(appro(glueFirstPoint[0], trOne), tTool, mVerySlow)
+        call moveDown(glueFirstPoint[1], mFast, trOne, false, trXYZero)
         waitEndMove()
-        //call moveDown(glueFirstPoint[0], mVerySlow, trZero, false, trXYZero)
         delay(waitGlue)
-        movel(appro(glueFirstPoint[0], trZclose), tTool, mVerySlow)
-        
+        call moveStampUp(glueFirstPoint[1], mSlow, trXYZero)
+       
+        call moveDown(glueFirstPoint[0], mSlow, trOne, false, trXYZero)
+        waitEndMove()
+        delay(waitGlue)
+        call moveStampUp(glueFirstPoint[0], mSlow, trXYZero)
+ 
         call parkEndProgram()
         
         // -- apply glue stamp to all positions:
@@ -92,9 +91,7 @@
               waitEndMove()
               delay(waitGlue)
               
-              movel(appro(gluePickPoint2[nIdx], trZclose), tTool, mVerySlow)
-              //waitEndMove()
-              movel(appro(gluePickPoint2[nIdx], trZverySafe), tTool, mNomSpeed)
+              call moveStampUp(gluePickPoint2[nIdx], mSlow, trXYZero)
 
               call parkEndProgram()
               
@@ -125,7 +122,7 @@
         call print("handling selected glasses")
       endIf
       
-      // -- pick weighted vacuum chucks and lift airex frames to HDIs
+      // -- pick weighted vacuum chucks and lift glasses to final locations
       for nIdx=0 to 5
         if !bSelectItem or (bSelectedItems[nIdx]==true)
           call setSpeed()
@@ -147,7 +144,7 @@
           
             call parkEndProgram()
             
-            // -- move with chuck to hdi glass position
+            // -- move with chuck to hdi glass(!) position
             call moveDown(glassInitial[nIdx], mSlow, trZero, true, trXYZero)
         
             // -- release hdi vacuum to allow picking up hdi glass
@@ -168,18 +165,18 @@
 
             // -- move to final HDI position and put down             
             call moveDown(hdiFinal[nIdx], mVerySlow, trZero, true, trXYZero)
-              switchVac0   = false
-              switchVac1   = false
-              switchMagnet = false
+            switchVac0   = false
+            switchVac1   = false
+            switchMagnet = false
 
-              delay(waitShort)
+            delay(waitShort)
 
-              // -- move up again
-              movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
-              movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
+            // -- move up again
+            movel(appro(hdiFinal[nIdx], trZclose), tTool, mSlow)
+            movel(appro(hdiFinal[nIdx], trZsafe), tTool, mNomSpeed)
 
-              call parkEndProgram()
-            endIf
+            call parkEndProgram()
+          endIf
         endIf
       endFor
 

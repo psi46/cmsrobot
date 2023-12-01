@@ -897,11 +897,37 @@
     },
     {
       "mode": 3,
+      "name": "clkCleanupChuck2",
+      "nodes": [
+        {
+          "start": 205,
+          "end": 1260,
+          "isCollapsed": false
+        },
+        {
+          "start": 225,
+          "end": 1251,
+          "isCollapsed": false
+        },
+        {
+          "start": 492,
+          "end": 590,
+          "isCollapsed": false
+        },
+        {
+          "start": 950,
+          "end": 1048,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
       "name": "doModules",
       "nodes": [
         {
           "start": 34,
-          "end": 6603,
+          "end": 6312,
           "isCollapsed": false
         },
         {
@@ -946,88 +972,52 @@
         },
         {
           "start": 1306,
-          "end": 6592,
+          "end": 6301,
           "isCollapsed": false
         },
         {
           "start": 1424,
-          "end": 4312,
+          "end": 4021,
           "isCollapsed": false
         },
         {
-          "start": 2760,
-          "end": 3998,
+          "start": 2624,
+          "end": 3707,
           "isCollapsed": false
         },
         {
-          "start": 2786,
-          "end": 3983,
+          "start": 2650,
+          "end": 3692,
           "isCollapsed": false
         },
         {
-          "start": 2874,
-          "end": 3967,
+          "start": 2738,
+          "end": 3676,
           "isCollapsed": false
         },
         {
-          "start": 4326,
-          "end": 4456,
+          "start": 4035,
+          "end": 4165,
           "isCollapsed": false
         },
         {
-          "start": 4391,
-          "end": 4444,
+          "start": 4100,
+          "end": 4153,
           "isCollapsed": false
         },
         {
-          "start": 4540,
-          "end": 6320,
+          "start": 4249,
+          "end": 6029,
           "isCollapsed": false
         },
         {
-          "start": 4564,
-          "end": 6307,
+          "start": 4273,
+          "end": 6016,
           "isCollapsed": false
         },
         {
-          "start": 4648,
-          "end": 6292,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
-      "name": "clkCleanupChuck2",
-      "nodes": [
-        {
-          "start": 205,
-          "end": 1406,
-          "isCollapsed": false
-        },
-        {
-          "start": 225,
-          "end": 1397,
-          "isCollapsed": false
-        },
-        {
-          "start": 492,
-          "end": 590,
-          "isCollapsed": false
-        },
-        {
-          "start": 612,
-          "end": 727,
-          "isCollapsed": false
-        },
-        {
-          "start": 667,
-          "end": 715,
-          "isCollapsed": false
-        },
-        {
-          "start": 1096,
-          "end": 1194,
+          "start": 4357,
+          "end": 6001,
           "isCollapsed": false
         }
       ]
@@ -1038,22 +1028,22 @@
       "nodes": [
         {
           "start": 54,
-          "end": 353,
+          "end": 318,
           "isCollapsed": false
         },
         {
-          "start": 177,
-          "end": 274,
+          "start": 150,
+          "end": 239,
           "isCollapsed": false
         },
         {
-          "start": 277,
-          "end": 345,
+          "start": 242,
+          "end": 310,
           "isCollapsed": false
         },
         {
-          "start": 464,
-          "end": 503,
+          "start": 429,
+          "end": 468,
           "isCollapsed": false
         }
       ]
@@ -1064,7 +1054,7 @@
       "nodes": [
         {
           "start": 8,
-          "end": 6944,
+          "end": 6682,
           "isCollapsed": false
         },
         {
@@ -1119,57 +1109,57 @@
         },
         {
           "start": 1498,
-          "end": 6933,
+          "end": 6671,
           "isCollapsed": false
         },
         {
           "start": 1553,
-          "end": 4410,
+          "end": 4157,
           "isCollapsed": false
         },
         {
-          "start": 2892,
-          "end": 4104,
+          "start": 2756,
+          "end": 3851,
           "isCollapsed": false
         },
         {
-          "start": 2918,
-          "end": 4089,
+          "start": 2782,
+          "end": 3836,
           "isCollapsed": false
         },
         {
-          "start": 3006,
-          "end": 4073,
+          "start": 2870,
+          "end": 3820,
           "isCollapsed": false
         },
         {
-          "start": 4424,
-          "end": 4554,
+          "start": 4171,
+          "end": 4301,
           "isCollapsed": false
         },
         {
-          "start": 4489,
-          "end": 4542,
+          "start": 4236,
+          "end": 4289,
           "isCollapsed": false
         },
         {
-          "start": 4638,
-          "end": 6676,
+          "start": 4391,
+          "end": 6414,
           "isCollapsed": false
         },
         {
-          "start": 4662,
-          "end": 6663,
+          "start": 4415,
+          "end": 6401,
           "isCollapsed": false
         },
         {
-          "start": 4746,
-          "end": 6649,
+          "start": 4499,
+          "end": 6387,
           "isCollapsed": false
         },
         {
-          "start": 5636,
-          "end": 5735,
+          "start": 5392,
+          "end": 5491,
           "isCollapsed": false
         }
       ]

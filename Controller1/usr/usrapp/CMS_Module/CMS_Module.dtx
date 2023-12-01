@@ -120,10 +120,10 @@
       <Value key="0" j1="70" j2="40" j3="80" j4="10" />
     </Data>
     <Data name="mFast" access="private" xsi:type="array" type="mdesc" size="1">
-      <Value key="0" accel="20" vel="50" decel="20" leave="100" />
+      <Value key="0" accel="10" vel="50" decel="10" tmax="999" rmax="999" leave="100" />
     </Data>
     <Data name="mNomSpeed" access="private" xsi:type="array" type="mdesc" size="1">
-      <Value key="0" accel="10" vel="30" decel="10" />
+      <Value key="0" accel="5" vel="20" decel="5" tmax="9999" rmax="9999" />
     </Data>
     <Data name="mSlow" access="private" xsi:type="array" type="mdesc" size="1">
       <Value key="0" accel="5" vel="20" decel="5" tmax="99" rmax="99" leave="25" reach="25" />
@@ -415,7 +415,7 @@
       <Value key="0" z="-1" />
     </Data>
     <Data name="mVeryFast" access="private" xsi:type="array" type="mdesc" size="1">
-      <Value key="0" accel="10" vel="60" decel="10" leave="100" />
+      <Value key="0" accel="10" vel="60" decel="10" tmax="9999" rmax="9999" leave="100" />
     </Data>
     <Data name="trXYstampOffset" access="private" xsi:type="array" type="trsf" size="1" />
     <Data name="trXYCorrection1" access="private" xsi:type="array" type="trsf" size="1" />
@@ -427,6 +427,9 @@
       <Value key="3" x="58.9" y="313.9" z="-97.69" rx="180" fatherId="fPalette[0]" />
       <Value key="4" x="133.9" y="313.9" z="-97.69" rx="180" fatherId="fPalette[0]" />
       <Value key="5" x="208.9" y="313.9" z="-97.69" rx="180" fatherId="fPalette[0]" />
+    </Data>
+    <Data name="mSmooth" access="private" xsi:type="array" type="mdesc" size="1">
+      <Value key="0" accel="5" vel="20" decel="5" tmax="99" rmax="99" leave="100" blend="cartesian" />
     </Data>
   </Datas>
 </Database>
