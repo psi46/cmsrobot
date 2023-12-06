@@ -87,7 +87,7 @@
               call parkEndProgram()
 
               call print("getting glue for position " + toString("1.0", nAirexIdx))
-              call moveDown(gluePickPoint[nAirexIdx], mSlow, trZero, false, trXYZero)         
+              call moveDown(gluePickPoint[nAirexIdx], mSlow, trOne, false, trXYZero)         
               delay(waitGlue)
               
               call moveStampUp(gluePickPoint[nAirexIdx], mVerySlow, trXYZero)
@@ -96,7 +96,8 @@
             
               // -- move to where the glue should be applied (the final airex position)
               call print("applying glue to position " + toString("1.0", nAirexIdx))
-              call moveDown(airexFinal[nAirexIdx], mSlow, trStamp, false, trXYZero)
+              call moveDown(airexFinal[nAirexIdx], mVerySlow, trStampHDI, false, trXYZero)
+              waitEndMove()
               delay(waitGlue)
               call moveStampUp(airexFinal[nAirexIdx], mVerySlow, trXYZero)
             endIf
