@@ -770,27 +770,6 @@
     },
     {
       "mode": 3,
-      "name": "moveStampUp",
-      "nodes": [
-        {
-          "start": 65,
-          "end": 120,
-          "isCollapsed": false
-        },
-        {
-          "start": 126,
-          "end": 302,
-          "isCollapsed": false
-        },
-        {
-          "start": 235,
-          "end": 294,
-          "isCollapsed": false
-        }
-      ]
-    },
-    {
-      "mode": 3,
       "name": "doAirex",
       "nodes": [
         {
@@ -1206,6 +1185,27 @@
         {
           "start": 2545,
           "end": 2683,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "moveStampUp",
+      "nodes": [
+        {
+          "start": 65,
+          "end": 120,
+          "isCollapsed": false
+        },
+        {
+          "start": 126,
+          "end": 306,
+          "isCollapsed": false
+        },
+        {
+          "start": 235,
+          "end": 298,
           "isCollapsed": false
         }
       ]

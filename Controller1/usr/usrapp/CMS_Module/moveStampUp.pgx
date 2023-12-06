@@ -16,7 +16,7 @@
     movej(appro(where, trZclose*xyTrsf), tTool, mVerySlow)
     waitEndMove()
   else
-    movej(appro(where, trZclose*xyTrsf), tTool, mSlow)
+    movej(appro(where, trZclose*xyTrsf), tTool, mVerySlow)
   endIf
   
   movej(appro(where, trZsafe*xyTrsf), tTool, mSlow)
