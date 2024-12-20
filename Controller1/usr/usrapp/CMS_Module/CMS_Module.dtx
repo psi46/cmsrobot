@@ -120,7 +120,7 @@
       <Value key="0" j1="70" j2="40" j3="80" j4="10" />
     </Data>
     <Data name="mFast" access="private" xsi:type="array" type="mdesc" size="1">
-      <Value key="0" accel="10" vel="50" decel="10" tmax="999" rmax="999" leave="100" />
+      <Value key="0" accel="2" vel="50" decel="2" tmax="60" rmax="60" leave="100" />
     </Data>
     <Data name="mNomSpeed" access="private" xsi:type="array" type="mdesc" size="1">
       <Value key="0" accel="5" vel="20" decel="5" tmax="9999" rmax="9999" />
@@ -371,12 +371,12 @@
       <Value key="1" accel="0.5" vel="0.5" decel="0.5" tmax="1" rmax="1" leave="2" reach="2" />
       <Value key="2" accel="1" vel="1" decel="1" tmax="2" rmax="2" leave="2" reach="2" />
       <Value key="3" accel="2" vel="2" decel="2" tmax="5" rmax="5" leave="5" reach="5" />
-      <Value key="4" accel="4" vel="5" decel="4" tmax="10" rmax="10" leave="10" reach="10" />
-      <Value key="5" accel="5" vel="7" decel="5" tmax="15" rmax="15" leave="20" reach="10" />
-      <Value key="6" accel="6" vel="10" decel="6" tmax="20" rmax="20" leave="20" reach="10" />
-      <Value key="7" accel="8" vel="15" decel="8" tmax="30" rmax="30" leave="40" reach="20" />
-      <Value key="8" accel="10" vel="20" decel="10" tmax="60" rmax="60" leave="40" reach="20" />
-      <Value key="9" accel="15" vel="30" decel="15" tmax="60" rmax="60" leave="80" reach="40" />
+      <Value key="4" accel="4" vel="7" decel="4" tmax="10" rmax="10" leave="10" reach="10" />
+      <Value key="5" accel="5" vel="10" decel="5" tmax="15" rmax="15" leave="20" reach="10" />
+      <Value key="6" accel="6" vel="15" decel="6" tmax="20" rmax="20" leave="20" reach="10" />
+      <Value key="7" accel="8" vel="20" decel="8" tmax="30" rmax="30" leave="40" reach="20" />
+      <Value key="8" accel="10" vel="25" decel="10" tmax="60" rmax="60" leave="40" reach="20" />
+      <Value key="9" accel="15" vel="35" decel="15" tmax="60" rmax="60" leave="80" reach="40" />
     </Data>
     <Data name="trDownTwo" access="private" xsi:type="array" type="trsf" size="1">
       <Value key="0" z="-2" />
@@ -433,6 +433,10 @@
     </Data>
     <Data name="trStampHDI" access="private" xsi:type="array" type="trsf" size="1">
       <Value key="0" z="-6" />
+    </Data>
+    <Data name="gluePreApplicationPoint" access="private" xsi:type="array" type="pointRs" size="2">
+      <Value key="0" x="280" y="-90" z="-62.5" rx="180" ry="6.952208E-15" fatherId="world[0]" />
+      <Value key="1" x="280" y="90" z="-62.5" rx="180" fatherId="world[0]" />
     </Data>
   </Datas>
 </Database>
